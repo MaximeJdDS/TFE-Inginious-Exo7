@@ -1,0 +1,60 @@
+accessible: false
+author: MJdDS
+categories: []
+contact_url: ''
+context: |-
+    Ecrivez l'en-tête et le corps d'une fonction baptisée ``afficheSum`` qui prend deux nombres entiers comme arguments et affiche la somme de ces nombres. La spécification de cette fonction est :
+
+    .. code-block:: python
+
+        pre: --
+        post: affiche la somme entre les nombres entiers `a` et `b`
+
+    .. raw:: html
+
+       <script defer>
+
+       bodyHeight = 0;
+       function postSize() {
+           if (document.body.scrollHeight != bodyHeight) {
+               bodyHeight = document.body.scrollHeight;
+               window.parent.postMessage({height: document.body.scrollHeight}, "*");
+           }
+       };
+       var target = document.querySelector('body');
+
+       var observer = new MutationObserver(postSize);
+
+       var config = { attributes: true, subtree: true }
+
+       observer.observe(target, config);
+       $(document).ready(function(){
+           setTimeout(postSize, 0);
+       });
+       </script>
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: test01
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: ''
+        language: python
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

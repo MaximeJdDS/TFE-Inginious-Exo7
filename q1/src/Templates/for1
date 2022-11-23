@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+
+
+def quotient_reste(a, b):
+    
+@    @q1@@ 
+    print(a,b)
+    print(q)
+    print(r)
+    print(reste)
+    print(egalite)
+    

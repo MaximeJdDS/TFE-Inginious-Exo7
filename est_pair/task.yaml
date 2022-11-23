@@ -1,0 +1,37 @@
+accessible: true
+author: MJdDS
+categories: []
+contact_url: ''
+context: |+
+    En informatique, on doit parfois déterminer si un nombre est pair ou impair. Pour rappel, 1, 3 et 5 sont des nombres impairs tandis que tous les multiples de 2 sont des nombres pairs (comme 0). Votre code va recevoir la variable N qui contient un nombre à analyser. Vous devez ensuite écrire quelques lignes de python pour déterminer si cette variable contient un entier pair ou non.
+
+    Rappelez-vous que python contient l’opérateur % qui permet de calculer le reste de la division entière entre deux nombres. Par exemple, en python l’expression 5 % 3 retourne la valeur 2 tandis que l’expression 12 % 3 retourne la valeur 0. En utilisant cet opérateur, vous devriez pouvoir facilement résoudre ce problème.
+
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: 'Pair ou pas pair ? '
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: ''
+        header: N = ...
+        language: python
+        default: |-
+            ...
+            pair = ...
+stored_submissions: 5
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

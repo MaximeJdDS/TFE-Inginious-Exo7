@@ -1,0 +1,39 @@
+accessible: true
+author: MJdDS
+categories: []
+contact_url: ''
+context: |-
+    Programme une fonction est_divisible(a,b) qui teste si b divise a.
+
+    La fonction renvoie True ou False.
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: est divisible
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: ''
+        header: ''
+        language: python
+        default: |-
+            def est_divisible(a,b):
+                if(*):
+                    return *
+                else :
+                    return *
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

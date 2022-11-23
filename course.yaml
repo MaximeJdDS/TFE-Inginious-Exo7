@@ -1,0 +1,45 @@
+accessible: false
+name: exo7
+description: ''
+admins:
+- Mava
+- obonaventure
+- mpiron
+tutors: []
+groups_student_choice: false
+allow_unregister: true
+allow_preview: false
+registration: true
+registration_password: null
+registration_ac: null
+registration_ac_accept: true
+registration_ac_list: []
+is_lti: false
+lti_url: ''
+lti_keys: {}
+lti_send_back_grade: false
+task_dispenser: toc
+dispenser_data:
+-   config:
+        closed: false
+    id: tasks-list
+    rank: 0
+    tasks_list:
+        SimpleMax: 1
+        test01: 0
+    title: Liste des exercices
+-   config:
+        closed: false
+    id: new_section_1
+    rank: 1
+    sections_list:
+    -   config:
+            closed: false
+        id: new_section
+        rank: 0
+        tasks_list:
+            est_pair: 0
+            q1: 1
+            q2: 2
+        title: Activite 1
+    title: Arithmétique – Boucle tant que – I
