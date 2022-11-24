@@ -1,4 +1,31 @@
 accessible: false
-environment_type: mcq
+author: MJdDS
+categories: []
+contact_url: ''
+context: ''
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
 name: nombredeFermat
-problems: {}
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: ''
+        header: ''
+        language: python
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
