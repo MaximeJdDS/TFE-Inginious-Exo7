@@ -1,0 +1,44 @@
+accessible: false
+author: MJdDS
+categories: []
+contact_url: ''
+context: |4
+
+
+    Méthode.
+    • On rappelle que d divise n si et seulement si n % d vaut 0.
+    • La mauvaise idée est d’utiliser une boucle « pour d variant de 2 à n ». En effet, si par exemple on
+    sait que 7 est diviseur de 91 cela ne sert à rien de tester si 8, 9, 10 . . . sont aussi des diviseurs car
+    on a déjà trouvé le plus petit.
+    • La bonne idée est d’utiliser une boucle « tant que » ! Le principe est : « tant que je n’ai pas obtenu
+    mon diviseur, je continue de chercher ». (Et donc, dès que je l’ai trouvé, j’arrête de chercher.)
+    • En pratique voici les grandes lignes :
+    — Commence avec d = 2.
+    — Tant que d ne divise pas n alors, passe au candidat suivant (d devient d + 1).
+    — À la fin d est le plus petit diviseur de n (dans le pire des cas d = n).
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Plus petit diviseur
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: ''
+        header: ''
+        language: python
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

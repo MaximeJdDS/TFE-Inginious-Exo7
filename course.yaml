@@ -39,7 +39,19 @@ dispenser_data:
         rank: 0
         tasks_list:
             est_pair: 0
-            q1: 1
-            q2: 2
+            q1: 2
+            q2: 1
         title: Activite 1
+    -   config:
+            closed: false
+        id: activite_2
+        rank: 1
+        tasks_list:
+            nombredeFermat: 2
+            nombrepremier1: 1
+            nombrepremiers2: 3
+            nombrepremiers3: 4
+            pluspetitdiviseur: 0
+            tempsdecalcul: 5
+        title: Activite 2
     title: Arithmétique – Boucle tant que – I
