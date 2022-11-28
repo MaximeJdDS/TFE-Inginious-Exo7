@@ -1,0 +1,5 @@
+{
+	"name": "Push to INGInious course",
+	"description": "Github workflow to push repo changes to an INGInious course",
+	"iconName": "inginious-push"
+}
