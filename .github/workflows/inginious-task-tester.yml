@@ -51,7 +51,7 @@ jobs:
       # TODO: change to main INGInious repo when patches are merged
       - name: Get INGInious
         if: steps.cache-inginious.outputs.cache-hit != 'true'
-        run: git clone https://github.com/nrybowski/INGInious ${INGINIOUS}
+        run: git clone https://github.com/UCL-INGI/INGInious ${INGINIOUS}
         
       # Get INGInious containers
       - name: Cache INGInious containers
