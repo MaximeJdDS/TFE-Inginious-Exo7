@@ -1,6 +1,0 @@
-{
-    "name": "INGInious task tester",
-    "description": "Replay old submissions to ensure that the tasks behavior is unchanged",
-    "categories": [ "CI" ],
-    "filesPatterns": [ ".github/workflows/inginious-task-tester.env" ]
-}
