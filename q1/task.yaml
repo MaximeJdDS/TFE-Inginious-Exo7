@@ -3,7 +3,7 @@ author: MJdDS
 categories: []
 contact_url: ''
 context: |-
-    Dans cette exercice, on va apprendre à utiliser la division entiere (//) elle permet de compter le nombre de fois que le 2eme nombre rentre dans le premier, par exemple 13//4 donnera 3.
+    Dans cet exercice, on va apprendre à utiliser la division entiere (//) elle permet de compter le nombre de fois que le 2eme nombre rentre dans le premier, par exemple 13//4 donnera 3.
 
     Et tant qu'à faire, on va voir l'opérateur modulo (%) qui va permettre de trouver le reste d'une division, par exemple 5 % 4 va retourner 1 et inversement 4 % 5 va retourner 4.
 
