@@ -1,0 +1,24 @@
+accessible: false
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Écris une fonction nombre_premier_apres(n) qui renvoie le premier nombre premier p supérieur
+    ou égal à n.
+    Par exemple, le premier nombre premier après n = 60 est p = 61. Quel est le premier nombre premier
+    après n = 100 000 ?
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Nombre Premier Apres
+network_grading: false
+problems: {}
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

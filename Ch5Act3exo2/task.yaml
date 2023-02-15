@@ -1,0 +1,23 @@
+accessible: false
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Deux nombres premiers p et p + 2 sont appelés nombres premiers jumeaux. Écris une fonction
+    nombres_jumeaux_apres(n) qui renvoie le premier couple p, p+2 de nombres premiers jumeaux,
+    avec p > n.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Nombres Premiers Jumeaux
+network_grading: false
+problems: {}
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

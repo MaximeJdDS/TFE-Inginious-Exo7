@@ -1,14 +1,14 @@
-accessible: false
+accessible: true
 name: exo7
 description: ''
 admins:
 - Mava
-- obonaventure
 - mpiron
+- obonaventure
 tutors: []
 groups_student_choice: false
 allow_unregister: true
-allow_preview: false
+allow_preview: true
 registration: true
 registration_password: null
 registration_ac: null
@@ -41,7 +41,7 @@ dispenser_data:
             est_pair: 0
             q1: 2
             q2: 1
-        title: Activite 1
+        title: Activité 1
     -   config:
             closed: false
         id: activite_2
@@ -53,5 +53,14 @@ dispenser_data:
             nombrepremiers3: 4
             pluspetitdiviseur: 0
             tempsdecalcul: 5
-        title: Activite 2
+        title: Activité 2
+    -   config:
+            closed: false
+        id: activit_3
+        rank: 2
+        tasks_list:
+            Ch5Act3exo1: 0
+            Ch5Act3exo2: 1
+            Ch5Act3exo3: 2
+        title: Activité 3
     title: Arithmétique – Boucle tant que – I

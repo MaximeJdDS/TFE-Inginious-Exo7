@@ -2,7 +2,20 @@ accessible: false
 author: MJdDS
 categories: []
 contact_url: ''
-context: ''
+context: |
+    Pierre de Fermat (∼1605–1665) pensait que tous les entiers
+    Fn = 2**(2n) + 1
+    étaient des nombres premiers. Effectivement F0 = 3, F1 = 5 et F2 = 17 sont des nombres premiers.
+    S’il avait connu Python il aurait sûrement changé d’avis ! Trouve le plus petit entier Fn qui n’est pas premier.
+
+    Indication :
+    Avec Python ``b puissance c``
+    s’écrit ``b ** c``
+    et donc ``a^(b^c)``
+    s’écrit ``a ** (b ** c)``.
+    On a amélioré notre fonction qui teste si un nombre est premier ou pas, cela nous permettra de tester plus vite plein de nombres ou bien des nombres très grands.
+
+    Vous pouvez donc appeler estpremier(n) qui vous renverra ``True`` si n est premier, ``False`` sinon.
 environment_id: default
 environment_parameters:
     limits:
@@ -20,10 +33,21 @@ network_grading: false
 problems:
     q1:
         type: code
-        name: ''
-        header: ''
+        name: Nombre de Fermat
+        header: |-
+            Premierement, complete la fonction F(n) qui exprimmmera le n_ieme nombre de Fermat.
+
+            Ensuite, complete la fonction contreExemple() qui retournera le premier nombre de Fermat qui ne sera pas premier.
         language: python
-        default: ''
+        default: |
+            def F(n):
+                Fermat = ...
+                return Fermat
+
+
+            def contreExemple():
+                i = 1
+                for(condition):
 stored_submissions: 0
 submission_limit:
     amount: -1
