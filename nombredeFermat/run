@@ -140,7 +140,7 @@ def run_code(n_exercises, lang):
     else:  # Tests failed
         if n_exercises == 1:
             feedback.set_global_result('failed')
-            feedback.set_global_feedback(_("It seems that you have made mistakes in your code…\n\n") + outerr + "\n")
+            feedback.set_global_feedback(_("Il semblerait qu\' il y a une erreur dans ton code...\n\n") + outerr + "\n")
         else:
             for i in range(0, n_exercises + 1):
                 regex = '@' + str(i) + '@: ((.+)(\n|\r){1})+'
