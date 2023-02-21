@@ -2,7 +2,8 @@ accessible: false
 author: ''
 categories: []
 contact_url: ''
-context: ''
+context: Compare les temps de calcul de tes différentes fonctions est_premier() en
+    répétant par exemple un million de fois l’appel est_premier(97).
 environment_id: default
 environment_parameters:
     limits:
@@ -21,9 +22,21 @@ problems:
     q1:
         type: code
         name: ''
-        header: ''
+        header: |-
+            Pour ce faire, on va avoir besoin que tu recherches tes anciens codes des 3 est_premierX(n).
+            Une fois ceci fait, on va exécuter 10 000 000 de fois tes fonctions pour voir le gain de temps que tes améliorations ont apporté.
+            Cet exercice ne fait que tester ton optimisation des 3 est_premier(n).
+            Si tu veux refaire ça chez toi, la ligne qui te permet de savoir combien de temps a pris l'execution de ta fonction se trouve dans le syllabus exo7 a la page 39.
         language: python
-        default: ''
+        default: |
+            def est_premier_1(n): #Remplace par ta fonction
+                return False
+
+            def est_premier_2(n): #Remplace par ta fonction
+                return False
+
+            def est_premier_3(n): #Remplace par ta fonction
+                return False
 stored_submissions: 0
 submission_limit:
     amount: -1

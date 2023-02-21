@@ -18,8 +18,8 @@ class TestPrime2(unittest.TestCase):
         ansNotPrime   = _("L\' entier {} n\'est pas premier. Pourtant ta fonction a retourné {}.")
         ansPrime      = _("L\' entier {} est premier. Pourtant ta fonction a retourné {}.")
         for i in range(len(a)):
-            stu_ans  = pair.est_premier3(a[i])
-            corr_ans = corr.est_premier3(a[i])
+            stu_ans  = pair.est_premier_3(a[i])
+            corr_ans = corr.est_premier_3(a[i])
             if(corr_ans): #Prime
                 self.assertEqual(corr_ans, stu_ans, ansPrime.format(a[i],stu_ans))
             else: #NotPrime

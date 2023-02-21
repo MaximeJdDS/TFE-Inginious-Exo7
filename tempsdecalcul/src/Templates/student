@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+import timeit
+temps1=-1
+temps2=-1
+temps3=-1
+
+@@q1@@ 
+
+
+def benchmark():
+    temps1 = timeit.timeit("est_premier_1(5000)",setup="from student import est_premier_1",number=10000000)
+    temps2 = timeit.timeit("est_premier_2(5000)",setup="from student import est_premier_2",number=10000000)
+    temps3 = timeit.timeit("est_premier_3(5000)",setup="from student import est_premier_3",number=10000000)
+    return temps1,temps2,temps3
+
+def fonction():
+    
+    return benchmark()
