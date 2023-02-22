@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+def est_premier(n):
+    d = 2
+    if(n%d == 0):
+            return False
+    d = d+1
+    while(d**2 <= n):
+        if(n%d == 0):
+            return False
+        d = d+2
+    return True
 
 def nombre_germain_apres(n):
     if(n%2 == 0): #even
@@ -15,5 +25,5 @@ def nombre_germain_apres(n):
             i = i+2
     return i
 
-def fonction():
-    return fonction()
+def fonction(n):
+    return nombre_germain_apres(n)
