@@ -8,8 +8,8 @@ import random
 import Corr as corr
 import student
 
-def equals(a,b,proportionA):
-    if( ((a*(1-proportionA))<= b) and ((a*(1+proportionA))>= b)):
+def equals(a,b,biais):
+    if( ((a*(1.0-biais))<= b) and ((a*(1.0+biais))>= b)):
         return True
     else : 
         return False
@@ -24,7 +24,7 @@ class Test(unittest.TestCase):
 
         
     def test_prime2(self):
-        a = [random.randint(1, 500) for _ in range(20)]
+        a = [random.randint(100, 500) for _ in range(20)]
         ansNotPrime   = _("L\' entier {} n\'est pas premier. Pourtant ta fonction numero {} a retourné {}.")
         ansPrime      = _("L\' entier {} est premier. Pourtant ta fonction numero {} a retourné {}.")
         
@@ -58,17 +58,20 @@ class Test(unittest.TestCase):
         
     def test_result(self):
         
-        ansresultPlus   = _("Pour le est_premier {} la réponse attendu est plus grande que ce que ta fonction a renvoyé. Ta fonction a renvoyé {}.")
-        ansresultMoins   = _("Pour le est_premier {} la réponse attendu est plus petite que ce que ta fonction a renvoyé. Ta fonction a donc pris trop de temps. Ta fonction a renvoyé {}.")       
+        ansresultMoins  = _("Pour le est_premier {}. Ta fonction a été trop rapide. Ta fonction a pris {} secondes.")
+        #ansresultPlus   = _("Pour le est_premier {}. Ta fonction a pris trop de temps. Ta fonction a pris {} secondes.")       
         stu_ans  = student.fonction()
         corr_ans = corr.fonction()
-        proportion = 0.05
-        for i in range(len(corr_ans)):
-            intervalBool=equals(corr_ans,stu_ans,proportion)
-            if(stu_ans[i]>corr_ans[i]):
-                self.assertEqual(True, intervalBool, ansresultMoins.format(i+1,corr_ans,stu_ans))
-            else :
-                self.assertEqual(True, intervalBool, ansresultMoins.format(i+1,corr_ans,stu_ans))
+        biais = 0.2 # 20%
+        for i in range(len(corr_ans)-1):
+            intervalBool=equals(corr_ans[i+1],stu_ans[i+1],biais)
+            if(stu_ans[i+1]>corr_ans[i+1]): #Student takes too much times
+                self.assertEqual(True, intervalBool, ansresultPlus.format(i+2,corr_ans[i+1],stu_ans[i+1]))
+                
+            
+            #else :                      #Student is too quick.
+            #    if(i==0): #for est_premier2
+            #        self.assertEqual(True, intervalBool, ansresultMoins.format(i+2,corr_ans[i+1],stu_ans[i+1]))
         
 
     

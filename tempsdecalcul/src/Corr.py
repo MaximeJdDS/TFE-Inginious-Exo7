@@ -32,9 +32,9 @@ def est_premier_3(n):
     return True
 
 def benchmark():
-    temps1 = timeit.timeit("est_premier_1(5000)",setup="from student import est_premier_1",number=10000000)
-    temps2 = timeit.timeit("est_premier_2(5000)",setup="from student import est_premier_2",number=10000000)
-    temps3 = timeit.timeit("est_premier_3(5000)",setup="from student import est_premier_3",number=10000000)
+    temps1 = timeit.timeit("est_premier_1(101)",setup="from Corr import est_premier_1",number=100000)
+    temps2 = timeit.timeit("est_premier_2(101)",setup="from Corr import est_premier_2",number=100000)
+    temps3 = timeit.timeit("est_premier_3(101)",setup="from Corr import est_premier_3",number=100000)
     return temps1,temps2,temps3
 
 
