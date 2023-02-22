@@ -1,21 +1,34 @@
-accessible: false
-author: ''
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
-context: |-
-    Deux nombres premiers p et p + 2 sont appelés nombres premiers jumeaux. Écris une fonction
-    nombres_jumeaux_apres(n) qui renvoie le premier couple p, p+2 de nombres premiers jumeaux,
-    avec p > n.
-environment_id: mcq
-environment_parameters: {}
-environment_type: mcq
+context: Deux nombres premiers ``p`` et ``p`` + 2 sont appelés nombres premiers jumeaux.
+    Écris une fonction ``nombres_jumeaux_apres(n)`` qui renvoie ``p`` tel que ``p``
+    et ``p``+2 soient des nombres premiers jumeaux, avec ``p`` > ``n``.
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
 evaluate: best
 file: ''
 groups: false
 input_random: 0
 name: Nombres Premiers Jumeaux
 network_grading: false
-problems: {}
+problems:
+    q1:
+        type: code
+        name: Nombres premiers jumeaux
+        header: 'Comme pour l''exercice précédent, tu as accès à ``est_premier(n)``. '
+        language: python
+        default: |-
+            def nombres_jumeaux_apres(n):
+
+                return -1
 stored_submissions: 0
 submission_limit:
     amount: -1

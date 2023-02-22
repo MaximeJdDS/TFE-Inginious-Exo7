@@ -1,23 +1,33 @@
-accessible: false
-author: ''
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
-context: |-
-    Un entier p est un nombre premier de Germain si p et 2p + 1 sont des nombres premiers. Écris une
-    fonction nombre_germain_apres(n) qui renvoie le couple p, 2p + 1 où p est le premier nombre
-    premier de Germain p > n.
-    Par exemple, le premier nombre premier de Germain après n = 60 est p = 83 avec 2p + 1 = 167.
-    Quel est le premier nombre premier de Germain après n = 100 000 ?
-environment_id: mcq
-environment_parameters: {}
-environment_type: mcq
+context: |
+    Un entier ``p`` est un nombre premier de Germain si ``p`` et ``2p + 1`` sont des nombres premiers. Écris une fonction ``nombre_germain_apres(n)`` qui renvoie le couple ``p``, ``2p + 1`` où ``p`` est le premier nombre premier de Germain ``p > n``.
+    Par exemple, le premier nombre premier de Germain après ``n`` = 60 est ``p`` = 83 avec ``2p + 1`` = 167.
+environment_id: default
+environment_parameters:
+    limits:
+        time: '5'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
 evaluate: best
 file: ''
 groups: false
 input_random: 0
 name: Nombre Premier de Germain
 network_grading: false
-problems: {}
+problems:
+    q1:
+        type: code
+        name: Nombres premiers Germain
+        header: Tu as accès à ``est_premier(n)``, profites en.
+        language: python
+        default: |-
+            def nombre_germain_apres(n):
+                return -1
 stored_submissions: 0
 submission_limit:
     amount: -1
