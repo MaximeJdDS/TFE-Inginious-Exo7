@@ -1,0 +1,45 @@
+_id: 63f0aba0e00d779b8b15b3d7
+archive: 63f0aba3e00d779b8b15b3d8
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '39'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-02-18 11:42:40.929535'
+    '@username': Mava
+    q1: |-
+        def F(n):
+            Fermat = 2**(2**n) + 1
+            return Fermat
+
+
+        def contreExemple():
+            i = 1
+            result = F(i)
+            while (estpremier(result)):
+                i=i+1
+                result = F(i)
+            return result
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 4 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-02-18 11:42:40.929000
+taskid: nombredeFermat
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:d903:61a:8ee6:fe39
+username:
+- Mava

@@ -1,0 +1,45 @@
+_id: 63f5edc66ea3d68d12432c51
+archive: 63f5edc96ea3d68d12432c52
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '4'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-02-22 11:26:14.901407'
+    '@username': Mava
+    q1: |-
+        def nombres_jumeaux_apres(n):
+            if(n%2 == 0): #even
+                i=n+1
+            else :        #odd
+                i=n+2
+            found = False
+            while(not(found)):
+                if(est_premier(i) and est_premier(i+2)):
+                    found = True
+                else:
+                    i = i+2
+            return i
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.002s
+
+    OK
+
+submitted_on: 2023-02-22 11:26:14.901000
+taskid: Ch5Act3exo2
+tests: {}
+text: ''
+user_ip: 95.182.210.61
+username:
+- Mava

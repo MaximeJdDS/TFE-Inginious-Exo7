@@ -1,0 +1,37 @@
+_id: 63961a962b4eb9cd851683f4
+archive: 63961a982b4eb9cd851683f5
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '2'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2022-12-11 18:59:50.228725'
+    '@username': Mava
+    q1: |-
+        q = a//b
+        r = a%b
+        reste   = 0 <= r < b
+        egalite = a == b*q + r
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2022-12-11 18:59:50.228000
+taskid: q1
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:88c9:d52c:66ed:809
+username:
+- Mava
