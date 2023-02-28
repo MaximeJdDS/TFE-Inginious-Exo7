@@ -1,13 +1,13 @@
-accessible: false
+accessible: true
 author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
 context: |-
-    Améliore ta fonction en une fonction est_premier_2(n) qui ne teste pas tous les diviseurs d jusqu’à n, mais seulement jusqu’à ``racine carre de n``.
+    Améliore ta fonction en une fonction ``est_premier_2(n)`` qui ne teste pas tous les diviseurs ``d`` jusqu’à ``n``, mais seulement jusqu’à ``racine carre de n``.
     Explications.
-    • Par exemple pour tester si 101 est un nombre premier, il suffit de voir s’il admet des diviseurs parmi 2, 3, . . . , 10. Le gain est appréciable !
-    • Cette amélioration est due à la proposition suivante : si un entier n’est pas premier alors il admet un diviseurs d qui vérifie 2 <= d <= ``racine carre de n``.
-    • Au lieu de tester si d <= ``racine carre de n``, il est plus facile de tester d² <= n !
+    • Par exemple pour tester si 101 est un ``nombre premier``, il suffit de voir s’il admet des diviseurs parmi ``2, 3, . . . , 10``. Le gain est appréciable !
+    • Cette amélioration est due à la proposition suivante : si un entier n’est pas ``premier`` alors il admet un diviseurs ``d`` qui vérifie ``2 <= d <= racine carre de n``.
+    • Au lieu de tester si ``d <= racine carre de n``, il est plus facile de tester ``d² <= n`` !
 environment_id: default
 environment_parameters:
     limits:
@@ -30,12 +30,8 @@ problems:
         language: python
         default: |-
             def est_premier_2(n):
-                d = 2
-                while(d**2 <= n):
-                    if(n%d == 0):
-                        return False
-                    d = d+1
-                return True
+
+                return False
 stored_submissions: 0
 submission_limit:
     amount: -1

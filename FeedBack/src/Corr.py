@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+
 def est_pair(n):
-    pair = False 
-@    @q1@@ 
-    return pair
-    
+    return 0 == n%2
+
+def fonction():
+    return fonction()

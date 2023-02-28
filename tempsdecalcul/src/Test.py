@@ -58,8 +58,8 @@ class Test(unittest.TestCase):
         
     def test_result(self):
         
-        ansresultMoins  = _("Pour le est_premier {}. Ta fonction a été trop rapide. Ta fonction a pris {} secondes.")
-        #ansresultPlus   = _("Pour le est_premier {}. Ta fonction a pris trop de temps. Ta fonction a pris {} secondes.")       
+        #ansresultMoins  = _("Pour le est_premier {}. Ta fonction a été trop rapide. Ta fonction a pris {} secondes.")
+        ansresultPlus   = _("Pour le est_premier {}. Ta fonction a pris trop de temps. Ta fonction a pris {} secondes.")       
         stu_ans  = student.fonction()
         corr_ans = corr.fonction()
         biais = 0.2 # 20%

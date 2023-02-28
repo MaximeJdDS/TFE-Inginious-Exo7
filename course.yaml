@@ -5,6 +5,8 @@ admins:
 - Mava
 - mpiron
 - obonaventure
+- Alrq
+- alrq
 tutors: []
 groups_student_choice: false
 allow_unregister: true
@@ -22,8 +24,15 @@ task_dispenser: toc
 dispenser_data:
 -   config:
         closed: false
-    id: tasks-list
+    id: feedback
     rank: 0
+    tasks_list:
+        FeedBack: 0
+    title: FeedBack
+-   config:
+        closed: false
+    id: tasks-list
+    rank: 1
     tasks_list:
         SimpleMax: 1
         test01: 0
@@ -31,7 +40,7 @@ dispenser_data:
 -   config:
         closed: false
     id: new_section_1
-    rank: 1
+    rank: 2
     sections_list:
     -   config:
             closed: false
@@ -64,3 +73,44 @@ dispenser_data:
             Ch5Act3exo3: 2
         title: Activité 3
     title: Arithmétique – Boucle tant que – I
+-   config:
+        closed: false
+    id: new_section_2
+    rank: 3
+    sections_list:
+    -   config:
+            closed: false
+        id: new_section_3
+        rank: 0
+        tasks_list:
+            Ch6Act1exo1: 0
+            Ch6Act1exo2: 1
+            Ch6Act1exo3: 2
+            Ch6Act1exo4: 3
+            Ch6Act1exo5: 4
+        title: Activité 1 (Pluriels des mots)
+    -   config:
+            closed: false
+        id: new_section_4
+        rank: 1
+        tasks_list: {}
+        title: Activité 2
+    -   config:
+            closed: false
+        id: activit_3_1
+        rank: 2
+        tasks_list: {}
+        title: Activité 3
+    -   config:
+            closed: false
+        id: activit_4
+        rank: 3
+        tasks_list: {}
+        title: Activité 4
+    -   config:
+            closed: false
+        id: activit_5
+        rank: 4
+        tasks_list: {}
+        title: Activité 5
+    title: Chaînes de caractères – Analyse d’un texte

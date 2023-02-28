@@ -3,11 +3,11 @@ author: MJdDS
 categories: []
 contact_url: ''
 context: |
-    En informatique, on doit parfois déterminer si un nombre est pair ou impair. Pour rappel, 1, 3 et 5 sont des nombres impairs tandis que tous les multiples de 2 sont des nombres pairs (comme 0).
+    En informatique, on doit parfois déterminer si un nombre est ``pair`` ou ``impair``. Pour rappel, ``1``, ``3`` et ``5`` sont des nombres impairs tandis que tous les multiples de 2 sont des nombres pairs (``0`` y compris).
 
-    Rappelez-vous que python contient l’opérateur % qui permet de calculer le reste de la division entière entre deux nombres. Par exemple, en python l’expression 5 % 3 retourne la valeur 2 tandis que l’expression 12 % 3 retourne la valeur 0. En utilisant cet opérateur, vous devriez pouvoir facilement résoudre ce problème.
+    Rappelez-vous que python contient l’opérateur ``%`` qui permet de calculer le reste de la division entière entre deux nombres. Par exemple, en python l’expression ``5 % 3`` retourne la valeur ``2`` tandis que l’expression ``12 % 3`` retourne la valeur ``0``. En utilisant cet opérateur, vous devriez pouvoir facilement résoudre ce problème.
 
-    Votre code va recevoir la variable ``N`` qui contient un nombre à analyser. Vous devez ensuite écrire quelques lignes de python pour déterminer si cette variable contient un entier pair ou non. Stockez votre resultat dans la variable ``pair`` qui doit contenir soit ``True`` soit ``False``.
+    Votre code va recevoir la variable ``n`` qui contient un nombre à analyser. Vous devez ensuite écrire quelques lignes de python pour déterminer si cette variable contient un entier ``pair`` ou non. Stockez votre resultat dans la variable ``pair`` qui doit contenir soit ``True`` soit ``False``.
 environment_id: default
 environment_parameters:
     limits:
@@ -26,7 +26,10 @@ problems:
     q1:
         type: code
         name: ''
-        header: N = ...
+        header: Votre code va recevoir la variable ``n`` qui contient un nombre à
+            analyser. Vous devez ensuite écrire quelques lignes de python pour déterminer
+            si cette variable contient un entier ``pair`` ou non. Stockez votre resultat
+            dans la variable ``pair`` qui doit contenir soit ``True`` soit ``False``.
         language: python
         default: |-
             ...
