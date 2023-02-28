@@ -1,4 +1,42 @@
-accessible: false
-environment_type: mcq
-name: Ch6Act1exo2
-problems: {}
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |
+    Pour un mot, par exemple ``"souris"``, affiche la dernière lettre de cette chaîne (ici "s").
+
+    Améliore ton programme de la première question, en testant si la dernière lettre est déjà un ``"s"`` :
+
+    • si c’est le cas, il n’y a rien à faire pour le pluriel,
+
+    • sinon il faut ajouter un ``"s"``.
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: '"s" à la fin (suite)'
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implementaion
+        header: Ecris la fonction ``pluriel(mot)`` tel qu'elle renvoie le mot au pluriel
+            comme expliqué dans l'enoncée.
+        language: python
+        default: |-
+            def pluriel(mot):
+
+                return mot
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
