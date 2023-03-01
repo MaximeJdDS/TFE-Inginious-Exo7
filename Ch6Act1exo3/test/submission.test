@@ -1,0 +1,40 @@
+_id: 63fe1795180b0504a9bece1a
+archive: 63fe1797180b0504a9bece1b
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '1'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-02-28 16:02:45.195859'
+    '@username': Mava
+    q1: |
+        def pluriel(mot):
+            if(mot[len(mot)-1]=="s"):
+                return mot
+            if(mot[len(mot)-2:len(mot)]=="al"):
+                return mot[0:len(mot)-2] + "aux"
+            else:
+                return mot +"s"
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 4 tests in 0.001s
+
+    OK
+
+submitted_on: 2023-02-28 16:02:45.195000
+taskid: Ch6Act1exo3
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:88cd:7693:7757:2ca1
+username:
+- Mava

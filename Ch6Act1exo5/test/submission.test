@@ -1,0 +1,39 @@
+_id: 63ff2063180b0504a9bed5dd
+archive: 63ff2065180b0504a9bed5de
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '7'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-01 10:52:35.570303'
+    '@username': Mava
+    q1: |-
+        def affiche_conjugaison(verbe):
+            if(verbe[len(verbe)-2:len(verbe)]!="er"):
+                print("Ce n'est pas un verbe du premier groupe.")
+            else:
+                pp = verbe[0:len(verbe)-2] #participe passer
+                print("je "+pp+"e, tu "+pp+"es, il "+pp+"e, nous "+pp+"ons, vous "+pp+"ez, ils "+pp+"ent")
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 4 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-03-01 10:52:35.570000
+taskid: Ch6Act1exo5
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:88cd:7693:7757:2ca1
+username:
+- Mava

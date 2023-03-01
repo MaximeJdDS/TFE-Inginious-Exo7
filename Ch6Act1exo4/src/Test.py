@@ -11,7 +11,7 @@ import student
 
 class Test(unittest.TestCase):
     def test_exists(self):
-        self.assertTrue(hasattr(student, 'pluriel'), _("Tu n\'as pas defini la bonne fonction. La fonction 'pluriel' est introuvable."))
+        self.assertTrue(hasattr(student, 'met_au_pluriel'), _("Tu n\'as pas defini la bonne fonction. La fonction 'met_au_pluriel' est introuvable."))
 
     def test_result(self):
         a = ["chat","chien","motsTresTresLongPourVoirSiLeSVaBienALaFinDuMot","le"]
@@ -21,7 +21,13 @@ class Test(unittest.TestCase):
             corr_ans = corr.fonction(a[i])
             self.assertEqual(corr_ans, stu_ans, ansresult.format(a[i],corr_ans,stu_ans))
 
-    
+    def test_result_ending_by_s(self):
+        a = ["souris","fois","motsTresTresLongPourVoirSiLeSVaBienALaFinDuMotAlorsQuEnFaitIlSeFiniParUns","rictus"]
+        ansresult   = _("Pour le mot \"{}\" la réponse attendu est \"{}\" et ta fonction a renvoyé \"{}\".")
+        for i in range(len(a)):
+            stu_ans  = student.fonction(a[i])
+            corr_ans = corr.fonction(a[i])
+            self.assertEqual(corr_ans, stu_ans, ansresult.format(a[i],corr_ans,stu_ans))   
             
     def test_result_ending_by_al(self):
         a = ["Cheval","vassal","motsTresTresLongPourVoirSiLeSVaBienALaFinDuMotAlorsQuEnFaitIlSeFiniParUnal","abdominal","abyssal"]

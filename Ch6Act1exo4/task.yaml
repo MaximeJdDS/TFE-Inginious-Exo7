@@ -1,4 +1,49 @@
-accessible: false
-environment_type: mcq
-name: Ch6Act1exo4
-problems: {}
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |
+    Rassemble tout ton travail des trois premières questions dans une fonction ``met_au_pluriel()``.
+    La fonction n’affiche rien, mais renvoie le mot au pluriel.
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Pluriel des mots (synthèse)
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: met_au_pluriel(mot)
+        header: |
+            ``Usage`` : met_au_pluriel(mot)
+
+            ``Entrée`` : un mot (une chaîne de caractères)
+
+            ``Sortie`` : le pluriel du mot
+
+            Exemples :
+
+            • ``met_au_pluriel("chat")`` renvoie "chats"
+
+            • ``met_au_pluriel("souris")`` renvoie "souris"
+
+            • ``met_au_pluriel("cheval")`` renvoie "chevaux"
+        language: python
+        default: |-
+            def met_au_pluriel(mot):
+
+                return mot
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
