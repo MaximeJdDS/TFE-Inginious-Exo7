@@ -1,0 +1,42 @@
+_id: 63ff3451180b0504a9bed6be
+archive: 63ff3453180b0504a9bed6bf
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '2'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-01 12:17:37.656350'
+    '@username': Mava
+    q1: |-
+        def distance_hamming(mot1,mot2):
+            if(len(mot1)!=len(mot2)): return -1
+            i=0
+            count=0
+            while(i<len(mot1)):
+                if(mot1[i]!=mot2[i]):
+                    count=count+1
+                i=i+1
+            return count
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-03-01 12:17:37.656000
+taskid: Ch6Act2exo1
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:dc17:7efc:302c:d6f6
+username:
+- Mava
