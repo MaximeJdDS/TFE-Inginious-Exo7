@@ -1,0 +1,45 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |-
+    Écris une fonction ``verlan()`` qui renvoie un mot à l’envers :
+
+    ``SALUT`` devient ``TULAS``
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: verlan
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: verlan()
+        header: |-
+            ``Usage`` : verlan(mot)
+
+            ``Entrée`` : un mot (une chaîne de caractères)
+
+            ``Sortie`` : le mot à l’envers
+
+            ``Exemple`` : verlan(``"TOCARD"``) renvoie ``"DRACOT"``
+
+            _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+        language: python
+        default: |-
+            def verlan(mot):
+                return mot
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
