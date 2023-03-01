@@ -6,7 +6,7 @@ context: |-
     Programme une fonction est_divisible(a,b) qui teste si b divise a.
 
     La fonction renvoie True ou False.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

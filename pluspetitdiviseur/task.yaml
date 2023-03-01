@@ -23,7 +23,7 @@ context: |
     — Tant que ``d`` ne divise pas n alors, passe au candidat suivant (``d`` devient ``d`` + 1).
 
     — À la fin ``d`` est le plus petit diviseur de ``n`` (dans le pire des cas ``d = n``).
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '5'

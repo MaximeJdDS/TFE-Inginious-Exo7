@@ -1,5 +1,5 @@
 accessible: true
-author: ''
+author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
 context: |-
@@ -7,7 +7,7 @@ context: |-
     • Par exemple pour tester si n = 419 est un nombre premier, on teste d’abord si d = 2 divise n, puis d = 3 et ensuite d = 5, d = 7. . .
     • Cela permet de faire environ deux fois moins de tests !
     • Explications : si un nombre pair d divise n, alors on sait déjà que 2 divise n.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

@@ -1,0 +1,31 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: Ici, tu peux rediger un ``feedback`` a propos des autres exercices.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: FeebBack
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: ''
+        header: ''
+        language: python
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 0.0

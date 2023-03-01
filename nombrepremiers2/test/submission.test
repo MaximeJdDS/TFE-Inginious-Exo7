@@ -1,0 +1,40 @@
+_id: 63ff5146e00d779b8b160aea
+archive: 63ff5148e00d779b8b160aeb
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '5'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-01 14:21:10.243993'
+    '@username': Mava
+    q1: |-
+        def est_premier_2(n):
+            d = 2
+            while(d**2 <= n):
+                if(n%d == 0):
+                    return False
+                d = d+1
+            return True
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-03-01 14:21:10.243000
+taskid: nombrepremiers2
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:dc17:7efc:302c:d6f6
+username:
+- Mava

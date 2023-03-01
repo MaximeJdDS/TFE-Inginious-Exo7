@@ -1,0 +1,36 @@
+_id: 6380c5e1ba0d56c391af0942
+archive: 6380c5e4ba0d56c391af0943
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '3'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2022-11-25 14:40:49.979913'
+    '@username': Mava
+    q1: |-
+        d=2
+        while n%d !=0 :
+            d = d+1
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2022-11-25 14:40:49.979000
+taskid: pluspetitdiviseur
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:1828:7f49:f79c:603c
+username:
+- Mava

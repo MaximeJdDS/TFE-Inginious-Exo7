@@ -10,7 +10,7 @@ context: |-
     Note : On a prérempli la condition du ``while`` par ``and d <= n`` pour éviter que la machine parte trop loin dans les calculs et que tu puisse avoir un retour sur ton code en cas de pépin. Si ca te perturbe trop, oublie ce ``and d <= n`` et ne rempli que les ``...`` par ta condition. Si tu veux en apprendre plus sur cette instruction, ce paragraphe est fait pour toi!
 
     L'instruction ``while`` demande une condition qui doit être respectée pour continuer la boucle. Dans notre cas ici, on veut verifier non pas une mais deux choses. Ainsi, on va lier les 2 conditions par l'operateur ``and`` qui va renvoyer Vrai si et seulement si les 2 conditions sont Vrai aussi. A noter qu'il existe son copain ``or`` qui lui est plus cool, il renvoie Vrai si au moins un des deux sont Vrai.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

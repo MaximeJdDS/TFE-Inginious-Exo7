@@ -1,0 +1,38 @@
+_id: 6395ecc6ff5cdf27505f2f28
+archive: 6395ecc8ff5cdf27505f2f29
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '5'
+    '@email': murielle.piron@cndbs.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2022-12-11 15:44:22.334955'
+    '@username': mpiron
+    q1: |-
+        def est_divisible(a,b):
+            if(a%b==0):
+                return True
+            else :
+                return False
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2022-12-11 15:44:22.334000
+taskid: q2
+tests: {}
+text: ''
+user_ip: 2a01:e0a:5bd:7e10:c84:4975:1547:9005
+username:
+- mpiron

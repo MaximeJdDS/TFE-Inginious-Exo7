@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 def est_pair(n):
-    N = n
     pair = False 
 @    @q1@@ 
     return pair
