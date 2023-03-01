@@ -1,0 +1,54 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |
+    On transforme un mot commençant par une consonne selon la recette suivante :
+
+    • on déplace la ``première`` lettre à la fin du mot ;
+    • on rajoute le suffixe ``UM``.
+
+    Par exemple
+
+    ``VITRE`` devient ``ITREVUM``;
+
+    ``BLANCHE`` devient ``LANCHEBUM``;
+
+    ``CARAMEL`` devient ``ARAMELCUM``.
+
+    Les mots commençant par une ``voyelle`` ne changent pas. Écris une fonction ``latin_cochon(mot)`` qui transforme un mot selon ce procédé.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Latin-cochon
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: latin_cochon(mot)
+        header: |-
+            ``Usage`` : latin_cochon(mot)
+
+            ``Entrée`` : un mot (une chaîne de caractères)
+
+            ``Sortie`` : le mot transformé en latin-cochon, s’il commence par une consonne.
+
+            ``Exemple`` : latin_cochon(``"BONJOUR"``) renvoie ``"ONJOURBUM"``
+        language: python
+        default: |-
+            def latin_cochon(mot):
+                return mot
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
