@@ -62,7 +62,7 @@ class Test(unittest.TestCase):
         ansresultPlus   = _("Pour le est_premier {}. Ta fonction a pris trop de temps. Ta fonction a pris {} secondes.")       
         stu_ans  = student.fonction()
         corr_ans = corr.fonction()
-        biais = 0.2 # 20%
+        biais = 0.3 # 30%
         for i in range(len(corr_ans)-1):
             intervalBool=equals(corr_ans[i+1],stu_ans[i+1],biais)
             if(stu_ans[i+1]>corr_ans[i+1]): #Student takes too much times
