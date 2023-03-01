@@ -4,7 +4,7 @@ categories: []
 contact_url: ''
 context: Pour une chaîne mot, par exemple ``"chat"``, affiche le pluriel de ce mot
     en rajoutant un ``"s"``.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

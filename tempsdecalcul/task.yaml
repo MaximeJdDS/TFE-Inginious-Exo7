@@ -9,7 +9,7 @@ context: |+
 
     Si tu veux refaire ça chez toi, la ligne qui te permet de savoir combien de temps a pris l'execution de ta fonction se trouve dans le syllabus exo7 a la page 39.
 
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

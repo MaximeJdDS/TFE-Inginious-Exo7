@@ -8,7 +8,7 @@ context: |-
     • Par exemple pour tester si 101 est un ``nombre premier``, il suffit de voir s’il admet des diviseurs parmi ``2, 3, . . . , 10``. Le gain est appréciable !
     • Cette amélioration est due à la proposition suivante : si un entier n’est pas ``premier`` alors il admet un diviseurs ``d`` qui vérifie ``2 <= d <= racine carre de n``.
     • Au lieu de tester si ``d <= racine carre de n``, il est plus facile de tester ``d² <= n`` !
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

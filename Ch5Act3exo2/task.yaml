@@ -5,7 +5,7 @@ contact_url: ''
 context: Deux nombres premiers ``p`` et ``p`` + 2 sont appelés nombres premiers jumeaux.
     Écris une fonction ``nombres_jumeaux_apres(n)`` qui renvoie ``p`` tel que ``p``
     et ``p``+2 soient des nombres premiers jumeaux, avec ``p`` > ``n``.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

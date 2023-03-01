@@ -3,7 +3,7 @@ author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
 context: Ici, tu peux rediger un ``feedback`` a propos des autres exercices.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

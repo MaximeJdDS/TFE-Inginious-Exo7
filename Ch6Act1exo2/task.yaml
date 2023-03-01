@@ -10,7 +10,7 @@ context: |
     • si c’est le cas, il n’y a rien à faire pour le pluriel,
 
     • sinon il faut ajouter un ``"s"``.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

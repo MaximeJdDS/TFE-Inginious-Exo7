@@ -18,7 +18,7 @@ context: |
     On a amélioré notre fonction qui teste si un nombre est premier ou pas, cela nous permettra de tester plus vite plein de nombres ou bien des nombres très grands.
 
     Vous pouvez appeler ``estpremier(n)`` qui vous renverra ``True`` si n est premier, ``False`` sinon.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

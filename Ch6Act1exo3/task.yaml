@@ -13,7 +13,7 @@ context: |
     • ``mot[0:4]`` renvoie la sous-chaîne ``"vend"`` formée des caractères de rang 0, 1, 2 et 3 (mais pas 4),
 
     • ``mot[3:6]`` renvoie ``"dre"`` correspondant aux rangs 3, 4 et 5.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

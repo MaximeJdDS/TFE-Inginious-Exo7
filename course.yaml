@@ -93,7 +93,8 @@ dispenser_data:
             closed: false
         id: new_section_4
         rank: 1
-        tasks_list: {}
+        tasks_list:
+            Ch6Act2exo1: 0
         title: Activité 2
     -   config:
             closed: false

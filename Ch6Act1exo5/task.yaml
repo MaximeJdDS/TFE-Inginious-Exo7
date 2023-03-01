@@ -4,7 +4,7 @@ categories: []
 contact_url: ''
 context: Écris une fonction affiche_conjugaison() qui conjugue un verbe du premier
     groupe au présent.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'

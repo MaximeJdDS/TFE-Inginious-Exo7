@@ -5,7 +5,7 @@ contact_url: ''
 context: |
     Rassemble tout ton travail des trois premières questions dans une fonction ``met_au_pluriel()``.
     La fonction n’affiche rien, mais renvoie le mot au pluriel.
-environment_id: default
+environment_id: pyjavacpp
 environment_parameters:
     limits:
         time: '30'
