@@ -35,6 +35,8 @@ dispenser_data:
     rank: 1
     tasks_list:
         SimpleMax: 1
+        intro1: 2
+        intro2: 3
         test01: 0
     title: Liste des exercices
 -   config:
@@ -95,19 +97,24 @@ dispenser_data:
         rank: 1
         tasks_list:
             Ch6Act2exo1: 0
-        title: Activité 2
+            Ch6Act2exo2: 1
+            Ch6Act2exo3: 2
+            Ch6Act2exo4: 3
+        title: Activité 2 (Jeux de mots)
     -   config:
             closed: false
         id: activit_3_1
         rank: 2
-        tasks_list: {}
-        title: Activité 3
+        tasks_list:
+            Ch6Act3exo1: 0
+            Ch6Act3exo2: 1
+        title: Activité 3 (ADN)
     -   config:
             closed: false
         id: activit_4
         rank: 3
         tasks_list: {}
-        title: Activité 4
+        title: Activité 4  (Majuscules/minuscules)
     -   config:
             closed: false
         id: activit_5

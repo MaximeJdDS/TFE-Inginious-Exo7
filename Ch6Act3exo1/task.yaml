@@ -1,0 +1,41 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: Écris une fonction ``presence_de_A()`` qui teste si une séquence contient
+    le nucléotide ``A``.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Presence de A
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: presence_de_A()
+        header: |-
+            ``Usage`` : presence_de_A(sequence)
+
+            ``Entrée`` : une séquence d’ADN (une chaîne de caractères parmi A, C, T, G)
+
+            ``Sortie`` : « vrai » si la séquence contient « A », « faux » sinon.
+
+            ``Exemple`` : presence_de_A(``"CTTGCT"``) renvoie False
+        language: python
+        default: |-
+            def presence_de_A(sequence):
+                return False
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

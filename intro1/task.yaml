@@ -1,0 +1,40 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |-
+    On aimerai ecrire un bout de code qui double la valeur contenu dans ``n``.
+
+    Comment pourrai t'on ecricre cela sachant que faire fois, en python, s'ecrit avec ``*`` ?
+
+
+
+    max
+    double
+    aire d'un rectangle
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Un c'est bien, deux c'est mieux!
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implementaion
+        header: ''
+        language: python
+        default: n = ?
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

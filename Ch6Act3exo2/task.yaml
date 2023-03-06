@@ -1,0 +1,51 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: Écris une fonction ``position_de_AT()`` qui teste si une séquence contient
+    le nucléotide ``A`` suivi du nucléotide ``T`` et renvoie la position de la première
+    occurrence trouvée.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Position de AT
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: position_de_AT()
+        header: |-
+            ``Usage`` : position_de_AT(sequence)
+
+            ``Entrée`` : une séquence d’ADN (une chaîne de caractères parmi A, C, T, G)
+
+            ``Sortie`` : la position de la première séquence « AT » trouvée (commence à 0) ; ``None`` si n’apparaît pas.
+
+            ``Exemple`` :
+
+            • position_de_AT(``"CTTATGCT"``) renvoie ``3``
+
+            • position_de_AT(``"GATATAT"``) renvoie ``1``
+
+            • position_de_AT(``"GACCGTA"``) renvoie ``None``
+
+            Note: ``None`` est affecté à une variable pour signifier l’absence de valeur. Il suffit donc d'écrire ``variable = None``.
+        language: python
+        default: |-
+            def position_de_AT(adn):
+
+                return None
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

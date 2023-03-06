@@ -1,0 +1,44 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |-
+    Déduis-en une fonction qui teste si un mot est un palindrome ou pas. Un palindrome est un mot qui s’écrit indifféremment de gauche à droite ou de droite à gauche ;
+
+    Par exemple ``RADAR`` est un palindrome.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Palindrome
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: est_un_palindrome()
+        header: |-
+            ``Usage`` : est_un_palindrome(mot)
+
+            ``Entrée`` : un mot (une chaîne de caractères)
+
+            ``Sortie`` : « vrai / ``True`` » si le mot est un palindrome, « faux / ``False`` » sinon.
+
+            ``Exemple`` : est_un_palindrome(``"KAYAK"``) renvoie ``True``
+        language: python
+        default: |-
+            def est_un_palindrome(mot):
+
+                return False
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

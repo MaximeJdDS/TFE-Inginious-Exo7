@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def double(n):
+@    @q1@@ 
+    return n
+    
+def fonction(n):
+	return double(n)

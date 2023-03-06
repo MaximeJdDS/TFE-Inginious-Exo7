@@ -40,7 +40,7 @@ evaluate: best
 file: ''
 groups: false
 input_random: 0
-name: Quotient, reste, divisibilité (feedback insuffisant)
+name: Quotient, reste, divisibilité
 network_grading: false
 problems:
     q1:
