@@ -1,0 +1,41 @@
+_id: 641dbbf9416f325fcdd70ada
+archive: 641dbbfb416f325fcdd70adb
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '7'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-24 16:04:25.507497'
+    '@username': Mava
+    q1: |
+        for c in range(10):
+                for d in range(10):
+                    for u in range(10):
+                        n = 100*c + 10*d + u
+                        if(u==3):
+                            if(c+d+u >= 15):
+                                if(d%2==0):
+                                    sac.append(n)
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.001s
+
+    OK
+
+submitted_on: 2023-03-24 16:04:25.507000
+taskid: Ch3Act3exo2
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:4d91:1887:c5d2:a70e
+username:
+- Mava

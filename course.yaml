@@ -1,12 +1,17 @@
 accessible: true
 name: exo7
-description: ''
+description: |-
+    Ce cours est une série d'exercices tirés de l'excellent syllabus `exo7 <http://exo7.emath.fr/cours/livre-python1.pdf>`_ . Ainsi, si vous voulez apprendre le langage Python, je vous conseille d'avoir ce syllabus à côté de vous et de ne pas hésiter à relire les sections ``cours`` qui précèdent ces exercices.
+
+    Le but de ce cours est donc bien d'offrir une version automatisée de certains exercices, pas tous. On vous invite donc à faire des exercices supplémentaires qui sont dans le syllabus mais pas ici afin de parfaire votre maîtrise du Python.
+
+    Bon apprentissage !
 admins:
+- Alrq
 - Mava
+- alrq
 - mpiron
 - obonaventure
-- Alrq
-- alrq
 tutors: []
 groups_student_choice: false
 allow_unregister: true
@@ -41,8 +46,41 @@ dispenser_data:
     title: Liste des exercices
 -   config:
         closed: false
-    id: new_section_1
+    id: new_section_5
     rank: 2
+    sections_list:
+    -   config:
+            closed: false
+        id: activit_1
+        rank: 0
+        tasks_list:
+            Ch3Act1exo1: 0
+        title: Activité 1
+    -   config:
+            closed: false
+        id: activit_3_2
+        rank: 1
+        tasks_list:
+            Ch3Act3exo1: 0
+            Ch3Act3exo2: 1
+        title: Activité 3
+    title: Si ... alors ...
+-   config:
+        closed: false
+    id: fonctions
+    rank: 3
+    sections_list:
+    -   config:
+            closed: false
+        id: activit_1_1
+        rank: 0
+        tasks_list: {}
+        title: Activité 1
+    title: Fonctions
+-   config:
+        closed: false
+    id: new_section_1
+    rank: 4
     sections_list:
     -   config:
             closed: false
@@ -78,7 +116,7 @@ dispenser_data:
 -   config:
         closed: false
     id: new_section_2
-    rank: 3
+    rank: 5
     sections_list:
     -   config:
             closed: false
@@ -122,3 +160,19 @@ dispenser_data:
         tasks_list: {}
         title: Activité 5
     title: Chaînes de caractères – Analyse d’un texte
+tags:
+    exist:
+        name: exist
+        description: the function asked is not defined
+        type: 0
+        visible: false
+    overflow:
+        name: overflow
+        description: Out of Memory
+        type: 2
+        visible: false
+    timeout:
+        name: timeout
+        description: program take too much time.
+        type: 2
+        visible: false

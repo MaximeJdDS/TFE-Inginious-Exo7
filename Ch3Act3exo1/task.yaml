@@ -1,0 +1,43 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |-
+    Le programme suivant affiche tous les entiers de 0 à 99. Comprends ce programme.
+
+    .. code-block:: python
+
+        for d in range(10):
+            for u in range(10):
+                n = 10*d + u
+                print(n)
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: 'QCM : Chiffre d''un nombre'
+network_grading: false
+problems:
+    q1:
+        type: multiple_choice
+        name: ''
+        header: Que représentent les variables ``u`` et ``d`` ?
+        limit: 0
+        choices:
+        -   text: '``u`` représente les unités tandis que ``d`` représente les dizaines.'
+            feedback: Exact!
+            valid: true
+        -   text: '``d`` représente les unités tandis que ``u`` représente les dizaines.'
+            feedback: Ça ne peut pas être la bonne réponse. Si ``d`` représentent
+                les unités, alors pourquoi le multiplierions par 10 et pas ``u`` ?
+        -   text: ils représentent des entiers aléatoires.
+            feedback: Leurs valeurs représentent bien des entiers mais ils ne sont
+                pas du tout aléatoire.
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

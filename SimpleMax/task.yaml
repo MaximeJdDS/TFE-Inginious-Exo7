@@ -1,6 +1,9 @@
 accessible: false
 author: MJdDS
-categories: []
+categories:
+- overflow
+- timeout
+- exist
 contact_url: ''
 context: |-
     Ecrivez l'en-tête et le corps d'une fonction baptisée ``afficheMax`` qui prend deux nombres entiers comme arguments et affiche le plus grand de ces nombres. La spécification de cette fonction est :

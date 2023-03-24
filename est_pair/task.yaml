@@ -31,9 +31,7 @@ problems:
             si cette variable contient un entier ``pair`` ou non. Stockez votre resultat
             dans la variable ``pair`` qui doit contenir soit ``True`` soit ``False``.
         language: python
-        default: |-
-            ...
-            pair = ...
+        default: pair = ...
 stored_submissions: 5
 submission_limit:
     amount: -1

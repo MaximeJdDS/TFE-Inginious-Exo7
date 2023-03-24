@@ -2,16 +2,12 @@ accessible: true
 author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
-context: |-
+context: |+
     On aimerai ecrire un bout de code qui double la valeur contenu dans ``n``.
 
-    Comment pourrai t'on ecricre cela sachant que faire fois, en python, s'ecrit avec ``*`` ?
+    Comment pourrait-on ecricre cela sachant que faire fois, en python, s'ecrit avec ``*`` ?
 
 
-
-    max
-    double
-    aire d'un rectangle
 environment_id: pyjavacpp
 environment_parameters:
     limits:
