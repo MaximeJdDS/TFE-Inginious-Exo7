@@ -64,7 +64,7 @@ def compile_code():
     if out_student != "":
         rawhtml = rst.get_codeblock("", out_student)
         feedback.set_global_result('failed')
-        feedback.set_global_feedback(_("Your program does not compile: \n ") + rawhtml + "\n")
+        feedback.set_global_feedback(_("Ton programme ne compile pas: \n ") + rawhtml + "\n")
         sys.exit(0)
 
     with open('logTests.out', 'w+', encoding="utf-8") as f:
@@ -135,14 +135,12 @@ def run_code(n_exercises, lang):
         feedback.set_global_result('success')
     elif result == 252:
         feedback.set_global_result('overflow')
-        feedback.set_tag("overflow", True)       
     elif result == 253:
         feedback.set_global_result('timeout')
-        feedback.set_tag("timeout", True)       
     else:  # Tests failed
         if n_exercises == 1:
             feedback.set_global_result('failed')
-            feedback.set_global_feedback(_("It seems that you have made mistakes in your code…\n\n") + outerr + "\n")
+            feedback.set_global_feedback(_("Il semblerait qu'il y ait des erreurs dans ton code…\n\n") + outerr + "\n")
         else:
             for i in range(0, n_exercises + 1):
                 regex = '@' + str(i) + '@: ((.+)(\n|\r){1})+'
@@ -162,7 +160,7 @@ def run_code(n_exercises, lang):
                         feed = _("You have made mistakes: \n\n") + rst.get_codeblock("python", outerr_question) + "\n"
                         feedback.set_problem_feedback(feed, "q" + str(i))
                     else:
-                        feedback.set_problem_feedback(_("You answered well this question"), "q" + str(i))
+                        feedback.set_problem_feedback(_("Tu as bien répondu à cette question"), "q" + str(i))
                         feedback.set_problem_result('success', "q" + str(i))
 
 
