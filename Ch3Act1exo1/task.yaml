@@ -46,7 +46,7 @@ problems:
 
             print("Bravo")
 
-            printf("Perdu, la réponse était",a*b)
+            print("Perdu, la réponse était",a*b)
 stored_submissions: 0
 submission_limit:
     amount: -1

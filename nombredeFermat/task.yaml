@@ -5,16 +5,14 @@ contact_url: ''
 context: |
     Pierre de Fermat (∼1605–1665) pensait que tous les entiers
 
-    Fn = 2^(2n) + 1
+    Fn = 2^(2^n) + 1
 
     étaient des nombres premiers. Effectivement F0 = 3, F1 = 5 et F2 = 17 sont des nombres premiers.
     S’il avait connu Python il aurait sûrement changé d’avis ! Trouve le plus petit entier Fn qui n’est pas premier.
 
     Indication :
-    Avec Python ``b puissance c``
-    s’écrit ``b ** c``
-    et donc ``a^(b^c)``
-    s’écrit ``a ** (b ** c)``.
+
+    Avec Python ``b puissance c`` s’écrit ``b ** c`` et donc ``a^(b^c)`` s’écrit ``a ** (b ** c)``.
     On a amélioré notre fonction qui teste si un nombre est premier ou pas, cela nous permettra de tester plus vite plein de nombres ou bien des nombres très grands.
 
     Vous pouvez appeler ``estpremier(n)`` qui vous renverra ``True`` si n est premier, ``False`` sinon.
@@ -37,22 +35,22 @@ problems:
         type: code
         name: Nombre de Fermat
         header: |-
-            Premierement, complete la fonction F(n) qui exprimmmera le n_ieme nombre de Fermat.
+            Premierement, complete la fonction ``F(n)`` qui exprimmmera le n_ieme nombre de Fermat.
 
-            Ensuite, complete la fonction contreExemple() qui retournera le premier nombre de Fermat qui ne sera pas premier.
+            Ensuite, complete la fonction ``contreExemple()`` qui retournera le premier nombre de Fermat qui ne sera pas premier.
 
-            On test la premiere fonction, puis la seconde. Ainsi, si tu as un message d'erreur sur contreExemple(), c'est que ta fonction F(n) est correct ;) .
+            On test la premiere fonction, puis la seconde. Ainsi, si tu as un message d'erreur sur ``contreExemple()``, c'est que ta fonction ``F(n)`` est correct ;) .
         language: python
         default: |-
             def F(n):
-                Fermat = 2  #a completer
+                Fermat = 2  #à compléter
                 return Fermat
 
 
             def contreExemple():
                 i = 1
                 result = F(i)
-                while (False):  #complete la condition en remplaceant False
+                while (False):  #compléter la condition en remplaçant False
                     i=i+1
                     result = F(i)
                 return result

@@ -3,13 +3,13 @@ author: MJdDS
 categories: []
 contact_url: ''
 context: |-
-    On va continuer de jouer avec notre boucle ``while`` pour cette fois-ci verifier qu'un nombre est un nombre premier. Pour rappel, un nombre est dit premier s'il se divise uniquement par 1 et lui même. Ainsi, 2,3,5,7,11 et 13 sont les 6 premiers nombres premiers.
+    On va continuer de jouer avec notre boucle ``while`` pour cette fois, vérifier qu'un nombre est un nombre premier. Pour rappel, un nombre est dit premier s'il est divisible uniquement par 1 et lui même. Ainsi, 2,3,5,7,11 et 13 sont les 6 premiers nombres premiers.
 
-    Pour cette exercice, essaye de modifier ta solution de l'exercice précédent pour retourner ``True`` si ``n`` est un nombre premier et ``False`` sinon.
+    Pour cet exercice, essaie de modifier ta solution de l'exercice précédent pour retourner ``True`` si ``n`` est un nombre premier et ``False`` sinon.
 
-    Note : On a prérempli la condition du ``while`` par ``and d <= n`` pour éviter que la machine parte trop loin dans les calculs et que tu puisse avoir un retour sur ton code en cas de pépin. Si ca te perturbe trop, oublie ce ``and d <= n`` et ne rempli que les ``...`` par ta condition. Si tu veux en apprendre plus sur cette instruction, ce paragraphe est fait pour toi!
+    Note : On a prérempli la condition du ``while`` par ``and d <= n`` pour éviter que la machine parte trop loin dans les calculs et que tu puisse avoir un retour sur ton code en cas de pépin. Si ça te perturbe trop, oublie ce ``and d <= n`` et ne rempli que les ``...`` par ta condition. Si tu veux en apprendre plus sur cette instruction, ce paragraphe est fait pour toi!
 
-    L'instruction ``while`` demande une condition qui doit être respectée pour continuer la boucle. Dans notre cas ici, on veut verifier non pas une mais deux choses. Ainsi, on va lier les 2 conditions par l'operateur ``and`` qui va renvoyer Vrai si et seulement si les 2 conditions sont Vrai aussi. A noter qu'il existe son copain ``or`` qui lui est plus cool, il renvoie Vrai si au moins un des deux sont Vrai.
+    L'instruction ``while`` demande une condition qui doit être respectée pour continuer la boucle. Dans notre cas ici, on veut verifier non pas une mais deux choses. Ainsi, on va lier les 2 conditions par l'operateur ``and`` qui va renvoyer Vrai si et seulement si les 2 conditions sont Vraies aussi.
 environment_id: pyjavacpp
 environment_parameters:
     limits:

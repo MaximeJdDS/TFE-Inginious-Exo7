@@ -3,7 +3,7 @@ author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
 context: |-
-    On aimerait calculer l'aire d'un rectangle dont on connait la ``longueur`` et la ``largeur``. Ces 2 valeurs sont stockées dans ``longueur`` et ``largeur``.
+    On aimerait calculer l'aire d'un rectangle dont on connaît la ``longueur`` et la ``largeur``. Ces 2 valeurs sont stockées dans ``longueur`` et ``largeur``.
 
     Pour faire cela, on aimerait mettre le résultat dans ``aire``.
 environment_id: pyjavacpp

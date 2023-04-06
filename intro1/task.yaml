@@ -3,9 +3,9 @@ author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
 context: |+
-    On aimerai ecrire un bout de code qui double la valeur contenu dans ``n``.
+    On aimerait écrire un bout de code qui double la valeur contenue dans n.
 
-    Comment pourrait-on ecricre cela sachant que faire fois, en python, s'ecrit avec ``*`` ?
+    Comment pourrait-on écrire cela sachant que l'opérateur multiplication, en python, s'écrit avec * ?
 
 
 environment_id: pyjavacpp

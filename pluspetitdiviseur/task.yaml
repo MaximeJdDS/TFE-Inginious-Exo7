@@ -3,7 +3,7 @@ author: MJdDS
 categories: []
 contact_url: ''
 context: |
-    C'est ici que les choses deviennent ineressantes. On voudrait demander aux machines de faire quelque chose durant un temps determiné ou meme indeterminé. Pour ce faire on a plusieurs outils en python et la premiere qu'on va aborder sera ``while``. Il revient a dire en francais "tant que". Ainsi, on va pouvoir lui demander "tant que tu n'as pas trouvé, continue de chercher". Le plus compliqué maintenant va etre de bien expliquer ce qu'il doit chercher. Pour le while de python, il faut lui donner une condition qui retournera ``True`` (vrai) ou ``False`` (faux) et tant que la condition est vrai, il continuera sa boucle.
+    On va aborder l'opérateur ``while``. Il revient à dire en francais "tant que". Ainsi, on va pouvoir lui demander "tant que tu n'as pas trouvé, continue de chercher". Le plus compliqué maintenant va etre de bien expliquer ce qu'il doit chercher. Pour le ``while`` de python, il faut lui donner une condition qui retournera ``True`` (vrai) ou ``False`` (faux) et tant que la condition est vrai, il continuera sa boucle.
 
     Pour nous entrainer on va lui demander de trouver le plus petit diviseur d'un nombre.
 

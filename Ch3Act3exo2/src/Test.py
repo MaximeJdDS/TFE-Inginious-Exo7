@@ -17,7 +17,7 @@ class Test(unittest.TestCase):
     
 
     def test_result_Int(self):        
-        ansresult   = _("\nIl te manque au moins les éléments suivants :\n{} \nEt tu as mits en trop dans le sac au moins les éléments suivants:\n{} \n.")
+        ansresult   = _("\nIl te manque au moins les éléments suivants :\n{} \nEt tu as mis en trop dans le sac au moins les éléments suivants:\n{} \n.")
         stu_ans  = student.fonction()
         corr_ans = corr.fonction()
         lack,over = comparer_tableaux(corr_ans,stu_ans,3)

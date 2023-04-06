@@ -3,9 +3,9 @@ author: MJdDS
 categories: []
 contact_url: ''
 context: |-
-    Programme une fonction est_divisible(a,b) qui teste si b divise a.
+    Programme une fonction ``est_divisible(a,b)`` qui teste si ``b`` divise ``a``.
 
-    La fonction renvoie True ou False.
+    La fonction renvoie ``True`` ou ``False``.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -18,7 +18,7 @@ evaluate: best
 file: ''
 groups: false
 input_random: 0
-name: est divisible
+name: Est_divisible
 network_grading: false
 problems:
     q1:
