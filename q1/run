@@ -75,8 +75,8 @@ def compile_code():
     if out_tests != "":
         rawhtml = rst.get_codeblock("", out_tests)
         feedback.set_global_result('failed')
-        feedback.set_global_feedback(_("Le programme ne compile pas pour des raisons externes,"
-                                       "veuillez contacter un administrateur dès que possible: \n ") + rawhtml + "\n")
+        feedback.set_global_feedback(_("The program does not compile for external reasons,"
+                                       "please contact an administrator asap: \n ") + rawhtml + "\n")
         sys.exit(0)
 
     with open('logRunner.out', 'w+', encoding="utf-8") as f:
@@ -87,8 +87,8 @@ def compile_code():
     if out_runner != "":
         rawhtml = rst.get_codeblock("", out_runner)
         feedback.set_global_result('failed')
-        feedback.set_global_feedback(_("Le programme ne compile pas pour des raisons externes,"
-                                       "veuillez contacter un administrateur dès que possible: \n ") + rawhtml + "\n")
+        feedback.set_global_feedback(_("The program does not compile for external reasons,"
+                                       "please contact an administrator asap: \n ") + rawhtml + "\n")
         sys.exit(0)
 
 
@@ -101,7 +101,7 @@ def cleanup_output(error_content):
     cleaned_lines = []
     indexes = [match.start() for match in re.finditer('AssertionError: ', error_content)]
     for i in indexes:
-        cleaned_lines.append(_('Test échoué:\n'))
+        cleaned_lines.append(_('Failed test:\n'))
         cleaned_lines.append(error_content[i + len("AssertionError: "): error_content.find("=" * 70, i)])
     return ''.join(cleaned_lines) if len(indexes) > 0 else error_content
 
@@ -140,7 +140,7 @@ def run_code(n_exercises, lang):
     else:  # Tests failed
         if n_exercises == 1:
             feedback.set_global_result('failed')
-            feedback.set_global_feedback(_("Il semble que votre code contienne des erreurs…\n\n") + outerr + "\n")
+            feedback.set_global_feedback(_("Il semblerait que tu aies fait des erreurs dans ton code…\n\n") + outerr + "\n")
         else:
             for i in range(0, n_exercises + 1):
                 regex = '@' + str(i) + '@: ((.+)(\n|\r){1})+'
@@ -153,14 +153,14 @@ def run_code(n_exercises, lang):
                 if i == 0:
                     feedback.set_global_result('failed')
                     if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("python", outerr_question) + "\n"
+                        feed = _("You have made mistakes: \n\n") + rst.get_codeblock("python", outerr_question) + "\n"
                         feedback.set_global_feedback(feed)
                 else:
                     if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("python", outerr_question) + "\n"
+                        feed = _("You have made mistakes: \n\n") + rst.get_codeblock("python", outerr_question) + "\n"
                         feedback.set_problem_feedback(feed, "q" + str(i))
                     else:
-                        feedback.set_problem_feedback(_("Vous avez correctement répondu à cette question."), "q" + str(i))
+                        feedback.set_problem_feedback(_("tu as bien répondu à la question."), "q" + str(i))
                         feedback.set_problem_result('success', "q" + str(i))
 
 

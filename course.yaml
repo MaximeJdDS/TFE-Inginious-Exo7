@@ -5,6 +5,8 @@ description: |-
 
     Le but de ce cours est donc bien d'offrir une version automatisée de certains exercices, pas tous. On vous invite donc à faire des exercices supplémentaires qui sont dans le syllabus mais pas ici afin de parfaire votre maîtrise du Python.
 
+    Cette plateforme n'est pas destinée à être un IDE et/ou un débogueur Python. Ainsi, nous vous conseillons d'en utiliser un en parallèle d'Inginious afin de ne pas avoir à développer vos réponses mais seulement à les vérifier.
+
     Bon apprentissage !
 admins:
 - Alrq
@@ -39,11 +41,14 @@ dispenser_data:
     id: tasks-list
     rank: 1
     tasks_list:
+        Demo1: 4
+        Demo2: 5
+        Demo3: 6
         SimpleMax: 1
         intro1: 2
         intro2: 3
         test01: 0
-    title: Liste des exercices
+    title: Démonstration d'exercices
 -   config:
         closed: false
     id: new_section_5
@@ -74,7 +79,10 @@ dispenser_data:
             closed: false
         id: activit_1_1
         rank: 0
-        tasks_list: {}
+        tasks_list:
+            Ch4Act1exo1: 0
+            Ch4Act1exo2: 1
+            Ch4Act1exo3: 2
         title: Activité 1
     title: Fonctions
 -   config:

@@ -1,0 +1,42 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |-
+    Pour cette exercice, nous voulons que vous ``instanciez`` une variable nommée ``demo`` dans laquelle on va ``stocker`` le nombre 2.
+
+    Pour faire ça en python c'est très simple, il suffit de mettre le nom de la variable que vous voulez instancié suivi d'un symbole égal puis ce que vous voulez mettre dedans.
+
+
+    Petit exemple :
+
+    .. code-block:: python
+
+        NomDeVariable = 0
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Demo1
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: ''
+        header: À vous de jouer maintenant! Instanciez la variable ``demo`` dans laquelle
+            on veut avoir le nombre 2 qui y est stocké.
+        language: python
+        default: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
