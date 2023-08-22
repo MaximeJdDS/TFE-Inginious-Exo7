@@ -2,13 +2,14 @@ accessible: true
 author: Maxime Jacques de Dixmude Slavic
 categories: []
 contact_url: ''
-context: |+
+context: |-
     On va comparer les temps de calcul de tes différentes fonctions ``est_premier(n)`` en répétant 100 000 de fois l’appel ``est_premier(n)``.
 
     Pour ce faire, on va avoir besoin que tu recherches tes anciens codes des 3 est_premierX(n).
 
     Si tu veux refaire ça chez toi, la ligne qui te permet de savoir combien de temps a pris l'execution de ta fonction se trouve dans le syllabus exo7 a la page 39.
 
+    ``Attention`` : Pour le moment, les tests sont soumis à de l'aléatoire, il est donc possible qu'une bonne réponse se fasse rejectee et inversement.
 environment_id: pyjavacpp
 environment_parameters:
     limits:

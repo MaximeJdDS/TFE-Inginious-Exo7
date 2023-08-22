@@ -135,8 +135,10 @@ def run_code(n_exercises, lang):
         feedback.set_global_result('success')
     elif result == 252:
         feedback.set_global_result('overflow')
+        feedback.set_tag("overflow", True)       
     elif result == 253:
         feedback.set_global_result('timeout')
+        feedback.set_tag("timeout", True)       
     else:  # Tests failed
         if n_exercises == 1:
             feedback.set_global_result('failed')

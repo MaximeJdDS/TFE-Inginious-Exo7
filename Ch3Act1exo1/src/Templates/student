@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+
+def quizz(a,b,n):    
+@    @q1@@ 
+
+    
+def fonction(a,b,n):
+	quizz(a,b,n)

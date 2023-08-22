@@ -4,8 +4,8 @@
 def est_pair(n):
     N = n
     pair = False 
-#@    @q1@@ 
+
     return pair
     
-def fonction():
-	return fonction()
+def fonction(n):
+	return est_pair(n)

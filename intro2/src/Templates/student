@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+def aire(longueur,largeur):
+    aire = 0 
+@    @q1@@ 
+    return aire
+    
+def fonction(a,b):
+	return aire(a,b)

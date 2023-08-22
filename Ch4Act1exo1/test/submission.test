@@ -1,0 +1,35 @@
+_id: 64314691fb6b25edf2593c08
+archive: 64314693fb6b25edf2593c09
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '4'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-04-08 12:48:49.412466'
+    '@username': Mava
+    q1: |-
+        def Hello_World():
+            print("Hello World!")
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-04-08 12:48:49.412000
+taskid: Ch4Act1exo1
+tests: {}
+text: ''
+user_ip: 95.182.210.61
+username:
+- Mava

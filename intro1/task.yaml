@@ -1,0 +1,36 @@
+accessible: true
+author: Maxime Jacques de Dixmude Slavic
+categories: []
+contact_url: ''
+context: |+
+    On aimerait écrire un bout de code qui double la valeur contenue dans n.
+
+    Comment pourrait-on écrire cela sachant que l'opérateur multiplication, en python, s'écrit avec * ?
+
+
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: 0
+name: Un c'est bien, deux c'est mieux!
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implementaion
+        header: ''
+        language: python
+        default: n = ?
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

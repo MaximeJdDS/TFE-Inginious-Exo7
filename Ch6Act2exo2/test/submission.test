@@ -1,0 +1,39 @@
+_id: 63ff5ee9180b0504a9bed82c
+archive: 63ff5eec180b0504a9bed82d
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '3'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-01 15:19:21.986621'
+    '@username': Mava
+    q1: |-
+        def latin_cochon(s):
+            voyelles = ["a","i","e","u","y","o"]
+            if(s[0] not in voyelles):
+                return s[1:len(s)]+s[0]+"um"
+            else:
+                return s
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 3 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-03-01 15:19:21.986000
+taskid: Ch6Act2exo2
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:dc17:7efc:302c:d6f6
+username:
+- Mava

@@ -1,0 +1,37 @@
+_id: 641dab55416f325fcdd70a26
+archive: 641dab57416f325fcdd70a27
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '10'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-24 14:53:25.624133'
+    '@username': Mava
+    q1: |-
+        if(n == a*b):
+            print("Bravo")
+        else:
+            print("Perdu, la réponse était",a*b)
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.001s
+
+    OK
+
+submitted_on: 2023-03-24 14:53:25.624000
+taskid: Ch3Act1exo1
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:4d91:1887:c5d2:a70e
+username:
+- Mava
