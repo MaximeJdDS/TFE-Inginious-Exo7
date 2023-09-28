@@ -27,6 +27,7 @@ class TestSum(unittest.TestCase):
                 corr.sum(a[i], b[i])
                 corr_ans = out.getvalue()
             self.assertEqual(corr_ans, stu_ans, ans.format([a[i], b[i]], corr_ans, stu_ans))
+            #if(corr_ans != stu_ans): 
 
 
 if __name__ == '__main__':

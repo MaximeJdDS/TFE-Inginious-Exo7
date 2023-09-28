@@ -1,0 +1,159 @@
+admins:
+- Alrq
+- Mava
+- alrq
+- mpiron
+- obonaventure
+description: |-
+    Ce cours est une série d'exercices tirés de l'excellent syllabus `exo7 <http://exo7.emath.fr/cours/livre-python1.pdf>`_ . Ainsi, si vous voulez apprendre le langage Python, je vous conseille d'avoir ce syllabus à côté de vous et de ne pas hésiter à relire les sections ``cours`` qui précèdent ces exercices.
+
+    Le but de ce cours est donc bien d'offrir une version automatisée de certains exercices, pas tous. On vous invite donc à faire des exercices supplémentaires qui sont dans le syllabus mais pas ici afin de parfaire votre maîtrise du Python.
+
+    Cette plateforme n'est pas destinée à être un IDE et/ou un débogueur Python. Ainsi, nous vous conseillons d'en utiliser un en parallèle d'Inginious afin de ne pas avoir à développer vos réponses mais seulement à les vérifier.
+
+    Bon apprentissage !
+
+    PS : Ce cours est actuellement en cours de dévellopement, ainsi, si vous voyez des fautes, des incohérences ou autres qui vous trouble, n'hésitez pas à nous en faire part via l'exercice "FeedBack"
+dispenser_data:
+-   config:
+        closed: false
+    id: feedback
+    rank: 0
+    tasks_list:
+        FeedBack: 0
+    title: FeedBack
+-   config:
+        closed: false
+    id: tasks-list
+    rank: 1
+    tasks_list:
+        Demo1: 4
+        Demo2: 5
+        Demo3: 6
+        SimpleMax: 1
+        intro1: 2
+        intro2: 3
+        test01: 0
+    title: Démonstration d'exercices
+-   config:
+        closed: false
+    id: new_section_5
+    rank: 2
+    sections_list:
+    -   config:
+            closed: false
+        id: activit_1
+        rank: 0
+        tasks_list:
+            Ch3Act1exo1: 0
+        title: Activité 1
+    -   config:
+            closed: false
+        id: activit_3_2
+        rank: 1
+        tasks_list:
+            Ch3Act3exo1: 0
+            Ch3Act3exo2: 1
+        title: Activité 3
+    title: Si ... alors ...
+-   config:
+        closed: false
+    id: fonctions
+    rank: 3
+    sections_list:
+    -   config:
+            closed: false
+        id: activit_1_1
+        rank: 0
+        tasks_list:
+            Ch4Act1exo1: 0
+            Ch4Act1exo2: 1
+            Ch4Act1exo3: 2
+        title: Activité 1
+    title: Fonctions
+-   config:
+        closed: false
+    id: new_section_1
+    rank: 4
+    sections_list:
+    -   config:
+            closed: false
+        id: new_section
+        rank: 0
+        tasks_list:
+            est_pair: 0
+            q1: 2
+            q2: 1
+        title: Activité 1
+    -   config:
+            closed: false
+        id: activite_2
+        rank: 1
+        tasks_list:
+            nombredeFermat: 2
+            nombrepremier1: 1
+            nombrepremiers2: 3
+            nombrepremiers3: 4
+            pluspetitdiviseur: 0
+            tempsdecalcul: 5
+        title: Activité 2
+    -   config:
+            closed: false
+        id: activit_3
+        rank: 2
+        tasks_list:
+            Ch5Act3exo1: 0
+            Ch5Act3exo2: 1
+            Ch5Act3exo3: 2
+        title: Activité 3
+    title: Arithmétique – Boucle tant que – I
+-   config:
+        closed: false
+    id: new_section_2
+    rank: 5
+    sections_list:
+    -   config:
+            closed: false
+        id: new_section_3
+        rank: 0
+        tasks_list:
+            Ch6Act1exo1: 0
+            Ch6Act1exo2: 1
+            Ch6Act1exo3: 2
+            Ch6Act1exo4: 3
+            Ch6Act1exo5: 4
+        title: Activité 1 (Pluriels des mots)
+    -   config:
+            closed: false
+        id: new_section_4
+        rank: 1
+        tasks_list:
+            Ch6Act2exo1: 0
+            Ch6Act2exo2: 1
+            Ch6Act2exo3: 2
+            Ch6Act2exo4: 3
+        title: Activité 2 (Jeux de mots)
+    -   config:
+            closed: false
+        id: activit_3_1
+        rank: 2
+        tasks_list:
+            Ch6Act3exo1: 0
+            Ch6Act3exo2: 1
+        title: Activité 3 (ADN)
+    -   config:
+            closed: false
+        id: activit_4
+        rank: 3
+        tasks_list: {}
+        title: Activité 4  (Majuscules/minuscules)
+    -   config:
+            closed: false
+        id: activit_5
+        rank: 4
+        tasks_list: {}
+        title: Activité 5
+    title: Chaînes de caractères – Analyse d’un texte
+name: exo7
+task_dispenser: toc
+public: true

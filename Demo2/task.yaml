@@ -1,8 +1,13 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
-context: None
+context: |
+    On va introduire un nouveau mot clef : ``if``. Littéralement ``si`` en anglais. Le but de ce mot clef et de pouvoir adapter son code en fonction d'une condition. Voici la structure de code que doit avoir le mot clef ``if``:
+
+    .. code-block:: python
+
+        if(condition): #si condition est vraie alors on passe à la ligne du dessous
+            instruction #la suite d'instruction que l'on veut exécuter dans ce cas précis.
+                            #Attention à bien continuer d'écrire avec le même décalage si votre instruction prends plusieurs lignes
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -11,21 +16,15 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Demo2
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
-        header: ''
+        name: Implementaion
+        header: 'On aimerait que le nombre contenu dans ``n`` devienne positif si
+            ``n < 0``. '
         language: python
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

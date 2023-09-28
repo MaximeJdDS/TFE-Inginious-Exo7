@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     Pour cette exercice, nous voulons que vous ``instanciez`` une variable nommée ``demo`` dans laquelle on va ``stocker`` le nombre 2.
@@ -21,9 +19,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Demo1
 network_grading: false
@@ -35,8 +31,3 @@ problems:
             on veut avoir le nombre 2 qui y est stocké.
         language: python
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0
