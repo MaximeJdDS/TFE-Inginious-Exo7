@@ -1,0 +1,34 @@
+_id: 651e90d4f0b7b51c8484303f
+archive: 651e90d5f0b7b51c84843040
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '2'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-10-05 12:32:52.688422'
+    '@username': Mava
+    q1: lettre = chr(ord(lettre) - 32 )
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.000s
+
+    OK
+
+submitted_on: 2023-10-05 12:32:52.688000
+taskid: Ch6Act4exo0
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:e180:64a8:3265:26f5
+username:
+- Mava

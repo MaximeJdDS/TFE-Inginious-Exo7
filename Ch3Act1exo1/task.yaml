@@ -1,10 +1,8 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     On aimerait programmer un petit quiz sur les tables de multiplication.
-    Pour ce faire, on va se diviser le travail. Je m'occupe de choisir les 2 nombres à multiplier ainsi que de récupérer la réponse de la personne interrogée.
+    Pour ce faire, on va se diviser le travail. Je m'occupe de choisir les 2 nombres à multiplier ainsi que de récupérer la réponse de la personne interrogée. Toi, tu dois vérifier que la multiplication des 2 nombres que j'ai choisi ( ``a`` et ``b``) soit bien égal à la réponse de l'étudiant  (``n``).
 
     Rappel théorique :
 
@@ -18,9 +16,14 @@ context: |-
             #instructions qui ne sera executées que si c'est faux
 
 
-    Le test d’égalité s’écrit bien avec le double signe égal « ``==`` ». Par exemple « x == 3 » renvoie « vrai »
-    si x vaut 3 et « faux » sinon.
-    Attention ! La commande « x = 3 » n’a rien à voir, cette instruction stocke 3 dans la variable x.
+    Le test d’égalité s’écrit bien avec le double signe égal « ``==`` ».
+
+    Par exemple « ``x == 3`` » renvoie « ``True`` »
+    si ``x`` vaut 3 et « ``False`` » sinon.
+
+    **Attention !**
+
+    La commande « ``x = 3`` » n’a rien à voir, cette instruction stocke 3 dans la variable ``x``.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -29,9 +32,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Connaissez vous vos tables de multiplication ?
 network_grading: false
@@ -47,8 +48,3 @@ problems:
             print("Bravo")
 
             print("Perdu, la réponse était",a*b)
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0
