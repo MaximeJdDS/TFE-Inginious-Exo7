@@ -1,0 +1,60 @@
+_id: 653fc31c8c92c88981f91b0e
+archive: 653fc31d8c92c88981f91b0f
+courseid: exo7
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '3'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-10-30 15:52:12.257393'
+    '@username': Mava
+    q1: |-
+        def soustraction(a,b):
+            return a-b
+problems: {}
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ======================================================================
+    FAIL: test_result_Int (Test.Test)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "./src/Test.py", line 25, in test_result_Int
+    AssertionError: 221 != -221 : Pour les éléments [115, 336] la réponse attendu est 221 et ta fonction a renvoyé -221.
+     Attention à bien vérifier l'ordre des arguments. Ici a-b n'est pas toujours égal à b-a.
+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    FAILED (failures=1)
+
+submitted_on: 2023-10-30 15:52:12.257000
+taskid: Ch4Act1exo2
+tests: {}
+text: |+
+    Il semble que votre code contienne des erreurs…
+
+
+
+    .. code-block:: console
+
+        Test échoué:
+        221 != -221 : Pour les éléments [115, 336] la réponse attendu est 221 et ta fonction a renvoyé -221.
+         Attention à bien vérifier l'ordre des arguments. Ici a-b n'est pas toujours égal à b-a.
+
+        ----------------------------------------------------------------------
+        Ran 2 tests in 0.000s
+
+        FAILED (failures=1)
+
+
+user_ip: 2a02:2788:804:62f:bd36:f072:bb3e:aaf4
+username:
+- Mava

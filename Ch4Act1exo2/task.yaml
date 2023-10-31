@@ -1,8 +1,27 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
-context: None
+context: |+
+    Maintenant on va écrire une fonction sans parametre mais avec une valeur de retour cette fois-ci. Les parametres sont les éléments que l'ont donne à la fonction pour pouvoir s'éxécuter comme on le souhaite, tandis que la valeur de retour est tous simplement le résultat que la fonction nous renvoie. Prenons un exemple :
+
+    .. code-block:: python
+
+        résultat = somme(2,3)
+
+    ``somme(a,b)`` est une fonction qui va prendre 2 arguments (ici, ``a`` et ``b``) pour calculer la somme des 2. Dans le cas juste au dessus on ne sera pas étonné de voir la valeur 5 contenue dans ``résultat``.
+
+    La question qu'on va se poser maintenant c'est comment écrire une fonction comme ``somme(a,b)``.
+    Voici le code de la fonction ``somme(a,b)`` :
+
+    .. code-block:: python
+
+        def somme(a,b):
+            result = a+b
+            return result
+
+    Notez qu'on aurait pu remplacer les 2 dernières lignes par ``return a+b`` et la fonction marcherait aussi.
+
+    Voyons voir si tu as tout compris :
+
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -11,21 +30,15 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Exercice
+name: Arguments et Return
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
-        header: ''
+        name: Implementaion
+        header: Écris la fonction ``soustraction(a,b)`` sachant que je veux que ``soustraction(2,5)``
+            renvoie ``3``.
         language: python
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

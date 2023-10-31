@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |
     Les fonctions permettent de faire appel à une série d'instructions en appelant simplement la fonction. En pratique, on peut avoir ``tourne_à_droite()`` si l'on développe un robot (et pour tourner à droite, le robot doit lever sa jambe, tourner le bassin, tendre la jambe, etc.).
@@ -8,6 +6,13 @@ context: |
     Vous l'aurez compris, en programmation, la notion de fonction est primordiale. Elle vous permettra d'avoir un code plus lisible, de ne pas avoir à réécrire du code qui a déjà été écrit, mais aussi de pouvoir travailler avec d'autres développeurs (toujours dans le cas de notre robot, vous pouvez écrire dans votre code ``tourne_à_droite()`` et demander à quelqu'un d'autre de le coder si vous êtes d'accord sur ce que cette fonction doit faire).
 
     Commençons donc par une petite fonction sans paramètre ni valeur de sortie : ``Hello_World()``. Cette fonction ne doit contenir que ``print("Hello World!")``.
+
+    Pour définir une fonction, rien de plus simple en python, pour exemple, si on veut définir la fonction ``test()`` on écrira :
+
+    .. code-block:: python
+
+        def test():
+            #corps de la function
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -16,9 +21,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Hello_World()
 network_grading: false
@@ -29,8 +32,3 @@ problems:
         header: ''
         language: python
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0
