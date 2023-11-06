@@ -1,0 +1,40 @@
+_id: 6548fe88f0b7b51c848595e5
+archive: 6548fe89f0b7b51c848595e6
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '8'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-11-06 15:56:08.416448'
+    '@username': Mava
+    q1: |-
+        def minuscule(a):
+            b = ord(a)
+            if ( 64 < b and b < 91 ):
+                c = b + 32
+                return chr(c)
+            return a
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 3 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-11-06 15:56:08.416000
+taskid: Ch6Act4exo1
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:e5ce:7b81:6b18:1b8c
+username:
+- Mava
