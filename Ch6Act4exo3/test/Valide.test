@@ -1,0 +1,39 @@
+_id: 654a6e8841deff7399d4d08f
+archive: 654a6e8941deff7399d4d090
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '5'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-11-07 18:06:16.820594'
+    '@username': Mava
+    q1: |-
+        def majLock(t):
+            result = ""
+            for c in t:
+                result = result + switch(c)
+            return result
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-11-07 18:06:16.820000
+taskid: Ch6Act4exo3
+tests: {}
+text: ''
+user_ip: 95.182.210.61
+username:
+- Mava

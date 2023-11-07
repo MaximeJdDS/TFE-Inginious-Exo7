@@ -31,7 +31,7 @@ network_grading: false
 problems:
     q1:
         type: code
-        name: Implementaion
+        name: Implémentation
         header: |-
             Écris la fontion ``switch(c)`` comme décrite au dessus.
             Pour ne pas réinventer la roue, tu as accès aux 2 fonctions que tu as écris précédemment (``minuscule(c)`` et ``majuscule(c)``).
