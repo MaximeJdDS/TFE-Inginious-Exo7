@@ -1,0 +1,39 @@
+_id: 654a50ec73cd444fb69a0d69
+archive: 654a50ed73cd444fb69a0d6a
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '2'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-11-07 15:59:56.531328'
+    '@username': Mava
+    q1: |-
+        def switch(c):
+            a = majuscule(c)
+            if(a == c):
+                return minuscule(c)
+            return a
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 3 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-11-07 15:59:56.531000
+taskid: Ch6Act4exo2
+tests: {}
+text: ''
+user_ip: 95.182.210.61
+username:
+- Mava

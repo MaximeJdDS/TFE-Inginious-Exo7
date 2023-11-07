@@ -1,0 +1,84 @@
+_id: 654a4f5041deff7399d4cff7
+archive: 654a4f5241deff7399d4cff8
+courseid: exo7
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '1'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-11-07 15:53:04.995709'
+    '@username': Mava
+    q1: |-
+        def switch(c):
+            return c
+problems: {}
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ======================================================================
+    FAIL: test_CasDeBase (Test.Test)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "./src/Test.py", line 24, in test_CasDeBase
+    AssertionError: 'o' != 'O'
+    - o
+    + O
+     : Pour l'élément O la réponse attendu est o et ta fonction a renvoyé O.
+
+    ======================================================================
+    FAIL: test_CasSpecial (Test.Test)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "./src/Test.py", line 34, in test_CasSpecial
+    AssertionError: 'b' != 'B'
+    - b
+    + B
+     : Pour l'élément B la réponse attendu est b et ta fonction a renvoyé B.
+     Tu as déjà du régler ce problème avec minuscule(c).
+     Tu as 2 solutions, soit tu fais comme minuscule, soit tu utilises minuscule(c) pour régler ce problème.
+
+    ----------------------------------------------------------------------
+    Ran 3 tests in 0.000s
+
+    FAILED (failures=2)
+
+submitted_on: 2023-11-07 15:53:04.995000
+taskid: Ch6Act4exo2
+tests: {}
+text: |+
+    Il semble que votre code contienne des erreurs…
+
+
+
+    .. code-block:: console
+
+        Test échoué:
+        'o' != 'O'
+        - o
+        + O
+         : Pour l'élément O la réponse attendu est o et ta fonction a renvoyé O.
+
+        Test échoué:
+        'b' != 'B'
+        - b
+        + B
+         : Pour l'élément B la réponse attendu est b et ta fonction a renvoyé B.
+         Tu as déjà du régler ce problème avec minuscule(c).
+         Tu as 2 solutions, soit tu fais comme minuscule, soit tu utilises minuscule(c) pour régler ce problème.
+
+        ----------------------------------------------------------------------
+        Ran 3 tests in 0.000s
+
+        FAILED (failures=2)
+
+
+user_ip: 95.182.210.61
+username:
+- Mava
