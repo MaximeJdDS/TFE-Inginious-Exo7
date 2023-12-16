@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: Écris une fonction affiche_conjugaison() qui conjugue un verbe du premier
     groupe au présent.
@@ -12,9 +10,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Je, tu, il, nous, vous, ils.
 network_grading: false
@@ -31,15 +27,10 @@ problems:
 
             Exemple :
 
-            • ``affiche_conjugaison("chanter")``, affiche ``"je chante, tu chantes,..."``
+            • ``affiche_conjugaison("chanter")``, affiche ``"je chante, tu chantes, il chante, nous chantons, vous chantez, ils chantent"``
 
             • ``affiche_conjugaison("choisir")``, affiche ``"Ce n'est pas un verbe du premier groupe."``
         language: python
         default: |-
             def affiche_conjugaison(verbe):
                 print("Ce n'est pas un verbe du premier groupe.")
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

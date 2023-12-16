@@ -1,10 +1,8 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: Deux nombres premiers ``p`` et ``p`` + 2 sont appelés nombres premiers jumeaux.
     Écris une fonction ``nombres_jumeaux_apres(n)`` qui renvoie ``p`` tel que ``p``
-    et ``p``+2 soient des nombres premiers jumeaux, avec ``p`` > ``n``.
+    et ``p`` +2 soient des nombres premiers jumeaux, avec ``p`` > ``n``.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -13,9 +11,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Nombres Premiers Jumeaux
 network_grading: false
@@ -29,8 +25,3 @@ problems:
             def nombres_jumeaux_apres(n):
 
                 return -1
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

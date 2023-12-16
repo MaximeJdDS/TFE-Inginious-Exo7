@@ -1,0 +1,46 @@
+_id: 6548fe53f0b7b51c848595df
+archive: 6548fe54f0b7b51c848595e0
+courseid: exo7
+custom: {}
+grade: 0.0
+input:
+    '@attempts': '7'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-11-06 15:55:15.088061'
+    '@username': Mava
+    q1: |-
+        def minuscule(a):
+            b = ord(a)
+            #if ( 64 < b and b < 91 ):
+            c = b + 32
+            return chr(c)
+            #return a
+problems: {}
+response_type: rst
+result: failed
+state: ''
+status: done
+stderr: ''
+stdout: "======================================================================\nFAIL:
+    test_CasSpecial (Test.Test)\n----------------------------------------------------------------------\nTraceback
+    (most recent call last):\n  File \"./src/Test.py\", line 33, in test_CasSpecial\nAssertionError:
+    'k' != '\\x8b'\n- k\n+ \x8B\n : Pour l'élément k la réponse attendu est k et ta
+    fonction a renvoyé \x8B.\n Qu'est-ce qu'on fait quand il y a des cas oú l'on voudrait
+    faire quelque chose mais pour un autre cas, autre chose ?\n\n----------------------------------------------------------------------\nRan
+    3 tests in 0.000s\n\nFAILED (failures=1)\n\n"
+submitted_on: 2023-11-06 15:55:15.088000
+taskid: Ch6Act4exo1
+tests: {}
+text: "Il semble que votre code contienne des erreurs…\n\n\n\n.. code-block:: console\n\n
+    \   Test échoué:\n    'k' != '\\x8b'\n    - k\n    + \x8B\n     : Pour l'élément
+    k la réponse attendu est k et ta fonction a renvoyé \x8B.\n     Qu'est-ce qu'on
+    fait quand il y a des cas oú l'on voudrait faire quelque chose mais pour un autre
+    cas, autre chose ?\n\n    ----------------------------------------------------------------------\n
+    \   Ran 3 tests in 0.000s\n\n    FAILED (failures=1)\n\n\n"
+user_ip: 2a02:2788:804:62f:e5ce:7b81:6b18:1b8c
+username:
+- Mava

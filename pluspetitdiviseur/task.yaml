@@ -1,6 +1,4 @@
-accessible: true
 author: MJdDS
-categories: []
 contact_url: ''
 context: |
     On va aborder l'opérateur ``while``. Il revient à dire en francais "tant que". Ainsi, on va pouvoir lui demander "tant que tu n'as pas trouvé, continue de chercher". Le plus compliqué maintenant va etre de bien expliquer ce qu'il doit chercher. Pour le ``while`` de python, il faut lui donner une condition qui retournera ``True`` (vrai) ou ``False`` (faux) et tant que la condition est vrai, il continuera sa boucle.
@@ -20,7 +18,7 @@ context: |
 
     — Commence avec ``d`` = 2.
 
-    — Tant que ``d`` ne divise pas n alors, passe au candidat suivant (``d`` devient ``d`` + 1).
+    — Tant que ``d`` ne divise pas ``n`` alors, passe au candidat suivant (``d`` devient ``d`` + 1).
 
     — À la fin ``d`` est le plus petit diviseur de ``n`` (dans le pire des cas ``d = n``).
 environment_id: pyjavacpp
@@ -31,9 +29,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Plus petit diviseur
 network_grading: false
@@ -48,8 +44,3 @@ problems:
             d = ...
             while (condition):
                 ....
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

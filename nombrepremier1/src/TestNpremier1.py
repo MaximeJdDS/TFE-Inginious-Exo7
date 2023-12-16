@@ -11,6 +11,9 @@ import npremier1
 
 class TestNpremier1(unittest.TestCase):
     
+    def test_exists(self):
+        self.assertTrue(hasattr(npremier1, 'est_premier_1'), _("Tu n\'as pas défini la bonne fonction. La fonction 'est_premier_1(n)' est introuvable."))
+    
     def test_npremier(self):
         a = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47] #,53,59,61,67,71,73,79,83,89,97]
         ansPair   = _("Le nombre {} est un nombre premier et tu as renvoyé {} .")

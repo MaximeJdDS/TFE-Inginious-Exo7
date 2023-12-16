@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-def est_pair(n):
-    N = n
-    pair = False 
+def demo2(n):
+
 @    @q1@@ 
-    return pair
+
+    return n
     
-def fonction():
-	return fonction()
+def fonction(n):
+	return demo2(n)

@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
-def est_pair(n):
-    return 0 == n%2
+def demo2(n):
+    if(n<0):
+        n = -n
+    return n
+        
 
-def fonction():
-    return fonction()
+def fonction(n):
+    return demo2(n)

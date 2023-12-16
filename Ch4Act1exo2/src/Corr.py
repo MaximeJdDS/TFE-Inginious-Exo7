@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 
-def est_pair(n):
-    return 0 == n%2
+def soustraction(a,b):
+    return b-a
 
-def fonction():
-    return fonction()
+def fonction(a,b):
+    return soustraction(a,b)

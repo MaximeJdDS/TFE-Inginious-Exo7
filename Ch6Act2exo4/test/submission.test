@@ -1,0 +1,40 @@
+_id: 6405bc6de00d779b8b162a57
+archive: 6405bc70e00d779b8b162a58
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '4'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-06 11:11:57.957871'
+    '@username': Mava
+    q1: |-
+        def est_un_palindrome(mot):
+            i = 0
+            while(i<len(mot)):
+                if(mot[i]!=mot[len(mot)-i-1]):
+                    return False
+                i = i +1
+            return True
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 3 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-03-06 11:11:57.957000
+taskid: Ch6Act2exo4
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:20c1:d894:8c7a:dc39
+username:
+- Mava

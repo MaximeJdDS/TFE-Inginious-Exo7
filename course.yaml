@@ -159,7 +159,8 @@ dispenser_data:
             closed: false
         id: activit_4
         rank: 3
-        tasks_list: {}
+        tasks_list:
+            Ch6Act4exo0: 0
         title: Activité 4  (Majuscules/minuscules)
     -   config:
             closed: false

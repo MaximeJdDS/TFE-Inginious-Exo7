@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     La distance de Hamming entre deux mots de même longueur est le nombre d’endroits où les lettres sont différentes.
@@ -22,9 +20,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Distance de Hamming
 network_grading: false
@@ -37,15 +33,10 @@ problems:
 
             ``Entrée`` : deux mots (des chaînes de caractères)
 
-            ``Sortie`` : la distance de Hamming (un entier)
+            ``Sortie`` : la distance de Hamming (un entier), ``-1`` si les 2 mots n'ont pas la même longueur
 
             ``Exemple`` : distance_hamming("LAPIN","SATIN") renvoie ``2``
         language: python
         default: |-
             def distance_hamming(mot1,mot2):
                 return 0
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

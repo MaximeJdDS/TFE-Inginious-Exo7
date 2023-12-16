@@ -1,0 +1,38 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    On va maintenant écrire une fonction qui prend en paramètre un caractère pour renvoyer ce même caractère, mais en minuscule.
+
+    Exemple :
+
+    .. code-block:: python
+
+        minuscule("A") == "a" #True
+        minuscule("b") == "b" #True
+        minuscule(" ") == " " #True
+
+    Pour t'aider revoici la table Ascii :
+
+    .. image:: Ch6Act4exo0/Ascii.png
+       :height: 488
+       :width: 958
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Minuscule
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implementaion
+        header: Implémente la fonction ``minuscule(lettre)`` qui renvoie la lettre
+            minuscule de ``lettre``.
+        language: python
+        default: ''

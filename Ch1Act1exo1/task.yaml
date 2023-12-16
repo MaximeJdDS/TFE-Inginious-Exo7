@@ -1,0 +1,63 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    Une variable est un nom associé à un emplacement de la mémoire. C’est comme une boîte que
+    l’on identifie par une étiquette. La commande
+
+    .. code-block:: python
+
+        a = 3
+
+
+    signifie que j’ai une variable ``a`` associée à la valeur 3.
+
+    Voici un premier exemple :
+
+    .. code-block:: python
+
+        a = 3 # Une variable
+        b = 5 # Une autre variable
+        print("La somme vaut",a+b) # Affiche la somme
+        print("Le produit vaut",a*b) # Affiche le produit
+        c = b**a # Nouvelle variable...
+        print(c) # ... qui s'affiche
+
+
+    **Commentaires :** Tout texte qui suit le caractère dièse « ``#`` » n’est pas exécuté par Python mais sert à
+    expliquer le programme pour les humains. C’est une bonne habitude de commenter abondamment ton code.
+
+    **Noms.** Il est très important de donner un nom clair et précis aux variables. Par exemple, avec les noms
+    bien choisis tu devrais savoir ce que calcule le code suivant :
+
+    .. code-block:: python
+
+        base = 8
+        hauteur = 3
+        aire = base * hauteur / 2
+        print(aire)
+        print(Aire) # !! Erreur !!
+
+
+    **Attention !** Python distingue les majuscules des minuscules. Donc ``mavariable``, ``Mavariable`` et
+    ``MAVARIABLE`` sont des variables différentes.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: 'Premiers pas avec les variables : aires rectangulaires'
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implementation
+        header: |
+            Calcul l'aire d'un rectangle dont les dimensions sont stockées dans les variables ``longueur`` et  ``largeur``.
+            Stocke le résultats dans la variable ``aire``.
+        language: python
+        default: ''

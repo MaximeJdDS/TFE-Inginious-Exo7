@@ -1,0 +1,32 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |+
+    T'est-il déjà arrivé d'écrire tout un texte sur l'ordinateur sans avoir levé les yeux de ton clavier pour au final se rendre compte que ta touche ``Maj Lock`` était enfoncée depuis le début ? C'est dans ces moments-là qu'on voudrait un code qui remplace tous les caractères par leurs alternatives majuscules/minuscules.
+
+    Exemple :
+
+    .. code-block:: python
+
+        majLock("pETIT TEXTE") == "Petit texte" #True
+        majLock("abcDE") == "ABCde" #True
+
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Maj. Lock.
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: Implémente la fonction ``majLock(texte)``. N'hésites pas à utiliser
+            ``switch(c)``.
+        language: python
+        default: ''

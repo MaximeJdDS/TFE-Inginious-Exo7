@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |
     On transforme un mot commençant par une consonne selon la recette suivante :
@@ -25,9 +23,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Latin-cochon
 network_grading: false
@@ -47,8 +43,3 @@ problems:
         default: |-
             def latin_cochon(mot):
                 return mot
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

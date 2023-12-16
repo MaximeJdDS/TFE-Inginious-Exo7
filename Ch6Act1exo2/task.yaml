@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |
     Pour un mot, par exemple ``"souris"``, affiche la dernière lettre de cette chaîne (ici "s").
@@ -18,16 +16,14 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '"s" à la fin (suite)'
 network_grading: false
 problems:
     q1:
         type: code
-        name: Implementaion
+        name: Implementation
         header: Ecris la fonction ``pluriel(mot)`` tel qu'elle renvoie le mot au pluriel
             comme expliqué dans l'enoncée.
         language: python
@@ -35,8 +31,3 @@ problems:
             def pluriel(mot):
 
                 return mot
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

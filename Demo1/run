@@ -11,6 +11,8 @@ import re
 from inginious import feedback
 from inginious import rst
 from inginious import input
+import inginious_container_api.input as ingi_input
+import inginious_container_api.feedback as ingi_feedback
 
 
 # This runner suits for typical exercises of LSINF1101/FSAB1401
@@ -127,7 +129,7 @@ def run_code(n_exercises, lang):
         f.seek(0)
         errors = f.read()
         print(errors)
-        outerr = rst.get_codeblock("python", cleanup_output(errors))
+        outerr = rst.get_codeblock("console", cleanup_output(errors))
 
     # expected error code: 252=outofmemory, 253=timedout
     # 127 = code returned by our runner
@@ -153,11 +155,11 @@ def run_code(n_exercises, lang):
                 if i == 0:
                     feedback.set_global_result('failed')
                     if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("python", outerr_question) + "\n"
+                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console", outerr_question) + "\n"
                         feedback.set_global_feedback(feed)
                 else:
                     if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("python", outerr_question) + "\n"
+                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console", outerr_question) + "\n"
                         feedback.set_problem_feedback(feed, "q" + str(i))
                     else:
                         feedback.set_problem_feedback(_("Vous avez correctement répondu à cette question."), "q" + str(i))
