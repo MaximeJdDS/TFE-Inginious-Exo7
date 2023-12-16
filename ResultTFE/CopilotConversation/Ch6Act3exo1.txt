@@ -1,0 +1,20 @@
+## Utilisateur
+Presence de A
+Écris une fonction presence_de_A() qui teste si une séquence contient le nucléotide A.
+presence_de_A()
+Usage : presence_de_A(sequence)
+Entrée : une séquence d’ADN (une chaîne de caractères parmi A, C, T, G)
+Sortie : « vrai » si la séquence contient « A », « faux » sinon.
+Exemple : presence_de_A("CTTGCT") renvoie False
+1
+def presence_de_A(sequence):
+2
+return False
+## Bing
+Voici une fonction qui teste si une séquence contient le nucléotide A:
+
+def presence_de_A(sequence):
+    return 'A' in sequence
+
+La fonction prend une séquence d'ADN en entrée, qui est une chaîne de caractères parmi A, C, T, G. Elle renvoie True si la séquence contient le nucléotide A, et False sinon. Par exemple, presence_de_A("CTTGCT") renvoie False.
+J'espère que cela vous aide. N'hésitez pas à me demander si vous avez d'autres questions.

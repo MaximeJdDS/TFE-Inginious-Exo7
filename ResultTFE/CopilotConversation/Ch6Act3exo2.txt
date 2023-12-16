@@ -1,0 +1,30 @@
+## Utilisateur
+Position de AT
+Écris une fonction position_de_AT() qui teste si une séquence contient le nucléotide A suivi du nucléotide T et renvoie la position de la première occurrence trouvée.
+position_de_AT()
+Usage : position_de_AT(sequence)
+Entrée : une séquence d’ADN (une chaîne de caractères parmi A, C, T, G)
+Sortie : la position de la première séquence « AT » trouvée (commence à 0) ; None si n’apparaît pas.
+Exemple :
+position_de_AT("CTTATGCT") renvoie 3
+position_de_AT("GATATAT") renvoie 1
+position_de_AT("GACCGTA") renvoie None
+Note: None est affecté à une variable pour signifier l’absence de valeur. Il suffit donc d'écrire variable = None.
+1
+def position_de_AT(adn):
+2
+​
+3
+return None
+## Bing
+Voici une implémentation possible de la fonction position_de_AT en Python :
+
+def position_de_AT(adn):
+    for i in range(len(adn)-1):
+        if adn[i] == 'A' and adn[i+1] == 'T':
+            return i
+    return None
+
+La fonction prend en entrée une séquence d'ADN sous forme d'une chaîne de caractères parmi A, C, T, G et renvoie la position de la première occurrence de la séquence "AT" trouvée (commence à 0) ou None si elle n'apparaît pas.
+Par exemple, position_de_AT("CTTATGCT") renvoie 3, position_de_AT("GATATAT") renvoie 1 et position_de_AT("GACCGTA") renvoie None.
+J'espère que cela vous aide. N'hésitez pas à me poser d'autres questions si vous en avez.

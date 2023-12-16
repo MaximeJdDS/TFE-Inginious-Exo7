@@ -1,0 +1,22 @@
+## Utilisateur
+Minuscule
+On va maintenant écrire une fonction qui prend en paramètre un caractère pour renvoyer ce même caractère, mais en minuscule.
+Exemple :
+minuscule("A") == "a" #True
+minuscule("b") == "b" #True
+minuscule(" ") == " " #True
+Pour t'aider revoici la table Ascii :
+Ch6Act4exo0/Ascii.png
+Implementaion
+Implémente la fonction minuscule(lettre) qui renvoie la lettre minuscule de lettre.
+## Bing
+Bien sûr, voici une implémentation possible de la fonction minuscule(lettre) en Python qui renvoie la lettre minuscule de lettre :
+
+def minuscule(lettre):
+    if ord(lettre) >= 65 and ord(lettre) <= 90:
+        return chr(ord(lettre) + 32)
+    else:
+        return lettre
+
+La fonction utilise la table ASCII pour vérifier si lettre est une lettre majuscule. Si c'est le cas, elle renvoie la lettre minuscule correspondante. Sinon, elle renvoie simplement lettre sans modification.
+J'espère que cela t'aidera à résoudre l'exercice. N'hésite pas à me poser d'autres questions si tu en as besoin.

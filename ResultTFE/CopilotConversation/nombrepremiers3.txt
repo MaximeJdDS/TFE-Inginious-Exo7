@@ -1,0 +1,43 @@
+## Utilisateur
+Nombre premier 3
+Améliore ta fonction en une fonction est_premier_3(n) à l’aide de l’idée suivante.
+On teste si d = 2 divise n, mais à partir de d = 3, il suffit de tester les diviseurs impairs (on teste d, puis d +2. . . ).
+Par exemple pour tester si n = 419 est un nombre premier, on teste d’abord si d = 2 divise n, puis d = 3 et ensuite d = 5, d = 7. . .
+Cela permet de faire environ deux fois moins de tests !
+Explications : si un nombre pair d divise n, alors on sait déjà que 2 divise n.
+Implementation
+Revoici le corps de la fonction est_premier_2(n). Cette question est moins guidé que les précédentes. N'hésite pas a faire appel a tout ce que tu as deja vu (if, else, utilisation de variable, etc.).
+1
+def est_premier_3(n):
+2
+d = 2
+3
+while(False):
+4
+if(n%d == 0):
+5
+return False
+6
+d = d+1
+7
+return True
+## Bing
+Voici une implémentation de la fonction est_premier_3(n) qui utilise l'idée que tu as mentionnée:
+
+def est_premier_3(n):
+    if n <= 1:
+        return False
+    elif n <= 3:
+        return True
+    elif n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+La fonction commence par vérifier si n est inférieur ou égal à 1. Si c'est le cas, elle retourne False. Ensuite, elle vérifie si n est inférieur ou égal à 3. Si c'est le cas, elle retourne True. Ensuite, elle vérifie si n est divisible par 2 ou 3. Si c'est le cas, elle retourne False. Ensuite, elle teste les diviseurs impairs à partir de 5 jusqu'à la racine carrée de n. Si n est divisible par un de ces diviseurs, elle retourne False. Sinon, elle retourne True.
+Cette implémentation permet de tester environ deux fois moins de diviseurs que l'implémentation précédente, ce qui la rend plus efficace.
+J'espère que cela t'aidera !

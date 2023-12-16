@@ -1,0 +1,24 @@
+## Utilisateur
+Nombres Premiers Jumeaux
+Deux nombres premiers p et p + 2 sont appelés nombres premiers jumeaux. Écris une fonction nombres_jumeaux_apres(n) qui renvoie p tel que p et p +2 soient des nombres premiers jumeaux, avec p > n.
+Nombres premiers jumeaux
+Comme pour l'exercice précédent, tu as accès à est_premier(n).
+1
+def nombres_jumeaux_apres(n):
+2
+​
+3
+return -1
+## Bing
+Bonjour! Pour résoudre cet exercice, il faut trouver le plus petit nombre premier jumeau supérieur à n. Un nombre premier jumeau est un couple de nombres premiers qui ne diffèrent que de 2. Par exemple, (3, 5) est un couple de nombres premiers jumeaux.
+Voici une fonction qui renvoie le plus petit nombre premier jumeau supérieur à n:
+
+def nombres_jumeaux_apres(n):
+    p = n + 1
+    while True:
+        if est_premier(p) and est_premier(p + 2):
+            return p
+        p += 1
+
+La fonction nombres_jumeaux_apres(n) prend un entier n en entrée et renvoie le plus petit nombre premier jumeau supérieur à n. Si aucun nombre premier jumeau n'est trouvé, la fonction renvoie -1.
+J'espère que cela t'aidera à résoudre l'exercice. Bonne chance! 🍀

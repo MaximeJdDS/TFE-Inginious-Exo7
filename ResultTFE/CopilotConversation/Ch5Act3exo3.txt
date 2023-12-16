@@ -1,0 +1,35 @@
+## Utilisateur
+Nombre Premier de Germain
+Un entier p est un nombre premier de Germain si p et 2p + 1 sont des nombres premiers. Écris une fonction nombre_germain_apres(n) qui renvoie le couple p, 2p + 1 où p est le premier nombre premier de Germain p > n.
+Par exemple, le premier nombre premier de Germain après n = 60 est p = 83 avec 2p + 1 = 167.
+Nombres premiers Germain
+Tu as accès à est_premier(n), profites en.
+1
+def nombre_germain_apres(n):
+2
+return -1
+## Bing
+Voici une implémentation possible de la fonction nombre_germain_apres(n) en Python qui utilise la fonction est_premier(n) pour vérifier si un nombre est premier. Elle renvoie le couple p, 2p + 1 où p est le premier nombre premier de Germain p > n:
+
+def est_premier(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def nombre_germain_apres(n):
+    p = n + 1
+    while True:
+        if est_premier(p) and est_premier(2 * p + 1):
+            return p, 2 * p + 1
+        p += 1
+
+Par exemple, pour trouver le premier nombre premier de Germain après n = 60, il suffit d'appeler la fonction nombre_germain_apres(60) qui renvoie le couple p, 2p + 1 où p est le premier nombre premier de Germain p > n:
+
+>>> nombre_germain_apres(60)
+(83, 167)
+
+Cela signifie que le premier nombre premier de Germain après n = 60 est p = 83 avec 2p + 1 = 167.
+J'espère que cela t'aide ! N'hésite pas à me poser d'autres questions si tu en as.

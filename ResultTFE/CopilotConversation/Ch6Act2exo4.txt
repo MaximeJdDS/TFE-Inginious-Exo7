@@ -1,0 +1,23 @@
+## Utilisateur
+Palindrome
+Déduis-en une fonction qui teste si un mot est un palindrome ou pas. Un palindrome est un mot qui s’écrit indifféremment de gauche à droite ou de droite à gauche ;
+Par exemple RADAR est un palindrome.
+est_un_palindrome()
+Usage : est_un_palindrome(mot)
+Entrée : un mot (une chaîne de caractères)
+Sortie : « vrai / True » si le mot est un palindrome, « faux / False » sinon.
+Exemple : est_un_palindrome("KAYAK") renvoie True
+1
+def est_un_palindrome(mot):
+2
+​
+3
+return False
+## Bing
+Un palindrome est un mot qui peut être lu de gauche à droite ou de droite à gauche sans changer son sens. Pour déterminer si un mot est un palindrome, il suffit de vérifier si le mot est égal à son inversion. Voici une implémentation possible de la fonction est_un_palindrome :
+
+def est_un_palindrome(mot):
+    return mot == mot[::-1]
+
+La fonction prend en entrée un mot sous forme de chaîne de caractères et renvoie True si le mot est un palindrome et False sinon. Par exemple, est_un_palindrome("KAYAK") renvoie True car "KAYAK" est un palindrome.
+J'espère que cela vous aide. N'hésitez pas à me poser d'autres questions si vous en avez.

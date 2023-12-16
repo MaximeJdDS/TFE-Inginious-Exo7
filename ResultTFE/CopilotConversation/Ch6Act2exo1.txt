@@ -1,0 +1,32 @@
+## Utilisateur
+Distance de Hamming
+La distance de Hamming entre deux mots de même longueur est le nombre d’endroits où les lettres sont différentes.
+Par exemple :
+J a P on
+S a V on
+La première lettre de JAPON est différente de la première lettre de SAVON, les troisièmes aussi sont différentes. La distance de Hamming entre JAPON et SAVON vaut donc 2.
+Écris une fonction distance_hamming() qui calcule la distance de Hamming entre deux mots de même longueur.
+distance_hamming()
+Usage : distance_hamming(mot1,mot2)
+Entrée : deux mots (des chaînes de caractères)
+Sortie : la distance de Hamming (un entier), -1 si les 2 mots n'ont pas la même longueur
+Exemple : distance_hamming("LAPIN","SATIN") renvoie 2
+1
+def distance_hamming(mot1,mot2):
+2
+return 0
+## Bing
+La distance de Hamming est une notion mathématique qui permet de quantifier la différence entre deux séquences de symboles de même longueur. Elle est définie comme le nombre d'endroits où les symboles des deux séquences diffèrent .
+Pour calculer la distance de Hamming entre deux mots de même longueur, on peut comparer chaque paire de symboles correspondants dans les deux mots et compter le nombre de paires qui diffèrent. Si les deux mots n'ont pas la même longueur, la fonction renvoie -1 .
+Voici une implémentation possible de la fonction distance_hamming en Python:
+
+def distance_hamming(mot1, mot2):
+    if len(mot1) != len(mot2):
+        return -1
+    distance = 0
+    for i in range(len(mot1)):
+        if mot1[i] != mot2[i]:
+            distance += 1
+    return distance
+
+Ainsi, distance_hamming("LAPIN", "SATIN") renvoie 2, comme attendu .

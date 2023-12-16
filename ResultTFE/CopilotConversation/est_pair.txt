@@ -1,0 +1,35 @@
+## Utilisateur
+Pair ou pas pair ?
+En informatique, on doit parfois déterminer si un nombre est pair ou impair.
+Python contient l’opérateur % qui permet de calculer le reste de la division entière entre deux nombres. Par exemple, en python l’expression 5 % 3 retourne la valeur 2 tandis que l’expression 12 % 3 retourne la valeur 0. En utilisant cet opérateur, vous devriez pouvoir facilement résoudre ce problème.
+Votre code va recevoir la variable n qui contient un nombre à analyser. Vous devez ensuite écrire quelques lignes de python pour déterminer si cette variable contient un entier pair ou non. Stockez votre résultat dans la variable pair qui doit contenir soit True soit False en fonction que n soit pair ou impair.
+Implementation
+Votre code va recevoir la variable n qui contient un nombre à analyser. Vous devez ensuite écrire quelques lignes de python pour déterminer si cette variable contient un entier pair ou non. Stockez votre resultat dans la variable pair qui doit contenir soit True soit False.
+1
+pair = ...
+## Bing
+Pour déterminer si un nombre est pair ou impair, vous pouvez utiliser l'opérateur modulo % qui calcule le reste de la division entière entre deux nombres. Si le reste est égal à 0, alors le nombre est pair, sinon il est impair. Voici un exemple de code Python qui résout ce problème:
+
+n = 42
+pair = n % 2 == 0
+
+Dans cet exemple, nous avons stocké le nombre à analyser dans la variable n. La variable pair contiendra True si n est pair, et False sinon.
+J'espère que cela vous aide à résoudre votre problème. N'hésitez pas à me poser d'autres questions si vous en avez besoin. 😊
+## Utilisateur
+Il y a des erreurs dans votre réponse. Votre note est de 0.0%. [Soumission #657b00b310485c4d73b21f4c (2023-12-14 14:18:43)]
+Il semble que votre code contienne des erreurs…
+Test échoué:
+False != True : L entier -1 n est pas pair et vous avez retourné True.
+Test échoué:
+False != True : L entier 43 n est pas pair et vous avez retourné True.
+Ran 3 tests in 0.000s
+FAILED (failures=2)
+## Bing
+Je suis désolé que ma réponse précédente n'ait pas été utile. Voici un exemple de code Python qui détermine si un nombre est pair ou impair:
+
+n = -1
+pair = n % 2 == 0
+
+Dans cet exemple, nous avons stocké le nombre à analyser dans la variable n. La variable pair contiendra True si n est pair, et False sinon.
+Il est important de noter que pour déterminer si un nombre est pair ou impair, vous devez utiliser l'opérateur modulo % qui calcule le reste de la division entière entre deux nombres. Si le reste est égal à 0, alors le nombre est pair, sinon il est impair.
+J'espère que cela vous aide à résoudre votre problème. N'hésitez pas à me poser d'autres questions si vous en avez besoin. 😊

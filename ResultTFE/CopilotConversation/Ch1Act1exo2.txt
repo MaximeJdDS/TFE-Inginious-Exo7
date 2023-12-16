@@ -1,0 +1,64 @@
+## Utilisateur
+Jeu des coquilles
+Quand on donne une valeur à une variable, on "écrase" la précédente valeurs contenue dans cette dernière. Lorsque c'est la première fois qu'on instancie cette variable, ce n'est pas un problème. Par contre cela peut en devenir un si on utilise le même noms de variable qu'une autre défini précédemment.
+Par exemple, dans le code suivant, variable contiendra la valeurs 0 à la fin de l'éxécution :
+variable = 1
+variable = variable + 2 # qui fait 3
+variable = 6
+variable = 0
+Implementation
+Jean-Eude souffre de dyslexie et a interverti ce que contenaient 2 variables. Écris un code qui échange le contenu de 2 variables. Ici, les variables seront gauche et droite.
+## Bing
+Lorsqu'on donne une valeur à une variable, on écrase la précédente valeur contenue dans cette dernière. Si c'est la première fois qu'on instancie cette variable, ce n'est pas un problème. Par contre, cela peut en devenir un si on utilise le même nom de variable qu'une autre définie précédemment.
+Dans l'exemple suivant, la variable contiendra la valeur 0 à la fin de l'exécution :
+
+variable = 1
+variable = variable + 2 # qui fait 3
+variable = 6
+variable = 0
+
+Pour échanger le contenu de deux variables, il suffit d'utiliser une affectation multiple. Voici un exemple de code qui échange les valeurs de deux variables gauche et droite :
+
+gauche = 5
+droite = 10
+
+# Échange des valeurs
+gauche, droite = droite, gauche
+
+print("gauche =", gauche)
+print("droite =", droite)
+
+Ce code affichera :
+
+gauche = 10
+droite = 5
+
+J'espère que cela vous aide ! N'hésitez pas à me poser d'autres questions si vous en avez.
+## Utilisateur
+Il y a des erreurs dans votre réponse. Votre note est de 0.0%. [Soumission #657af970a6278cb0b302a701 (2023-12-14 13:47:44)]
+Il semble que votre code contienne des erreurs…
+Test échoué:
+140 != 3 : Gauche et droite ne contienne pas la bonne valeur.
+Essaie de régler un problème à la fois, occupe toi de gauche comme si c'était ton seul objectif. On s'occupera de droite après.
+Ran 1 test in 0.000s
+FAILED (failures=1)
+## Bing
+Je suis désolé que ma réponse précédente n'ait pas été utile. Je vais essayer de vous aider à résoudre le problème.
+Il semble que vous ayez besoin d'échanger les valeurs de deux variables gauche et droite. Voici un exemple de code qui échange les valeurs de deux variables :
+
+gauche = 5
+droite = 10
+
+# Échange des valeurs
+gauche, droite = droite, gauche
+
+print("gauche =", gauche)
+print("droite =", droite)
+
+Ce code affichera :
+
+gauche = 10
+droite = 5
+
+Si vous rencontrez toujours des problèmes, essayez de vous concentrer sur un seul problème à la fois. Par exemple, essayez de régler le problème avec gauche avant de vous occuper de droite.
+J'espère que cela vous aide ! N'hésitez pas à me poser d'autres questions si vous en avez.

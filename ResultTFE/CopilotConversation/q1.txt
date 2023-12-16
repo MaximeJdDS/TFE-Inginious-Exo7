@@ -1,0 +1,39 @@
+## Utilisateur
+Quotient, reste, divisibilité
+Dans cet exercice, on va apprendre à utiliser la division entière (// en python) elle permet de compter le nombre de fois que le diviseur rentre dans le dividende, par exemple 13//4 donnera 3.
+Et tant qu'à faire, on va voir l'opérateur modulo (%) qui va permettre de trouver le reste d'une division, par exemple 5 % 4 va retourner 1 et inversement 4 % 5 va retourner 4.
+On va donc calculer:
+Le quotient q de la division euclidienne de a par b,
+Le reste r de cette division,
+Si le reste r est bien positif et strictement inférieur à b,
+Si on a bien l’égalité a = bq + r.
+Voici par exemple ce que donne pour 100 et 7 :
+Division de a = 100 par b = 7
+Le quotient vaut q = 14 ( car on a bien 7 fois 14 qui donne 98)
+Le reste vaut r = 2
+Vérification "reste" 0 <= r < b ? True
+Vérification "égalité" a = bq + r ? True
+Remarque. il faut que tu vérifies sans tricher que l’on a bien 0 <= r < b et a = bq + r, mais bien sûr cela doit toujours être vrai !
+N'hésites pas à rajouter des lignes de codes intermédiaires si tu en as besoin!
+Implémentation
+Les variables a et b sont deja assignées à des valeurs.
+1
+q = ...
+2
+r = ...
+3
+reste   = ...
+4
+egalite = ...
+## Bing
+Bonjour, je suis Copilot, votre assistant piloté par l'IA sur le web. Je vais vous aider à écrire un script Python pour effectuer une recherche binaire.
+Voici une possible solution :
+q = a // b # Le quotient est le résultat de la division entière de a par b
+r = a % b # Le reste est le résultat du modulo de a par b
+reste = 0 <= r < b # Le reste est positif et strictement inférieur à b
+egalite = a == b * q + r # On vérifie l'égalité a = bq + r
+On affiche les résultatsprint(f"Division de a = {a} par b = {b}")
+print(f"Le quotient vaut q = {q}")
+print(f"Le reste vaut r = {r}")
+print(f"Vérification "reste" 0 <= r < b ? {reste}")
+print(f"Vérification "égalité" a = bq + r ? {egalite}")
