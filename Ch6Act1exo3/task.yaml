@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |
     Teste si un mot se termine par ``"al"``. Si c’est le cas, affiche le pluriel en ``"aux"`` (le pluriel de ``"cheval"``
@@ -21,24 +19,17 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Cheval en Chevaux
 network_grading: false
 problems:
     q1:
         type: code
-        name: Implementaion
+        name: Implementation
         header: ''
         language: python
         default: |
             def pluriel(mot):
 
                 return mot
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

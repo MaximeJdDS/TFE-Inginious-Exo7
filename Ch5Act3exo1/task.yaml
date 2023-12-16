@@ -1,9 +1,8 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     Écris une fonction ``nombre_premier_apres(n)`` qui renvoie le premier nombre premier ``p`` supérieur ou égal à ``n``.
+
     Par exemple, le premier nombre premier après ``n`` = 60 est ``p`` = 61. Quel est le premier nombre premier après n = 100 000 ?
 environment_id: pyjavacpp
 environment_parameters:
@@ -13,16 +12,14 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Nombre Premier Apres
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
+        name: Implementation
         header: Pour ne pas avoir à reinventer la roue, tu peux faire appel à ``est_premier(n)``
             pour savoir si n est premier (renverra ``True`` si premier, ``False``
             sinon).
@@ -31,8 +28,3 @@ problems:
             def nombre_premier_apres(n):
 
                 return -1
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

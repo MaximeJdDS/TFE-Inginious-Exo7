@@ -1,6 +1,4 @@
-accessible: true
 author: MJdDS
-categories: []
 contact_url: ''
 context: |
     En informatique, on doit parfois déterminer si un nombre est ``pair`` ou ``impair``.
@@ -16,24 +14,17 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: 'Pair ou pas pair ? '
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
+        name: Implementation
         header: Votre code va recevoir la variable ``n`` qui contient un nombre à
             analyser. Vous devez ensuite écrire quelques lignes de python pour déterminer
             si cette variable contient un entier ``pair`` ou non. Stockez votre resultat
             dans la variable ``pair`` qui doit contenir soit ``True`` soit ``False``.
         language: python
         default: pair = ...
-stored_submissions: 5
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

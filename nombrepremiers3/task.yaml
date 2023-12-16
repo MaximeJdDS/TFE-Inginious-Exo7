@@ -1,12 +1,15 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
-    Améliore ta fonction en une fonction est_premier_3(n) à l’aide de l’idée suivante. On teste si d = 2 divise n, mais à partir de d = 3, il suffit de tester les diviseurs impairs (on teste d, puis d +2. . . ).
+    Améliore ta fonction en une fonction ``est_premier_3(n)`` à l’aide de l’idée suivante.
+
+    On teste si d = 2 divise n, mais à partir de d = 3, il suffit de tester les diviseurs impairs (on teste d, puis d +2. . . ).
+
     • Par exemple pour tester si n = 419 est un nombre premier, on teste d’abord si d = 2 divise n, puis d = 3 et ensuite d = 5, d = 7. . .
+
     • Cela permet de faire environ deux fois moins de tests !
-    • Explications : si un nombre pair d divise n, alors on sait déjà que 2 divise n.
+
+    **Explications** : si un nombre pair d divise n, alors on sait déjà que 2 divise n.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -15,19 +18,17 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: nombrepremiers3
+name: Nombre premier 3
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
-        header: Revoici le corps de la fonction est_premier_2(n). Cette question est
-            moins guidé que les précédentes. N'hésite pas a faire appel a tout ce
-            que tu as deja vu (if, else, utilisation de variable, etc.).
+        name: Implementation
+        header: Revoici le corps de la fonction ``est_premier_2(n)``. Cette question
+            est moins guidé que les précédentes. N'hésite pas a faire appel a tout
+            ce que tu as deja vu (``if``, ``else``, utilisation de variable, etc.).
         language: python
         default: |-
             def est_premier_3(n):
@@ -37,8 +38,3 @@ problems:
                         return False
                     d = d+1
                 return True
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

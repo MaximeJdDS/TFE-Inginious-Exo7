@@ -16,6 +16,8 @@ context: |-
             #instructions qui ne sera executées que si c'est faux
 
 
+    **Indentation** : ce concept est capital dans la maitrise du python. En effet, pour que votre code puisse fonctionner, il faut que le code soit bien placer aux bonne endroit. Ici, il faut bien commencer à écrire là où se situe le ``#`` dans le code. N'hésitez pas à utiliser la touche **Tab** de votre clavier, il place directement votre curseur au bonne endroit.
+
     Le test d’égalité s’écrit bien avec le double signe égal « ``==`` ».
 
     Par exemple « ``x == 3`` » renvoie « ``True`` »
@@ -39,8 +41,8 @@ network_grading: false
 problems:
     q1:
         type: code
-        name: Implementaion
-        header: 'Voici les 2 print() attendue en cas de bonne ou de mauvaise réponse.
+        name: Implementation
+        header: 'Voici les 2 ``print()`` attendue en cas de bonne ou de mauvaise réponse.
             À toi de les arranger dans des ``if`` approprié. '
         language: python
         default: |4-

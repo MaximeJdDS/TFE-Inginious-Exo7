@@ -1,0 +1,34 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    Quand on donne une valeur à une variable, on "écrase" la précédente valeurs contenue dans cette dernière. Lorsque c'est la première fois qu'on instancie cette variable, ce n'est pas un problème. Par contre cela peut en devenir un si on utilise le même noms de variable qu'une autre défini précédemment.
+
+    Par exemple, dans le code suivant, ``variable`` contiendra la valeurs ``0`` à la fin de l'éxécution :
+
+    .. code-block:: python
+
+        variable = 1
+        variable = variable + 2 # qui fait 3
+        variable = 6
+        variable = 0
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Jeu des coquilles
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implementation
+        header: Jean-Eude souffre de dyslexie et a interverti ce que contenaient 2
+            variables. Écris un code qui échange le contenu de 2 variables. Ici, les
+            variables seront ``gauche`` et ``droite``.
+        language: python
+        default: ''

@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     Écris une fonction ``verlan()`` qui renvoie un mot à l’envers :
@@ -14,11 +12,9 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: verlan
+name: Verlan
 network_grading: false
 problems:
     q1:
@@ -38,8 +34,3 @@ problems:
         default: |-
             def verlan(mot):
                 return mot
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

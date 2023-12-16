@@ -28,7 +28,7 @@ network_grading: false
 problems:
     q1:
         type: code
-        name: Implementaion
+        name: Implementation
         header: ''
         language: python
         default: ''

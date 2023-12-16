@@ -18,7 +18,7 @@ class Test(unittest.TestCase):
     def test_result_String(self):
         a = ["japon","tout pareil","motsTresTresLongPourVoirSiLeSVaBienALaFinDuMot","Satin"]
         b = ["savon","tout pareil","mots TresTresLongPourVoirSiLeSVaBienALaFinDuMot","Lapin"]
-        ansresult   = _("Pour le couple de mots \"{}\" la réponse attendu est \"{}\" et ta fonction a renvoyé \"{}\".")
+        ansresult   = _("Pour le couple de mots {} \nla réponse attendu est {} \net ta fonction a renvoyé {}.")
         for i in range(len(a)):
             stu_ans  = student.fonction(a[i],b[i])
             corr_ans = corr.fonction(a[i],b[i])

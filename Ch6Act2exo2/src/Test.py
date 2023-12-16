@@ -8,6 +8,9 @@ import random
 import Corr as corr
 import student
 
+def compare(mot1, mot2):
+    return mot1.lower() == mot2.lower()
+
 
 class Test(unittest.TestCase):
     def test_exists(self):
@@ -16,12 +19,15 @@ class Test(unittest.TestCase):
     
 
     def test_result_normalCase(self):
-        a = ["vitre","blanche","motsTresTresLongPourVoirSiLeSVaBienALaFinDuMot","test"]
-        ansresult   = _("Pour le mot \"{}\" la réponse attendu est \"{}\" et ta fonction a renvoyé \"{}\".")
+        a = ["VITRE","BLANCHE","MotsTresTresLongPourVoirSiLeSVaBienALaFinDuMot","test"]
+        ansresult   = _("Pour le mot \"{}\" la réponse attendu est \"{}\" et ta fonction a renvoyé \"{}\"\nMalgrès ce que peut te montrer les valeurs de retour, ne perd pas de temps avec les Majuscules/minuscules. Concentre toi sur l'emplacement des lettres.")
         for i in range(len(a)):
             stu_ans  = student.fonction(a[i])
             corr_ans = corr.fonction(a[i])
-            self.assertEqual(corr_ans, stu_ans, ansresult.format(a[i],corr_ans,stu_ans))
+            if(compare(stu_ans,corr_ans)):#Bonne réponse 
+                self.assertEqual(True, True, "Bonne réponse.")
+            else:
+                self.assertEqual(corr_ans, stu_ans, ansresult.format(a[i],corr_ans,stu_ans))
             
     def test_result_voyelleCase(self):
         a = ["etude","impossible","otsTresTresLongPourVoirSiLeSVaBienALaFinDuMot","arbre","utile","yakari"]
@@ -29,7 +35,10 @@ class Test(unittest.TestCase):
         for i in range(len(a)):
             stu_ans  = student.fonction(a[i])
             corr_ans = corr.fonction(a[i])
-            self.assertEqual(corr_ans, stu_ans, ansresult.format(a[i],corr_ans,stu_ans))
+            if(compare(stu_ans,corr_ans)):#Bonne réponse 
+                self.assertEqual(True, True, "Bonne réponse.")
+            else:
+                self.assertEqual(corr_ans, stu_ans, ansresult.format(a[i],corr_ans,stu_ans))
             
             
 

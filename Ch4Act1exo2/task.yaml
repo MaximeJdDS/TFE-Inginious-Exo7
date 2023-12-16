@@ -37,7 +37,7 @@ network_grading: false
 problems:
     q1:
         type: code
-        name: Implementaion
+        name: Implementation
         header: Écris la fonction ``soustraction(a,b)`` sachant que je veux que ``soustraction(2,5)``
             renvoie ``3``.
         language: python

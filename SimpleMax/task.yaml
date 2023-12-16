@@ -1,9 +1,4 @@
-accessible: false
 author: MJdDS
-categories:
-- overflow
-- timeout
-- exist
 contact_url: ''
 context: |-
     Ecrivez l'en-tête et le corps d'une fonction baptisée ``afficheMax`` qui prend deux nombres entiers comme arguments et affiche le plus grand de ces nombres. La spécification de cette fonction est :
@@ -43,9 +38,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: SimpleMax
 network_grading: false
@@ -56,8 +49,3 @@ problems:
         header: ''
         language: python
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

@@ -23,7 +23,7 @@ def nombre_germain_apres(n):
             found = True 
         else:
             i = i+2
-    return i
+    return i, 2*i +1
 
 def fonction(n):
     return nombre_germain_apres(n)

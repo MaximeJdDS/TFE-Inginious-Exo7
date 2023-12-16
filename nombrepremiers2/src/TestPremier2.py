@@ -14,7 +14,7 @@ class TestPrime2(unittest.TestCase):
         self.assertTrue(hasattr(premier2, 'est_premier_2'), _("Tu n\'as pas défini la bonne fonction. La fonction 'est_premier_2' est introuvable."))
 
     def test_prime2(self):
-        a = [random.randint(1, 100) for _ in range(10)]
+        a = [random.randint(2, 150) for _ in range(15)]
         ansNotPrime   = _("L\' entier {} n\'est pas premier. Pourtant ta fonction a retourné {}.")
         ansPrime      = _("L\' entier {} est premier. Pourtant ta fonction a retourné {}.")
         for i in range(len(a)):

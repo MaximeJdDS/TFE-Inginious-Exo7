@@ -1,19 +1,11 @@
 admins:
 - Alrq
 - Mava
+- NicolasRybowski
 - alrq
 - mpiron
 - obonaventure
-description: |-
-    Ce cours est une série d'exercices tirés de l'excellent syllabus `exo7 <http://exo7.emath.fr/cours/livre-python1.pdf>`_ . Ainsi, si vous voulez apprendre le langage Python, je vous conseille d'avoir ce syllabus à côté de vous et de ne pas hésiter à relire les sections ``cours`` qui précèdent ces exercices.
-
-    Le but de ce cours est donc bien d'offrir une version automatisée de certains exercices, pas tous. On vous invite donc à faire des exercices supplémentaires qui sont dans le syllabus mais pas ici afin de parfaire votre maîtrise du Python.
-
-    Cette plateforme n'est pas destinée à être un IDE et/ou un débogueur Python. Ainsi, nous vous conseillons d'en utiliser un en parallèle d'Inginious afin de ne pas avoir à développer vos réponses mais seulement à les vérifier.
-
-    Bon apprentissage !
-
-    PS : Ce cours est actuellement en cours de dévellopement, ainsi, si vous voyez des fautes, des incohérences ou autres qui vous trouble, n'hésitez pas à nous en faire part via l'exercice "FeedBack"
+description: Exercices tirés du syllabus exo7 (http://exo7.emath.fr/cours/livre-python1.pdf).
 dispenser_data:
     config:
         Ch3Act1exo1:
