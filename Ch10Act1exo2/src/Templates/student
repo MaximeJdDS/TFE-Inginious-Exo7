@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+ 
+@@q1@@ 
+    
+    
+def fonction(x,y,z):
+	return Bourse(x,y,z)

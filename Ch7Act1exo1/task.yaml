@@ -1,0 +1,57 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |+
+    Une **liste** est une suite d’éléments. Cela peut être une liste d’entiers, par exemple [5,-7,12,99], ou bien une liste de chaînes de caractères, par exemple ["Mars","Avril","Mai"] ou bien les objets peuvent être de différents types [3.14,"pi",10e-3,"x",True].
+
+    • Construction d’une liste. Une liste se définit par des éléments entre crochets :
+
+    .. code-block:: python
+
+        liste1 = [5,4,3,2,1] une liste de 5 entiers,
+        liste2 = ["Vendredi","Samedi","Dimanche"] une liste de 3 chaînes de caractères,
+        liste3 = [] la liste vide (très utile pour la compléter plus tard !).
+
+
+    • Accéder à un élément. Pour obtenir un élément de la liste, il suffit d’écrire liste[i] où i est le rang de l’élément souhaité.
+
+
+    **Attention !** Le piège c’est que l’on commence à compter à partir du rang ``0`` !
+    Par exemple après l’instruction liste = ["A","B","C","D","E","F"] alors
+
+    — liste[0] renvoie "A"
+
+    — liste[1] renvoie "B"
+
+    — liste[2] renvoie "C"
+
+    — liste[3] renvoie "D"
+
+    — liste[4] renvoie "E"
+
+    — liste[5] renvoie "F"
+
+
+
+    .. image:: Ch7Act1exo1/rangTableau.png
+
+
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Le b.a-b.a. du tableau
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: |
+            On te demande de créer une fonction ``troisieme(tab)`` qui prends en paramètre un tableau et retourne le troisième élément de ce dernier.
+        language: python
+        default: ''

@@ -1,0 +1,38 @@
+_id: 6405beba6ea3d68d1243daa7
+archive: 6405bebc6ea3d68d1243daa8
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '3'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@state': ''
+    '@time': '2023-03-06 11:21:46.019678'
+    '@username': Mava
+    q1: |-
+        def presence_de_A(adn):
+            for i in adn:
+                if i == "A":
+                    return True
+            return False
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-03-06 11:21:46.019000
+taskid: Ch6Act3exo1
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:20c1:d894:8c7a:dc39
+username:
+- Mava

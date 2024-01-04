@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     On va comparer les temps de calcul de tes différentes fonctions ``est_premier(n)`` en répétant 100 000 de fois l’appel ``est_premier(n)``.
@@ -9,7 +7,7 @@ context: |-
 
     Si tu veux refaire ça chez toi, la ligne qui te permet de savoir combien de temps a pris l'execution de ta fonction se trouve dans le syllabus exo7 a la page 39.
 
-    ``Attention`` : Pour le moment, les tests sont soumis à de l'aléatoire, il est donc possible qu'une bonne réponse se fasse rejectee et inversement.
+    ``Attention`` : Pour le moment, les tests sont soumis à de l'aléatoire, il est donc possible qu'une bonne réponse se fasse rejecter et inversement.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -18,11 +16,9 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: tempsdecalcul
+name: Temps de calcul
 network_grading: false
 problems:
     q1:
@@ -40,8 +36,3 @@ problems:
 
             def est_premier_3(n): #Remplace par ta fonction
                 return False
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

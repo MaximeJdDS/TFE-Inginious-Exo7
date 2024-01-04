@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+class Plat:
+    def __init__(self,ingredient,prix,nom,isVege):
+        self.ingredient = ingredient
+        self.prix = prix
+        self.nom = nom
+        self.isVege = isVege
+            
+    def isVege(self):
+        return self.isVege
+            
+        
+    def service(): # pour servir automatiquement le plat
+        return 0
+
+
+ 
+@@q1@@ 
+    
+    
+def fonction(x,y,z,e,r):
+	return Pizza(x,y,z,e,r)

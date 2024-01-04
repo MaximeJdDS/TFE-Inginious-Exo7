@@ -1,10 +1,8 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |
     Rassemble tout ton travail des trois premières questions dans une fonction ``met_au_pluriel()``.
-    La fonction n’affiche rien, mais renvoie le mot au pluriel.
+    La fonction renvoie le mot au pluriel.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -13,9 +11,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Pluriel des mots (synthèse)
 network_grading: false
@@ -42,8 +38,3 @@ problems:
             def met_au_pluriel(mot):
 
                 return mot
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

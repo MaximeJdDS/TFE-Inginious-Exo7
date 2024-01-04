@@ -1,6 +1,4 @@
-accessible: true
 author: MJdDS
-categories: []
 contact_url: ''
 context: |-
     Programme une fonction ``est_divisible(a,b)`` qui teste si ``b`` divise ``a``.
@@ -14,16 +12,14 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: Est_divisible
+name: Est_divisible()
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
+        name: Implementation
         header: ''
         language: python
         default: |-
@@ -32,8 +28,3 @@ problems:
                     return *
                 else :
                     return *
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

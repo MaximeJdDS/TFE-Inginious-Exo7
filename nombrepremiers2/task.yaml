@@ -1,11 +1,11 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     Améliore ta fonction en une fonction ``est_premier_2(n)`` qui ne teste pas tous les diviseurs ``d`` jusqu’à ``n``, mais seulement jusqu’à ``racine carre de n``.
-    Explications.
-    • Par exemple pour tester si 101 est un ``nombre premier``, il suffit de voir s’il admet des diviseurs parmi ``2, 3, . . . , 10``. Le gain est appréciable !
+
+    **Explications** :
+
+    • Par exemple, pour tester si 101 est un ``nombre premier``, il suffit de voir s’il admet des diviseurs parmi ``2, 3, . . . , 10``. Le gain est appréciable !
     • Cette amélioration est due à la proposition suivante : si un entier n’est pas ``premier`` alors il admet un diviseurs ``d`` qui vérifie ``2 <= d <= racine carre de n``.
     • Au lieu de tester si ``d <= racine carre de n``, il est plus facile de tester ``d² <= n`` !
 environment_id: pyjavacpp
@@ -16,11 +16,9 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
-name: nombrepremiers2
+name: Nombre premier 2
 network_grading: false
 problems:
     q1:
@@ -32,8 +30,3 @@ problems:
             def est_premier_2(n):
 
                 return False
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

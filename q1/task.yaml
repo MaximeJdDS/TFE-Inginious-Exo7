@@ -1,6 +1,4 @@
-accessible: true
 author: MJdDS
-categories: []
 contact_url: ''
 context: |-
     Dans cet exercice, on va apprendre à utiliser la division entière (``//`` en python) elle permet de compter le nombre de fois que le diviseur rentre dans le dividende, par exemple 13//4 donnera 3.
@@ -36,30 +34,18 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Quotient, reste, divisibilité
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
-        header: |-
-            Les variables a et b sont deja assignées à des valeurs.
-
-            a = ...
-
-            b = ...
+        name: Implémentation
+        header: Les variables ``a`` et ``b`` sont deja assignées à des valeurs.
         language: python
         default: |-
             q = ...
             r = ...
             reste   = ...
             egalite = ...
-stored_submissions: 5
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

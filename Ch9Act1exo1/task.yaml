@@ -1,0 +1,61 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |+
+    Écrire dans un fichier est presque aussi facile que d’afficher une phrase à l’écran. Voici à gauche un
+    programme qui écrit deux lignes dans un fichier appelé mon_fichier.txt; à droite le fichier résultant
+    qui s’affiche dans un éditeur de texte.
+
+    .. code-block:: python
+
+        fic = open("mon_fichier.txt","w")
+        fic.write("Bonjour le monde\n")
+        ligne = "Coucou\n"
+        fic.write(ligne)
+        fic.close()
+
+
+    **Explications.**
+    • La commande open permet d’ouvrir un fichier. Le premier argument est le nom du fichier. Le second argument est ici ``"w"`` pour dire que l’on veut écrire dans le fichier (*write* en anglais).
+
+    • On ne travaille pas avec le nom du fichier, mais avec la valeur renvoyée par la fonction open. Ici nous avons nommé ``fic`` ce fichier-objet. C’est avec cette variable fic que l’on travaille désormais.
+
+    • On écrit maintenant dans le fichier presque comme on afficherait une phrase à l’écran. L’instruction est ``fic.write()`` où l’argument est une chaîne de caractères.
+
+    • Pour passer à la ligne, il faut ajouter le caractère de fin de ligne ``"\n"``.
+
+    • Il est important de fermer son fichier quand on a fini d’écrire. La commande est ``fic.close()``.
+
+    • Les données à écrire sont des chaînes, donc pour écrire un nombre, il faut d’abord le transformer par ``str(nombre)``.
+
+
+    **Vidéo explicative** : https://www.youtube.com/embed/kLdHGVD2qZo
+
+
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Écriture dans un Fichier
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: |-
+            Écris une fonction ``ecritXfois(nomdufichier,contenu,x)`` qui écris dans ``nomdufichier`` le ``contenu x`` fois.
+
+            Exemple : ecritXfois("fichier.txt","un c'est bien, deux c'est mieux\n", 2) écrira dans le fichier :
+
+
+            .. code-block:: console
+
+                un c'est bien, deux c'est mieux
+                un c'est bien, deux c'est mieux
+        language: python
+        default: ''

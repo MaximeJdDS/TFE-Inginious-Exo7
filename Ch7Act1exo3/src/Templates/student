@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+
+@@q1@@ 
+
+    
+def fonction(n):
+	return somme(n)

@@ -1,8 +1,28 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
-context: None
+context: |-
+    Pour cette exercice on va vous demander d'écrire un code Python qui calculera la factoriel d'un nombre.
+
+    **Définition de la Factorielle :**
+
+    La factorielle d'un nombre entier positif "``n``" est le produit de tous les entiers positifs de ``1`` à "``n``" et se note "``n!``". Cela peut sembler un peu complexe, mais ne vous inquiétez pas, nous allons le décomposer étape par étape.
+
+
+    **Comment Calculer n! :**
+
+
+    Prenons un exemple pour mieux comprendre. Supposons que nous voulions calculer ``5!``. Cela signifie que nous multiplions tous les entiers de ``1`` à ``5`` ensemble :
+
+    .. code-block:: sql
+
+        5! = 5 × 4 × 3 × 2 × 1
+
+    Donc, ``5!`` équivaut à ``120``.
+
+    **Propriétés Importantes :**
+
+    - ``0!`` est toujours égal à ``1``. C'est une règle fondamentale de la factorielle.
+    - ``1!`` est également égal à ``1``.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -11,21 +31,17 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Demo3
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
-        header: ''
+        name: Implementaion
+        header: Écris un code Python qui calcule la factoriel du nombre stocké dans
+            la variable ``n`` et stocke la réponse dans la variable ``result``.
         language: python
-        default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0
+        default: |4-
+
+            result = -1

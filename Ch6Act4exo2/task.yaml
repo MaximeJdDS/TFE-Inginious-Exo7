@@ -1,0 +1,39 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    On aimerait maintenant écrire une fonction qui passe de majuscule à minuscule et inversément.
+
+    Exemple :
+
+    .. code-block:: python
+
+        switch("C") == "c" #True
+        switch("a") == "A" #True
+        switch(" ") == " " #True
+
+    Pour t'aider revoici la table Ascii :
+
+    .. image:: Ch6Act4exo0/Ascii.png
+       :height: 488
+       :width: 958
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Switch
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: |-
+            Écris la fontion ``switch(c)`` comme décrite au dessus.
+            Pour ne pas réinventer la roue, tu as accès aux 2 fonctions que tu as écris précédemment (``minuscule(c)`` et ``majuscule(c)``).
+        language: python
+        default: ''

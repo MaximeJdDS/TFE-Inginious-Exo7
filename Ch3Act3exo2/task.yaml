@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     Trouve tous les entiers compris entre ``0`` et ``999`` qui vérifient toutes les propriétés suivantes :
@@ -18,16 +16,14 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Propriété sur les chiffres d'un nombres.
 network_grading: false
 problems:
     q1:
         type: code
-        name: Implementaion
+        name: Implementation
         header: |-
             Pour ce faire, on va utiliser un petit sac pour ranger tout les nombres qui nous interresse au lieux de les afficher les un après les autres. Son utilisation est très simple si on veut ranger la valeur que contient ``n`` dans notre sac, on écrira :
 
@@ -44,8 +40,3 @@ problems:
                 for u in range(10):
                     n = 10*d + u
                     sac.append(n)
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

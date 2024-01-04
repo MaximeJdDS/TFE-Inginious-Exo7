@@ -1,0 +1,36 @@
+_id: 653fc3398c92c88981f91b13
+archive: 653fc33a8c92c88981f91b14
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '4'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-10-30 15:52:41.730151'
+    '@username': Mava
+    q1: |-
+        def soustraction(a,b):
+            return b-a
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-10-30 15:52:41.730000
+taskid: Ch4Act1exo2
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:bd36:f072:bb3e:aaf4
+username:
+- Mava
