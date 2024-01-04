@@ -56,7 +56,7 @@ class Test(unittest.TestCase):
         test_attribut = tester_objet_attribut(stu_obj)
         test_meth = tester_objet_methode(stu_obj)
         if(test_attribut != 0):
-            self.assertTrue(False, _("Tu n\'as pas défini le bonne attribut. L'attribut {} est introuvable.").format(test_attribut))
+            self.assertTrue(False, _("Tu n\'as pas défini le bon attribut. L'attribut {} est introuvable.").format(test_attribut))
         if(test_meth != 0):
             self.assertTrue(False, _("Tu n\'as pas défini la bonne méthode. La méthode {} est introuvable.").format(test_meth))
         mid = int(len(a)/2)
