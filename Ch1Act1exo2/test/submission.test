@@ -1,0 +1,48 @@
+_id: 65770b90ecc92e699e5e026b
+archive: 65770b91ecc92e699e5e026c
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '12'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-12-11 14:16:00.206828'
+    '@username': Mava
+    q1: |4
+
+
+        # Affichage des valeurs avant l'échange
+        print("Avant l'échange :")
+        print("gauche =", gauche)
+        print("droite =", droite)
+
+        # Échange des valeurs entre gauche et droite sans utiliser de variable temporaire
+        gauche, droite = droite, gauche
+
+        # Affichage des valeurs après l'échange
+        print("\nAprès l'échange :")
+        print("gauche =", gauche)
+        print("droite =", droite)
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.000s
+
+    OK
+
+submitted_on: 2023-12-11 14:16:00.206000
+taskid: Ch1Act1exo2
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:ac5c:e8db:2b53:eb5f
+username:
+- Mava

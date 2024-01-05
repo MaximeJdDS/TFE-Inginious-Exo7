@@ -1,0 +1,52 @@
+_id: 658ef7a7ced52dd9e4fdfc1c
+archive: 658ef7a9ced52dd9e4fdfc1d
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts':
+    - '13'
+    '@email':
+    - max.jacques@student.uclouvain.be
+    '@lang':
+    - fr
+    '@random':
+    - []
+    '@settings':
+    - {}
+    '@state':
+    - ''
+    '@time':
+    - '2023-12-29 17:45:27.307081'
+    '@username':
+    - Mava
+    q1:
+    - |
+        def pythagore(data):
+            result = []
+            for i in data:
+                if (i[2]**2) == (i[1]**2) + (i[0]**2) :
+                    result = result + [True]
+                else :
+                    result = result + [False]
+
+            return result
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.005s
+
+    OK
+
+submitted_on: 2023-12-29 17:45:27.307000
+taskid: Ch7Act1exo4
+tests: {}
+text: ''
+user_ip: 2a02:2788:806:109c:f47c:5774:4aa7:689c
+username:
+- Mava
