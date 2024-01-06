@@ -1,0 +1,29 @@
+## Utilisateur
+Pythagore et ses triangles
+Tu te souviens de ce bon vieux Pythagore et ses triangles? Si un triangle est rectangle alors le carré de la longueur de l'hypoténuse est égal à la somme des carrés des 2 autres cotés.
+On a mesuré les longueurs de plusieurs triangles et on aimerait vérifier lesquels sont rectangles. Pour t'aider, on a déjà trier les longueurs du plus petit au plus grand, du coup, l'hypoténuse sera toujours le dernier des 3.
+Voici un petit exemple :
+data = [
+[5,4,3],
+[6,5,4],
+[13,12,1],
+]
+print(pythagore(data)) # [True,False,False]
+Implémentation
+Écrit une fonction pythagore(data) qui teste si les triplets de longueurs contenus dans un tableau d'entrées correspondent bien à un triangle rectangle. Cette fonction doit renvoyer un tableau qui contient True à l'emplacement i si le triplet correspond à des longueur d'un triangle rectangle, False sinon.
+## Bing
+Bien sûr que je me souviens de Pythagore et de son théorème. Pour vérifier si un triangle est rectangle, il suffit de vérifier si la somme des carrés des deux plus petits côtés est égale au carré de l'hypoténuse. Dans ton exemple, le premier triplet (5, 4, 3) correspond à un triangle rectangle car 5^2 = 4^2 + 3^2. Le deuxième triplet (6, 5, 4) ne correspond pas à un triangle rectangle car 6^2 ≠ 5^2 + 4^2. Enfin, le troisième triplet (13, 12, 1) ne correspond pas à un triangle rectangle car 13^2 ≠ 12^2 + 1^2.
+Voici une implémentation possible de la fonction pythagore(data) en Python:
+
+def pythagore(data):
+    result = []
+    for triplet in data:
+        a, b, c = sorted(triplet)
+        if a**2 + b**2 == c**2:
+            result.append(True)
+        else:
+            result.append(False)
+    return result
+
+Cette fonction prend en entrée un tableau de triplets de longueurs et renvoie un tableau de booléens qui indique si chaque triplet correspond à un triangle rectangle ou non. Par exemple, pour le tableau de triplets de longueurs de ton exemple, l'appel pythagore(data) renvoie [True, False, False].
+J'espère que cela t'aide. N'hésite pas à me poser d'autres questions si tu en as besoin.

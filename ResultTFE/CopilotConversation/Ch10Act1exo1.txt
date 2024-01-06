@@ -1,0 +1,53 @@
+## Utilisateur
+Programmation objet : la classe !
+Un objet est une entité qui regroupe à la fois des variables et des fonctions. Le premier intérêt est qu’un objet est indépendant et auto-suffisant puisqu’il contient tout ce qu’il faut pour être utilisé, il permet d’éviter le recours aux variables globales par exemple. Un objet est défini comme une instance d’une classe, c’est-à-dire un élément d’une catégorie. Voici un exemple de la vie courante : on considère la classe Chien, alors mon chien Médor est un objet, appartenant à la classe Chien. Note que Chien est un concept, mais que Médor est bien réel. Mon autre chien Foulcan est aussi une instance de Chien.
+Pour l’instant un vecteur est un concept auquel sont rattachés trois nombres (x, y, z). Le mot self fait référence à l’objet lui-même mais dont on ne connaît pas encore le nom (ce sera V ou bien V1, V2...).
+Je peux changer une de ces valeurs comme pour une variable classique (même si ce n’est pas la manière recommandée), par exemple :
+V.x = 7
+Maintenant V.x + V.y + V.z vaut 12.
+Tu peux définir plusieurs objets qui seront indépendants les uns des autres :
+V1 = Vecteur(1,2,3)
+V2 = Vecteur(1,0,0)
+Ainsi par exemple V1.y vaut 2, V2.y vaut 0.
+Pour un objet, une fonction associée s’appelle une méthode. Complétons notre classe Vecteur() pour lui associer trois nouvelles méthodes :
+class Vecteur:
+def init(self,x,y,z):
+self.x = x
+self.y = y
+self.z = z
+def norme(self):
+    N = sqrt(self.x**2 + self.y**2 + self.z**2)
+    return N
+
+def addition(self,other):
+    W = Vecteur(self.x+other.x,self.y+other.y,self.z+other.z)
+    return W
+Implémentation
+On va te demander d'implémenter la Classe Chien qui a 4 attributs : nom, race, x et y (pour leur position). Ainsi que 2 méthodes : wouaf() qui imprime sur la console "Wouaf!" et viensIci(x,y) qui change ses attributs de position pour aller à x,y.
+## Bing
+Bonjour! Merci pour votre message. Vous avez fourni une excellente introduction à la programmation orientée objet. En effet, un objet est une entité qui regroupe à la fois des variables et des fonctions. Un objet est défini comme une instance d'une classe, c'est-à-dire un élément d'une catégorie. Pour illustrer cela, vous avez donné un exemple de la vie courante : on considère la classe Chien, alors mon chien Médor est un objet, appartenant à la classe Chien.
+En ce qui concerne les vecteurs, vous avez expliqué que pour l'instant, un vecteur est un concept auquel sont rattachés trois nombres (x, y, z). Le mot self fait référence à l'objet lui-même mais dont on ne connaît pas encore le nom (ce sera V ou bien V1, V2...).
+Vous avez également montré comment changer une valeur de vecteur comme pour une variable classique (même si ce n'est pas la manière recommandée), par exemple :
+V.x = 7
+Maintenant V.x + V.y + V.z vaut 12.
+Enfin, vous avez expliqué comment définir plusieurs objets qui seront indépendants les uns des autres :
+V1 = Vecteur(1,2,3)
+V2 = Vecteur(1,0,0)
+Ainsi par exemple V1.y vaut 2, V2.y vaut 0.
+Pour répondre à votre question, voici une implémentation possible de la classe Chien avec les attributs et méthodes demandés :
+
+class Chien:
+    def __init__(self, nom, race, x, y):
+        self.nom = nom
+        self.race = race
+        self.x = x
+        self.y = y
+
+    def wouaf(self):
+        print("Wouaf!")
+
+    def viensIci(self, x, y):
+        self.x = x
+        self.y = y
+
+J'espère que cela vous aide. N'hésitez pas à me poser d'autres questions si vous en avez.

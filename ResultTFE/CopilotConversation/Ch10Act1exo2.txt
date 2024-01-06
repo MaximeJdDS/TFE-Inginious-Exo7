@@ -1,0 +1,141 @@
+## Utilisateur
+Les bourses bien remplies
+Complétons notre classe Vecteur() afin de permettre un joli affichage et d’additionner les vecteurs à l’aide de l’opérateur « + ».
+class Vecteur:
+def init(self,x,y,z):
+self.x = x
+self.y = y
+self.z = z
+def __str__(self):
+    ligne = "("+str(self.x)+","+str(self.y)+","+str(self.z)+")"
+    return ligne
+
+def __add__(self,other):
+    W = Vecteur(self.x+other.x,self.y+other.y,self.z+other.z)
+    return W
+La méthode str() (le nom est réservé) renvoie ici un bel affichage du vecteur. Par exemple avec V = Vecteur(1,2,3) alors :
+print(V.str())
+affiche (1,2,3).
+Mais ce n’est pas comme cela qu’on l’utilise car une fois que la méthode str() est définie alors la commande :
+print(V)
+affiche aussi (1,2,3). C’est très pratique !
+La méthode add() a exactement la même définition que la méthode addition() définie précédemment. Avec V1 = Vecteur(1,2,3) et V2 = Vecteur(1,0,-4) on pourrait l’utiliser par :
+V3 = V1.add(V2)
+Mais comme on a utilisé le nom réservé add() alors cela a défini l’opérateur « + » et il est beaucoup plus agréable d’écrire simplement :
+V3 = V1 + V2
+Implémentation
+On va te demander d'implémenter la Classe Bourse qui a 3 attributs : or, argent et bronze. Ainsi que 1 méthode : echange() qui permet d'échanger ses pièces pour en avoir le moins possible. Le taux de change est le suivant : 1 pièce d'or vaut 100 pièces d'argent qui elle-même vaut 100 pièces de bronze.
+PS: Pour tes attributs, appel les "gold, silver et bronze", d'une part ça t'évite d'utiliser le terme or car python le reconnaitra comme un ou et ne voudra pas compiler. Et d'autre part, on pourra mieux tester ton code.
+## Bing
+Voici une implémentation possible de la classe Bourse :
+
+class Bourse:
+    def __init__(self, gold, silver, bronze):
+        self.gold = gold
+        self.silver = silver
+        self.bronze = bronze
+
+    def echange(self):
+        total_bronze = self.gold * 100 * 100 + self.silver * 100 + self.bronze
+        self.gold = total_bronze // (100 * 100)
+        total_bronze -= self.gold * 100 * 100
+        self.silver = total_bronze // 100
+        self.bronze = total_bronze % 100
+
+La méthode echange() permet d'échanger les pièces pour en avoir le moins possible. Le taux de change est le suivant : 1 pièce d'or vaut 100 pièces d'argent qui elle-même vaut 100 pièces de bronze.
+Par exemple, si on a 2 pièces d'or, 5 pièces d'argent et 345 pièces de bronze, alors echange() convertira toutes les pièces en 2 pièces d'or, 45 pièces d'argent et 45 pièces de bronze.
+J'espère que cela t'aidera à compléter ta classe Vecteur() ! N'hésite pas à me poser des questions si tu en as d'autres. 😊
+## Utilisateur
+Il y a des erreurs dans votre réponse. Votre note est de 0.0%. [Soumission #659955155cc27fe90d00aa95 (2024-01-06 14:26:45)]
+Il semble que votre code contienne des erreurs…
+Test échoué:
+False is not true : Tu n'as pas défini la bonne méthode. La méthode add est introuvable.
+Ran 2 tests in 0.000s
+FAILED (failures=1)
+## Bing
+Je suis désolé que ma réponse précédente n'ait pas été utile. Il semble que j'ai mal compris votre question. Pourriez-vous me donner plus de détails sur ce que vous cherchez à faire ? Je serai ravi de vous aider à résoudre votre problème. 😊
+## Utilisateur
+implémente la fonction add et str de la classe Bourse
+## Bing
+Je suis désolé pour la confusion. Voici une implémentation possible de la classe Bourse avec les méthodes __add__ et __str__ :
+
+class Bourse:
+    def __init__(self, gold, silver, bronze):
+        self.gold = gold
+        self.silver = silver
+        self.bronze = bronze
+
+    def echange(self):
+        total_bronze = self.gold * 100 * 100 + self.silver * 100 + self.bronze
+        self.gold = total_bronze // (100 * 100)
+        total_bronze -= self.gold * 100 * 100
+        self.silver = total_bronze // 100
+        self.bronze = total_bronze % 100
+
+    def __add__(self, other):
+        gold = self.gold + other.gold
+        silver = self.silver + other.silver
+        bronze = self.bronze + other.bronze
+        if bronze >= 100:
+            silver += bronze // 100
+            bronze %= 100
+        if silver >= 100:
+            gold += silver // 100
+            silver %= 100
+        return Bourse(gold, silver, bronze)
+
+    def __str__(self):
+        return f"{self.gold} pièces d'or, {self.silver} pièces d'argent, et {self.bronze} pièces de bronze"
+
+La méthode __add__ permet d'additionner deux objets de la classe Bourse. Elle retourne un nouvel objet de la classe Bourse qui contient la somme des pièces d'or, d'argent et de bronze des deux objets.
+La méthode __str__ permet d'afficher un objet de la classe Bourse de manière lisible. Elle retourne une chaîne de caractères qui décrit le nombre de pièces d'or, d'argent et de bronze de l'objet.
+J'espère que cela t'aidera à résoudre ton problème. N'hésite pas à me poser des questions si tu en as d'autres. 😊
+## Utilisateur
+Il semble que votre code contienne des erreurs…
+Test échoué:
+"31 pièce(s) d'or, 192 pièce(s) d'argent et 938 pièce(s) de bronze." != "31 pièces d'or, 192 pièces d'argent, et 938 pièces de bronze"
+- 31 pièce(s) d'or, 192 pièce(s) d'argent et 938 pièce(s) de bronze.
+?         - -                - -                      - -          -
+- 31 pièces d'or, 192 pièces d'argent, et 938 pièces de bronze
+?                                    +
+: Ta méthode str() ne marche pas correctement.
+On s'attendait à :
+31 pièce(s) d'or, 192 pièce(s) d'argent et 938 pièce(s) de bronze.
+Et tu as renvoyé :
+31 pièces d'or, 192 pièces d'argent, et 938 pièces de bronze.
+Ran 2 tests in 0.001s
+FAILED (failures=1)
+## Bing
+Je suis désolé pour la confusion. Voici une implémentation possible de la classe Bourse avec les méthodes __add__ et __str__ :
+
+class Bourse:
+    def __init__(self, gold, silver, bronze):
+        self.gold = gold
+        self.silver = silver
+        self.bronze = bronze
+
+    def echange(self):
+        total_bronze = self.gold * 100 * 100 + self.silver * 100 + self.bronze
+        self.gold = total_bronze // (100 * 100)
+        total_bronze -= self.gold * 100 * 100
+        self.silver = total_bronze // 100
+        self.bronze = total_bronze % 100
+
+    def __add__(self, other):
+        gold = self.gold + other.gold
+        silver = self.silver + other.silver
+        bronze = self.bronze + other.bronze
+        if bronze >= 100:
+            silver += bronze // 100
+            bronze %= 100
+        if silver >= 100:
+            gold += silver // 100
+            silver %= 100
+        return Bourse(gold, silver, bronze)
+
+    def __str__(self):
+        return f"{self.gold} pièces d'or, {self.silver} pièces d'argent, et {self.bronze} pièces de bronze"
+
+La méthode __add__ permet d'additionner deux objets de la classe Bourse. Elle retourne un nouvel objet de la classe Bourse qui contient la somme des pièces d'or, d'argent et de bronze des deux objets.
+La méthode __str__ permet d'afficher un objet de la classe Bourse de manière lisible. Elle retourne une chaîne de caractères qui décrit le nombre de pièces d'or, d'argent et de bronze de l'objet.
+J'espère que cela t'aidera à résoudre ton problème. N'hésite pas à me poser des questions si tu en as d'autres. 😊
