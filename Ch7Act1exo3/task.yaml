@@ -1,0 +1,28 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    Maintenant que tu sais lire les éléments d'un tableau et créer ton propre tableau, on va pouvoir commencer à vraiment les utiliser.
+
+    On va introduire le concept d'**accumulateur** qui est une variable qui va suivre une propriété tous au long de l'algorithme. Ainsi, si on stock dans une variable ``total`` la somme du nombre contenu à l'emplacement ``i`` et le nombre contenue dans ``total``, alors peut importe où on se trouve dans l'éxécution de la boucle, ``total`` représentera la somme des nombres contenu dans le tableau jusqu'au moment où on est dans le programme.
+
+    Avec cette méthode, on est capable de calculer n'importe quelles propriétés sur un tableau (on peut même en calculer plusieurs simultanement, du moment que chaque propriété a sa/ses variable(s) bien définie(s))
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Accumulateur
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: Implémente la fonction ``somme(tableau)`` qui retourne la somme de
+            tous les élements contenus dans ``tableau``.
+        language: python
+        default: ''

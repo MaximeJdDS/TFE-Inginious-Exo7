@@ -1,9 +1,9 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
-context: Pour une chaîne mot, par exemple ``"chat"``, affiche le pluriel de ce mot
-    en rajoutant un ``"s"``.
+context: |-
+    Une chaine de caractères est appelée ``string`` en programmation. Maintenant que les tableaux n'ont plus aucun secret pour toi, tu ne devrais avoir aucune difficultée avec les chaines de caractères car c'est un tableau dans lequel on stock des caractères. Ainsi, tous ce que tu as utilisé pour les tableaux fonctionnera aussi.
+
+    Pour une chaîne ``mot``, par exemple ``"chat"``, affiche le pluriel de ce mot en rajoutant un ``"s"``.
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -12,23 +12,16 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: '"s" à la fin'
 network_grading: false
 problems:
     q1:
         type: code
-        name: ''
+        name: Implémentation
         header: |-
             Ecris un bout de code ``python`` qui rajoute seulement un ``s`` à la fin de la chaine de caractère.
             Le mot à mettre aux pluriel est stocké dans la variable ``mot``.
         language: python
         default: 'mot = '
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

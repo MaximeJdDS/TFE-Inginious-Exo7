@@ -1,0 +1,24 @@
+## Utilisateur
+Je, tu, il, nous, vous, ils.
+Écris une fonction affiche_conjugaison() qui conjugue un verbe du premier groupe au présent.
+affiche_conjugaison()
+Usage : affiche_conjugaison(verbe)
+Entrée : un verbe du premier groupe (une chaîne de caractères se terminant par "er")
+Sortie : pas de résultat mais l’affichage de la conjugaison du verbe au présent
+Exemple :
+affiche_conjugaison("chanter"), affiche "je chante, tu chantes, il chante, nous chantons, vous chantez, ils chantent"
+affiche_conjugaison("choisir"), affiche "Ce n'est pas un verbe du premier groupe."
+1
+def affiche_conjugaison(verbe):
+2
+print("Ce n'est pas un verbe du premier groupe.")
+## Bing
+Voici une fonction affiche_conjugaison() qui conjugue un verbe du premier groupe au présent :
+
+def affiche_conjugaison(verbe):
+    if verbe[-2:] == "er":
+        print(f"je {verbe[:-2]}e, tu {verbe[:-2]}es, il {verbe[:-2]}e, nous {verbe[:-2]}ons, vous {verbe[:-2]}ez, ils {verbe[:-2]}ent")
+    else:
+        print("Ce n'est pas un verbe du premier groupe.")
+
+Pour utiliser cette fonction, il suffit d'appeler affiche_conjugaison(verbe) en remplaçant verbe par le verbe que vous souhaitez conjuguer. Par exemple, affiche_conjugaison("chanter") affichera "je chante, tu chantes, il chante, nous chantons, vous chantez, ils chantent" .

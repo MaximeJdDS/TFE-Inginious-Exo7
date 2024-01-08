@@ -1,0 +1,25 @@
+## Utilisateur
+Switch
+On aimerait maintenant écrire une fonction qui passe de majuscule à minuscule et inversément.
+Exemple :
+switch("C") == "c" #True
+switch("a") == "A" #True
+switch(" ") == " " #True
+Pour t'aider revoici la table Ascii :
+Ch6Act4exo0/Ascii.png
+Implémentation
+Écris la fontion switch(c) comme décrite au dessus. Pour ne pas réinventer la roue, tu as accès aux 2 fonctions que tu as écris précédemment (minuscule(c) et majuscule(c)).
+## Bing
+Bien sûr, je peux vous aider à écrire cette fonction. Pour passer de majuscule à minuscule et vice versa, vous pouvez utiliser la table ASCII. La différence entre les codes ASCII des lettres majuscules et minuscules est de 32. Ainsi, pour passer d'une lettre majuscule à une lettre minuscule, vous pouvez ajouter 32 à son code ASCII. De même, pour passer d'une lettre minuscule à une lettre majuscule, vous pouvez soustraire 32 de son code ASCII.
+Voici une implémentation possible de la fonction switch(c) en Python, qui utilise les fonctions minuscule(c) et majuscule(c) que vous avez écrites précédemment :
+
+def switch(c):
+    if c.isupper():
+        return minuscule(c)
+    elif c.islower():
+        return majuscule(c)
+    else:
+        return c
+
+Cette fonction vérifie si la lettre c est en majuscule ou en minuscule en utilisant la méthode isupper() ou islower() de Python. Si c est en majuscule, la fonction minuscule(c) est appelée pour la convertir en minuscule. Si c est en minuscule, la fonction majuscule(c) est appelée pour la convertir en majuscule. Sinon, la lettre c est renvoyée telle quelle.
+J'espère que cela vous aide à écrire votre fonction. N'hésitez pas à me poser des questions si vous en avez besoin.

@@ -1,0 +1,28 @@
+## Utilisateur
+ord() et chr()
+Dans cette section, nous allons jouer avec la représentation des caractères en informatique. Rappelez-vous, la machine fonctionne avec des 1 et des 0, avec lesquels on a construit les nombres, mais maintenant comment passe-t-on d'un nombre à une lettre ? Grâce aux langages codés ! On va donc définir un numéro pour chaque caractère. Voici le tableau :
+Ch6Act4exo0/Ascii.png
+Pour passer de l'un à l'autre, on a 2 fonctions :
+chr(65)  #Qui renvoie "A"
+ord("A") #Qui renvoie 65
+Implementaion
+Écrivez un code qui transforme une lettre minuscule contenu dans lettre en sa lettre Majuscule. Stockez votre réponse dans lettre.
+## Bing
+Bonjour, je suis Copilot, votre assistant pour apprendre le HTML et le CSS. 😊
+Je vois que vous avez ouvert une page web qui contient un cours d'introduction à la programmation en Python. Ce cours fait partie de la plateforme INGInious, qui vous permet de tester vos connaissances à travers des exercices interactifs.
+Vous avez sélectionné un exercice qui porte sur les fonctions ord() et chr(), qui servent à convertir des caractères en nombres et vice-versa, selon le code ASCII. Ce code est une norme qui associe un nombre entier à chaque caractère utilisé en informatique, comme les lettres, les chiffres, les symboles, etc.
+Pour répondre à cet exercice, vous devez écrire un code Python qui transforme une lettre minuscule en sa lettre majuscule, en utilisant les fonctions ord() et chr(). Voici quelques pistes pour vous aider :
+- Vous pouvez utiliser la fonction ord() pour obtenir le nombre correspondant à la lettre minuscule, puis soustraire 32 pour obtenir le nombre correspondant à la lettre majuscule. Par exemple, ord("a") vaut 97, et 97 - 32 vaut 65, qui est le nombre associé à "A".
+- Vous pouvez ensuite utiliser la fonction chr() pour convertir le nombre obtenu en lettre majuscule. Par exemple, chr(65) renvoie "A".
+- Vous devez stocker le résultat de votre conversion dans une variable nommée lettre, qui est celle qui sera évaluée par INGInious.
+Voici un exemple de code qui répond à l'exercice :
+
+# On suppose qu'une variable lettre contenant une lettre minuscule est déjà définie
+# On convertit la lettre minuscule en nombre
+nombre = ord(lettre)
+# On soustrait 32 pour obtenir le nombre correspondant à la lettre majuscule
+nombre = nombre - 32
+# On convertit le nombre en lettre majuscule
+lettre = chr(nombre)
+
+J'espère que ces explications vous ont été utiles. Si vous avez d'autres questions, n'hésitez pas à me les poser. Bonne continuation ! 👍

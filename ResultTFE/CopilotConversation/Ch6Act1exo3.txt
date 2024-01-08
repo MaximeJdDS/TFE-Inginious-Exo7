@@ -1,0 +1,47 @@
+## Utilisateur
+Cheval en Chevaux
+Teste si un mot se termine par "al". Si c’est le cas, affiche le pluriel en "aux" (le pluriel de "cheval" est "chevaux"). (Ne tiens pas compte des exceptions.)
+Pour rappel :
+si mot = "vendredi" alors :
+mot[0:4] renvoie la sous-chaîne "vend" formée des caractères de rang 0, 1, 2 et 3 (mais pas 4),
+mot[3:6] renvoie "dre" correspondant aux rangs 3, 4 et 5.
+Implementation
+1
+def pluriel(mot):
+2
+​
+3
+return mot
+## Bing
+Bonjour! Pour tester si un mot se termine par "al" et afficher le pluriel en "aux", vous pouvez utiliser la fonction ci-dessous:
+
+def pluriel(mot):
+    if mot[-2:] == "al":
+        return mot[:-2] + "aux"
+    else:
+        return "Le mot ne se termine pas par 'al'."
+
+Par exemple, pluriel("cheval") renvoie "chevaux". Notez que cette fonction ne tient pas compte des exceptions.
+J'espère que cela vous aide! N'hésitez pas à me poser d'autres questions si vous en avez.
+## Utilisateur
+Il y a des erreurs dans votre réponse. Votre note est de 0.0%. [Soumission #657d7aeb9d0703c58762270e (2023-12-16 11:24:43)]
+Il semble que votre code contienne des erreurs…
+Test échoué:
+'chats' != "Le mot ne se termine pas par 'al'."
+- chats
+- Le mot ne se termine pas par 'al'.
+: Pour le mot "chat" la réponse attendu est "chats" et ta fonction a renvoyé "Le mot ne se termine pas par 'al'.".
+Ran 3 tests in 0.000s
+FAILED (failures=1)
+## Bing
+Je suis désolé que ma réponse précédente n'ait pas été utile. Pour corriger une erreur dans votre code Python, vous pouvez utiliser les techniques de gestion d'erreurs. Vous pouvez trouver des informations sur la gestion des erreurs Python dans la documentation officielle de Python . Si vous avez besoin d'aide supplémentaire pour corriger votre code, n'hésitez pas à me poser des questions.
+Pour votre question initiale, voici une implémentation de la fonction pluriel qui teste si un mot se termine par "al" et affiche le pluriel en "aux":
+
+def pluriel(mot):
+    if mot[-2:] == "al":
+        return mot[:-2] + "aux"
+    else:
+        return "Le mot ne se termine pas par 'al'."
+
+Par exemple, pluriel("cheval") renvoie "chevaux". Notez que cette fonction ne tient pas compte des exceptions.
+J'espère que cela vous aide! N'hésitez pas à me poser d'autres questions si vous en avez.

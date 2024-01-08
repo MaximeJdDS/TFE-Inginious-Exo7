@@ -1,0 +1,45 @@
+_id: 658427abced52dd9e4fdd880
+archive: 658427acced52dd9e4fdd881
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts':
+    - '5'
+    '@email':
+    - max.jacques@student.uclouvain.be
+    '@lang':
+    - fr
+    '@random':
+    - []
+    '@settings':
+    - {}
+    '@state':
+    - ''
+    '@time':
+    - '2023-12-21 12:55:23.512499'
+    '@username':
+    - Mava
+    q1:
+    - |-
+        def troisieme(tab):
+            return tab[2]
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2023-12-21 12:55:23.512000
+taskid: Ch7Act1exo1
+tests: {}
+text: ''
+user_ip: 2a02:2788:806:109c:ad30:a189:f981:e047
+username:
+- Mava

@@ -1,0 +1,44 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |+
+    Dans l'exercice précédent, on a vu comment créer des tableaux de taille fixe. On va maintenant voir comment en instancier de taille variable.
+    Pour ce faire, plusieurs options s'offre à toi. Soit tu utilises une fonction toute faite, soit tu le construis. Pour construire un tableau tu peux utiliser ceci :
+
+    .. code-block:: python
+
+        list  = [1] * 5   # Qui répetera le tableau 5 fois ([1,1,1,1,1]). Ainsi,
+        list2 = [1,2] * 3 # donnera [1,2,1,2,1,2]
+        # On peut aussi ajouter à la fin du tableau un autre tableau avec append(tab) comme ceci :
+        tab = list2.append([3,4]) #  [1,2,1,2,1,2,3,4]
+        # Et pour modifier un élément d'un tableau, c'est comme l'exercice précédent :
+        tab[3] = 0 # [1,2,1,0,1,2,3,4]
+
+
+    Avec tout ça tu devrais être capable de créer une fonction ``mergeTimes(tab1,a,tab2,b)`` qui retourne un tableau qui est la fusion de 2 tableaux que tu dois répeter ``a`` fois pour le premier, ``b`` fois pour le second. Voici quelques exemples d'utilisation :
+
+    .. code-block:: python
+
+        mergeTimes([0],2,[7],1) #[0,0,7]
+        mergeTimes([1,2],3,[-2,-1,0],2) #[1,2,1,2,1,2,-2,-1,0,-2,-1,0]
+
+
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Un tableau pour la deux!
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: Implémente la fonction ``mergeTimes(tab1,a,tab2,b)`` décrite plus
+            haut.
+        language: python
+        default: ''

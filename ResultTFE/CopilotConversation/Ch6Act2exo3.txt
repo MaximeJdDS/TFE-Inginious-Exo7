@@ -1,0 +1,21 @@
+## Utilisateur
+Verlan
+Écris une fonction verlan() qui renvoie un mot à l’envers :
+SALUT devient TULAS
+verlan()
+Usage : verlan(mot)
+Entrée : un mot (une chaîne de caractères)
+Sortie : le mot à l’envers
+Exemple : verlan("TOCARD") renvoie "DRACOT"
+1
+def verlan(mot):
+2
+return mot
+## Bing
+Bonjour! Voici une fonction verlan() qui renvoie un mot à l'envers:
+
+def verlan(mot):
+    return mot[::-1]
+
+La fonction prend en entrée un mot (une chaîne de caractères) et renvoie le mot à l'envers. Par exemple, verlan("TOCARD") renvoie "DRACOT".
+J'espère que cela vous aide! 😊

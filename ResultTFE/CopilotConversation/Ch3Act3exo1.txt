@@ -1,0 +1,14 @@
+## Utilisateur
+QCM : Chiffre d'un nombre
+Le programme suivant affiche tous les entiers de 0 à 99. Comprends ce programme.
+for d in range(10):
+for u in range(10):
+n = 10*d + u
+print(n)
+Que représentent les variables u et d ?
+u représente les unités tandis que d représente les dizaines.
+ils représentent des entiers aléatoires.
+d représente les unités tandis que u représente les dizaines.
+## Bing
+Le programme affiche tous les entiers de 0 à 99 en utilisant deux boucles imbriquées. La variable d représente les dizaines et la variable u représente les unités. Ainsi, pour chaque valeur de d, la boucle interne parcourt toutes les valeurs de u de 0 à 9, ce qui permet d'afficher tous les nombres de 0 à 99. La variable n est ensuite utilisée pour stocker le nombre formé par la concaténation de d et u .
+Par conséquent, la réponse correcte est : "u représente les unités tandis que d représente les dizaines." 🎉

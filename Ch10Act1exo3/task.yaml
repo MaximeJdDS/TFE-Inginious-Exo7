@@ -1,0 +1,62 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |+
+    Un des gros avantages de la programmation orientée objet, c'est l'héritage. C'est-à-dire qu'un objet peut hériter de toutes les méthodes et attributs que son objet parent avait tout en étant encore considéré comme un objet parent. Voici un petit exemple pour mieux comprendre :
+
+    Vous vous souvenez de notre classe ``Bourse``? Comme notre argent était bien placé, elle a eu des petits! Je vous présente ``PorteFeuille`` qui possède toutes les méthodes qu'on a implémenté précédemment sans devoir les réécrire. De plus, il est aussi un objet ``Bourse`` donc si une fonction avait besoin d'un objet ``Bourse``, elle fonctionnera encore avec un objet ``PorteFeuille``. Voici comment on implémente l'héritage en Python :
+
+
+    .. code-block:: python
+
+        class PorteFeuille(Bourse):
+            def __init__(self,gold,silver,bronze, cartes):
+                super().__init__(gold,silver,bronze)
+                self.cartes = cartes
+
+
+
+    Ceci étant fait, je peux maintenant définir d'autres fonctions propres à ``PorteFeuille`` et/ou redéfinir celles héritées de ``Bourse`` pour qu'elles conviennent mieux.
+
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Héritage
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: |-
+            On va te demander d'implémenter la ``Classe`` *Pizza* qui hérite de la ``Classe`` *Plat*. Voici la ``Classe`` *Plat* :
+
+
+            .. code-block:: python
+
+                class Plat:
+                    def __init__(self,ingredient,prix,nom,isVege)
+                        self.ingredient = ingredient
+                        self.prix = prix
+                        self.nom = nom
+                        self.isVege = isVege
+
+                    def isVege(self):
+                        return self.isVege
+
+
+                    def service(): # pour servir automatiquement le plat
+
+
+            Ta classe Pizza doit avoir les mêmes attributs que ``Plat`` et ``typeDeFour`` en plus.
+
+            Pour les méthodes, on te demande d'implémenter ``surfacePizza(diametre)`` qui calcule la surface de la pizza en fonction du diamètre. Pour le nombre :math:`\pi` utilise ``3.14``.
+
+            **PS**: Le gros point fort de faire cela ainsi, c'est que le code de la caisse de la caisse enregistreuse ne doit pas être modifié à chaque nouveau plat.
+        language: python
+        default: ''

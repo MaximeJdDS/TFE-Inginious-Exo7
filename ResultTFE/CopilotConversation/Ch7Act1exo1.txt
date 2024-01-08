@@ -1,0 +1,21 @@
+## Utilisateur
+Le b.a-b.a. du tableau
+Une liste est une suite d’éléments. Cela peut être une liste d’entiers, par exemple [5,-7,12,99], ou bien une liste de chaînes de caractères, par exemple ["Mars","Avril","Mai"] ou bien les objets peuvent être de différents types [3.14,"pi",10e-3,"x",True].
+Construction d’une liste. Une liste se définit par des éléments entre crochets :
+liste1 = [5,4,3,2,1] une liste de 5 entiers,
+liste2 = ["Vendredi","Samedi","Dimanche"] une liste de 3 chaînes de caractères,
+liste3 = [] la liste vide (très utile pour la compléter plus tard !).
+Accéder à un élément. Pour obtenir un élément de la liste, il suffit d’écrire liste[i] où i est le rang de l’élément souhaité.
+Attention ! Le piège c’est que l’on commence à compter à partir du rang 0 ! Par exemple après l’instruction liste = ["A","B","C","D","E","F"] alors
+— liste[0] renvoie "A"
+— liste[1] renvoie "B"
+— liste[2] renvoie "C"
+— liste[3] renvoie "D"
+— liste[4] renvoie "E"
+— liste[5] renvoie "F"
+Ch7Act1exo1/rangTableau.png
+Implémentation
+On te demande de créer une fonction troisieme(tab) qui prends en paramètre un tableau et retourne le troisième élément de ce dernier.
+## Bing
+Bonjour! Pour accéder à un élément d'une liste en Python, il suffit d'utiliser l'opérateur d'indexation []. Pour obtenir le troisième élément d'un tableau, il suffit donc d'écrire tab[2] car on commence à compter à partir de 0. Par exemple, si tab = [1, 2, 3, 4, 5], alors troisieme(tab) renverra 3.
+J'espère que cela t'aide! N'hésite pas à me poser d'autres questions si tu en as.

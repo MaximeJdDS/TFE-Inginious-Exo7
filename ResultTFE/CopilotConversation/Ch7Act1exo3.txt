@@ -1,0 +1,35 @@
+## Utilisateur
+Accumulateur
+Maintenant que tu sais lire les éléments d'un tableau et créer ton propre tableau, on va pouvoir commencer à vraiment les utiliser.
+On va introduire le concept d'accumulateur qui est une variable qui va suivre une propriété tous au long de l'algorithme. Ainsi, si on stock dans une variable total la somme du nombre contenu à l'emplacement i et le nombre contenue dans total, alors peut importe où on se trouve dans l'éxécution de la boucle, total représentera la somme des nombres contenu dans le tableau jusqu'au moment où on est dans le programme.
+Avec cette méthode, on est capable de calculer n'importe quelles propriétés sur un tableau (on peut même en calculer plusieurs simultanement, du moment que chaque propriété a sa/ses variable(s) bien définie(s))
+Implémentation
+Implémente la fonction somme(tableau) qui retourne la somme de tous les élements contenus dans tableau.
+## Bing
+Bonjour! Je suis Bing. Je suis heureux de vous aider à implémenter la fonction somme(tableau) qui retourne la somme de tous les éléments contenus dans tableau.
+L'accumulateur est un concept clé pour résoudre ce problème. Il s'agit d'une variable qui suit une propriété tout au long de l'algorithme. Dans ce cas, l'accumulateur est la somme des éléments du tableau. À chaque itération de la boucle, nous ajoutons l'élément actuel à l'accumulateur.
+Voici une implémentation possible de la fonction somme(tableau) en JavaScript:
+
+function somme(tableau) {
+  let accumulateur = 0;
+  for (let i = 0; i < tableau.length; i++) {
+    accumulateur += tableau[i];
+  }
+  return accumulateur;
+}
+
+Dans cette implémentation, nous initialisons l'accumulateur à 0 et parcourons chaque élément du tableau en ajoutant sa valeur à l'accumulateur. Enfin, nous retournons la valeur de l'accumulateur.
+J'espère que cela vous aide! N'hésitez pas à me poser d'autres questions si vous en avez.
+## Utilisateur
+en python
+## Bing
+Bien sûr! Voici une implémentation possible de la fonction somme(tableau) en Python:
+
+def somme(tableau):
+    accumulateur = 0
+    for i in range(len(tableau)):
+        accumulateur += tableau[i]
+    return accumulateur
+
+Dans cette implémentation, nous initialisons l'accumulateur à 0 et parcourons chaque élément du tableau en ajoutant sa valeur à l'accumulateur. Enfin, nous retournons la valeur de l'accumulateur.
+J'espère que cela vous aide! N'hésitez pas à me poser d'autres questions si vous en avez.

@@ -1,0 +1,49 @@
+## Utilisateur
+Héritage
+Un des gros avantages de la programmation orientée objet, c'est l'héritage. C'est-à-dire qu'un objet peut hériter de toutes les méthodes et attributs que son objet parent avait tout en étant encore considéré comme un objet parent. Voici un petit exemple pour mieux comprendre :
+Vous vous souvenez de notre classe Bourse? Comme notre argent était bien placé, elle a eu des petits! Je vous présente PorteFeuille qui possède toutes les méthodes qu'on a implémenté précédemment sans devoir les réécrire. De plus, il est aussi un objet Bourse donc si une fonction avait besoin d'un objet Bourse, elle fonctionnera encore avec un objet PorteFeuille. Voici comment on implémente l'héritage en Python :
+class PorteFeuille(Bourse):
+def init(self,gold,silver,bronze, cartes):
+super().init(gold,silver,bronze)
+self.cartes = cartes
+Ceci étant fait, je peux maintenant définir d'autres fonctions propres à PorteFeuille et/ou redéfinir celles héritées de Bourse pour qu'elles conviennent mieux.
+Implémentation
+On va te demander d'implémenter la Classe Pizza qui hérite de la Classe Plat. Voici la Classe Plat :
+class Plat:
+def init(self,ingredient,prix,nom,isVege)
+self.ingredient = ingredient
+self.prix = prix
+self.nom = nom
+self.isVege = isVege
+def isVege(self):
+    return self.isVege
+
+
+def service(): # pour servir automatiquement le plat
+Ta classe Pizza doit avoir les mêmes attributs que Plat et typeDeFour en plus.
+Pour les méthodes, on te demande d'implémenter surfacePizza(diametre) qui calcule la surface de la pizza en fonction du diamètre. Pour le nombre π
+utilise 3.14.
+PS: Le gros point fort de faire cela ainsi, c'est que le code de la caisse de la caisse enregistreuse ne doit pas être modifié à chaque nouveau plat.
+## Bing
+L'héritage est un concept clé de la programmation orientée objet. Il permet à une classe de dériver les propriétés d'une autre classe, appelée classe de base. En d'autres termes, un objet peut hériter de toutes les méthodes et attributs de son objet parent tout en étant considéré comme un objet parent. Par exemple, dans le code Python ci-dessous, la classe PorteFeuille hérite de toutes les méthodes de la classe Bourse sans avoir à les réécrire :
+
+class PorteFeuille(Bourse):
+    def __init__(self,gold,silver,bronze, cartes):
+        super().__init__(gold,silver,bronze)
+        self.cartes = cartes
+
+Dans cet exemple, PorteFeuille est également un objet Bourse, ce qui signifie que si une fonction avait besoin d'un objet Bourse, elle fonctionnerait également avec un objet PorteFeuille.
+Pour implémenter la classe Pizza qui hérite de la classe Plat, vous pouvez utiliser le code Python suivant :
+
+class Pizza(Plat):
+    def __init__(self, ingredient, prix, nom, isVege, typeDeFour):
+        super().__init__(ingredient, prix, nom, isVege)
+        self.typeDeFour = typeDeFour
+
+    def surfacePizza(self, diametre):
+        rayon = diametre / 2
+        surface = 3.14 * (rayon ** 2)
+        return surface
+
+Dans cet exemple, Pizza hérite des attributs ingredient, prix, nom, et isVege de la classe Plat, et ajoute l'attribut typeDeFour. La méthode surfacePizza calcule la surface de la pizza en fonction du diamètre en utilisant la valeur de π égale à 3.14.
+Le gros avantage de l'héritage est que le code de la caisse enregistreuse n'a pas besoin d'être modifié à chaque nouveau plat, car chaque plat hérite des propriétés de la classe Plat.

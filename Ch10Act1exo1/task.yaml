@@ -1,0 +1,103 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    Un ``objet`` est une entité qui regroupe à la fois des ``variables`` et des ``fonctions``. Le premier intérêt est qu’un objet est indépendant et auto-suffisant puisqu’il contient tout ce qu’il faut pour être utilisé, il permet d’éviter le recours aux variables globales par exemple.
+    Un objet est défini comme une ``instance`` d’une ``classe``, c’est-à-dire un élément d’une catégorie. Voici un exemple de la vie courante : on considère la classe ``Chien``, alors mon chien ``Médor`` est un objet, appartenant à la classe ``Chien``. Note que Chien est un concept, mais que Médor est bien réel. Mon autre chien Foulcan est aussi une instance de Chien.
+
+    Voici comment définir le début d’une classe Vecteur() afin de modéliser des vecteurs de l’espace :
+
+    .. code-block:: python
+
+        class Vecteur:
+            def __init__(self,x,y,z):
+                self.x = x
+                self.y = y
+                self.z = z
+
+    Pour l’instant un vecteur est un concept auquel sont rattachés trois nombres (x, y, z). Le mot ``self`` fait référence à l’objet lui-même mais dont on ne connaît pas encore le nom (ce sera V ou bien V1, V2...).
+
+    Et voici un objet défini à partir de cette classe :
+
+    .. code-block:: python
+
+        V = Vecteur(1,2,3)
+
+
+    Cet objet possède trois ``attributs`` :
+
+    .. code-block:: python
+
+        V.x
+        V.y
+        V.z
+
+
+    qui valent ici respectivement 1, 2 et 3. Autre exemple, le calcul V.x + V.y + V.z renvoie 6. Je peux
+    changer une de ces valeurs comme pour une variable classique (même si ce n’est pas la manière recommandée), par exemple :
+
+    .. code-block:: python
+
+        V.x = 7
+
+
+    Maintenant V.x + V.y + V.z vaut 12.
+
+
+    Tu peux définir plusieurs objets qui seront indépendants les uns des autres :
+
+
+    .. code-block:: python
+
+        V1 = Vecteur(1,2,3)
+        V2 = Vecteur(1,0,0)
+
+
+
+    Ainsi par exemple V1.y vaut 2, V2.y vaut 0.
+
+
+    Pour un objet, une fonction associée s’appelle une ``méthode``.
+    Complétons notre classe Vecteur() pour lui associer trois nouvelles méthodes :
+
+
+    .. code-block:: python
+
+        class Vecteur:
+            def __init__(self,x,y,z):
+                self.x = x
+                self.y = y
+                self.z = z
+
+            def norme(self):
+                N = sqrt(self.x**2 + self.y**2 + self.z**2)
+                return N
+
+            def produit_par_scalaire(self,k):
+                W = Vecteur(k*self.x,k*self.y,k*self.z)
+                return W
+
+            def addition(self,other):
+                W = Vecteur(self.x+other.x,self.y+other.y,self.z+other.z)
+                return W
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: 'Programmation objet : la classe !'
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: 'On va te demander d''implémenter la ``Classe`` *Chien* qui a 4 ``attributs``
+            : nom, race, x et y (pour leur position). Ainsi que 2 ``méthodes`` : wouaf()
+            qui imprime sur la console "Wouaf!" et viensIci(x,y) qui change ses attributs
+            de position pour aller à x,y.'
+        language: python
+        default: ''

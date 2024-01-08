@@ -1,0 +1,54 @@
+_id: 6595c059257b6e5ec23ae71c
+archive: 6595c05a257b6e5ec23ae71d
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts':
+    - '35'
+    '@email':
+    - max.jacques@student.uclouvain.be
+    '@lang':
+    - fr
+    '@random':
+    - []
+    '@settings':
+    - {}
+    '@state':
+    - ''
+    '@time':
+    - '2024-01-03 21:15:21.771967'
+    '@username':
+    - Mava
+    q1:
+    - |-
+        class Pizza(Plat):
+            def __init__(self,ingredient,prix,nom,isVege,typeDeFour):
+                #self.ingredient=ingredient
+                #self.prix=prix
+                #self.nom=nom
+                #self.isVege=isVege
+                super().__init__(ingredient,prix,nom,isVege)
+                self.typeDeFour = typeDeFour
+
+            def surfacePizza(self,d):
+                return (d/2)**2 *3.14
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.000s
+
+    OK
+
+submitted_on: 2024-01-03 21:15:21.771000
+taskid: Ch10Act1exo3
+tests: {}
+text: ''
+user_ip: 2a02:2788:806:109c:85c8:168:d82f:cd83
+username:
+- Mava

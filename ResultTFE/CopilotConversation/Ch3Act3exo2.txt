@@ -1,0 +1,80 @@
+## Utilisateur
+Propriété sur les chiffres d'un nombres.
+Trouve tous les entiers compris entre 0 et 999 qui vérifient toutes les propriétés suivantes :
+l’entier se termine par 3,
+la somme des chiffres est supérieure ou égale à 15,
+le chiffre des dizaines est pair.
+Implementation
+Pour ce faire, on va utiliser un petit sac pour ranger tout les nombres qui nous interresse au lieux de les afficher les un après les autres. Son utilisation est très simple si on veut ranger la valeur que contient n dans notre sac, on écrira :
+sac.append(n)
+Pour ne pas commencer de zéro, voici le code que tu as analysé à l'exercice précédent avec l'ajout dans le sac au lieux du print():
+À toi de montrer que tu l'as bien compris pour le modifier pour faire tout ce qui est expliqué plus haut.
+1
+for d in range(10):
+2
+for u in range(10):
+3
+n = 10*d + u
+4
+sac.append(n)
+5
+​
+## Bing
+Bonjour! Pour trouver tous les entiers compris entre 0 et 999 qui vérifient les propriétés suivantes :
+- l’entier se termine par 3,
+- la somme des chiffres est supérieure ou égale à 15,
+- le chiffre des dizaines est pair.
+On peut utiliser un sac pour ranger les nombres qui nous intéressent. Pour ranger la valeur que contient n dans notre sac, on écrira :
+
+sac.append(n)
+
+Voici le code que tu as analysé à l'exercice précédent avec l'ajout dans le sac au lieu du print():
+
+sac = []
+for d in range(10):
+    for u in range(10):
+        n = 10*d + u
+        if n % 10 == 3 and (d + u + n // 10) >= 15 and d % 2 == 0:
+            sac.append(n)
+
+Ce code permet de trouver tous les entiers compris entre 0 et 999 qui vérifient les propriétés mentionnées. J'espère que cela t'aidera!
+## Utilisateur
+Il y a des erreurs dans votre réponse. Votre note est de 0.0%. [Soumission #657afc94ecc92e699e5e0fe9 (2023-12-14 14:01:08)]
+Il semble que votre code contienne des erreurs…
+Test échoué:
+Lists differ: [483, 583, 663, 683, 763, 783, 843, 863, 883, 943, 963, 983] != [63, 83]
+First differing element 0:
+483
+63
+First list contains 10 additional elements.
+First extra element 2:
+663
+- [483, 583, 663, 683, 763, 783, 843, 863, 883, 943, 963, 983]
+- [63, 83] :
+Il te manque au moins les éléments suivants :
+[483, 583, 663]
+Et tu as mis en trop dans le sac au moins les éléments suivants:
+[63, 83]
+.
+Ran 1 test in 0.000s
+FAILED (failures=1)
+## Bing
+Je suis désolé que ma réponse précédente n'ait pas été utile. Pour trouver tous les entiers compris entre 0 et 999 qui vérifient les propriétés suivantes :
+- l’entier se termine par 3,
+- la somme des chiffres est supérieure ou égale à 15,
+- le chiffre des dizaines est pair.
+On peut utiliser un sac pour ranger les nombres qui nous intéressent. Pour ranger la valeur que contient n dans notre sac, on écrira :
+
+sac.append(n)
+
+Voici le code corrigé pour trouver tous les entiers compris entre 0 et 999 qui vérifient les propriétés mentionnées:
+
+sac = []
+for d in range(10):
+    for u in range(10):
+        for c in range(10):
+            n = 100*c + 10*d + u
+            if n % 10 == 3 and (d + u + c) >= 15 and d % 2 == 0:
+                sac.append(n)
+
+Ce code permet de trouver tous les entiers compris entre 0 et 999 qui vérifient les propriétés mentionnées. J'espère que cela t'aidera!

@@ -1,0 +1,30 @@
+## Utilisateur
+Latin-cochon
+On transforme un mot commençant par une consonne selon la recette suivante :
+on déplace la première lettre à la fin du mot ;
+on rajoute le suffixe UM.
+Par exemple
+VITRE devient ITREVUM;
+BLANCHE devient LANCHEBUM;
+CARAMEL devient ARAMELCUM.
+Les mots commençant par une voyelle ne changent pas. Écris une fonction latin_cochon(mot) qui transforme un mot selon ce procédé.
+latin_cochon(mot)
+Usage : latin_cochon(mot)
+Entrée : un mot (une chaîne de caractères)
+Sortie : le mot transformé en latin-cochon, s’il commence par une consonne.
+Exemple : latin_cochon("BONJOUR") renvoie "ONJOURBUM"
+1
+def latin_cochon(mot):
+2
+return mot
+## Bing
+Bonjour! Je suis heureux de vous aider à écrire une fonction qui transforme un mot selon la recette du latin-cochon. Voici une implémentation possible de la fonction latin_cochon en Python:
+
+def latin_cochon(mot):
+    if mot[0] in "AEIOUYaeiouy":
+        return mot
+    else:
+        return mot[1:] + mot[0] + "UM"
+
+La fonction prend un mot en entrée et renvoie le mot transformé en latin-cochon, s’il commence par une consonne. Si le mot commence par une voyelle, la fonction renvoie le mot inchangé. Par exemple, latin_cochon("BONJOUR") renvoie "ONJOURBUM", et latin_cochon("AMOUR") renvoie "AMOUR".
+J'espère que cela vous aide! N'hésitez pas à me poser d'autres questions si vous en avez.

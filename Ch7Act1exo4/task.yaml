@@ -1,0 +1,43 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |+
+    Tu te souviens de ce bon vieux Pythagore et ses triangles? Si un triangle est ``rectangle`` alors le carré de la longueur de l'hypoténuse est égal à la somme des carrés des 2 autres cotés.
+
+    On a mesuré les longueurs de plusieurs triangles et on aimerait vérifier lesquels sont rectangles. Pour t'aider, on a déjà trier les longueurs du plus petit au plus grand, du coup, l'hypoténuse sera toujours le dernier des 3.
+
+    Voici un petit exemple :
+
+    .. code-block:: python
+
+        data = [
+        [5,4,3],
+        [6,5,4],
+        [13,12,1],
+        ]
+        print(pythagore(data)) # [True,False,False]
+
+
+
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Pythagore et ses triangles
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: Écrit une fonction ``pythagore(data)`` qui teste si les triplets de
+            longueurs contenus dans un tableau d'entrées correspondent bien à un triangle
+            rectangle. Cette fonction doit renvoyer un tableau qui contient ``True``
+            à l'emplacement ``i`` si le triplet correspond à des longueur d'un triangle
+            rectangle, ``False`` sinon.
+        language: python
+        default: ''

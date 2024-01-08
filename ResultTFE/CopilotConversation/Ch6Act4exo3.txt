@@ -1,0 +1,25 @@
+## Utilisateur
+Maj. Lock.
+T'est-il déjà arrivé d'écrire tout un texte sur l'ordinateur sans avoir levé les yeux de ton clavier pour au final se rendre compte que ta touche Maj Lock était enfoncée depuis le début ? C'est dans ces moments-là qu'on voudrait un code qui remplace tous les caractères par leurs alternatives majuscules/minuscules.
+Exemple :
+majLock("pETIT TEXTE") == "Petit texte" #True
+majLock("abcDE") == "ABCde" #True
+Implémentation
+Implémente la fonction majLock(texte). N'hésites pas à utiliser switch(c).
+## Bing
+Je peux vous aider à implémenter la fonction majLock(texte) qui remplace tous les caractères par leurs alternatives majuscules/minuscules. Voici une implémentation possible en Python:
+
+def majLock(texte):
+    res = ""
+    for c in texte:
+        if c.isupper():
+            res += c.lower()
+        elif c.islower():
+            res += c.upper()
+        else:
+            res += c
+    return res
+
+Cette fonction prend en entrée une chaîne de caractères texte et renvoie une chaîne de caractères où les lettres majuscules sont remplacées par leurs alternatives minuscules et vice versa. Les caractères qui ne sont pas des lettres ne sont pas modifiés.
+Par exemple, majLock("pETIT TEXTE") renvoie "Petit texte" et majLock("abcDE") renvoie "ABCde".
+J'espère que cela vous aide. N'hésitez pas à me poser d'autres questions si vous en avez.

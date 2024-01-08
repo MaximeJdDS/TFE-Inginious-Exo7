@@ -1,0 +1,54 @@
+_id: 65783b91a6278cb0b302a0c6
+archive: 65783b92a6278cb0b302a0c7
+courseid: exo7
+custom: {}
+grade: 100.0
+input:
+    '@attempts': '10'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2023-12-12 11:53:05.210105'
+    '@username': Mava
+    q1: |
+        def aire_rectangle(longueur, largeur):
+          """
+          Calcul l'aire d'un rectangle.
+
+          Args:
+            longueur: La longueur du rectangle.
+            largeur: La largeur du rectangle.
+
+          Returns:
+            La surface du rectangle.
+          """
+
+          return longueur * largeur
+
+
+        # Appel de la fonction
+        aire = aire_rectangle(longueur, largeur)
+
+        # Affichage de l'aire
+        print("L'aire du rectangle est de", aire)
+problems: {}
+response_type: rst
+result: success
+state: ''
+status: done
+stderr: ''
+stdout: |+
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.000s
+
+    OK
+
+submitted_on: 2023-12-12 11:53:05.210000
+taskid: Ch1Act1exo1
+tests: {}
+text: ''
+user_ip: 2a02:2788:804:62f:9437:cd93:e480:e971
+username:
+- Mava

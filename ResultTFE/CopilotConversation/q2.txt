@@ -1,0 +1,26 @@
+## Utilisateur
+Est_divisible()
+Programme une fonction est_divisible(a,b) qui teste si b divise a.
+La fonction renvoie True ou False.
+Implementation
+1
+def est_divisible(a,b):
+2
+if(*):
+3
+return *
+4
+else :
+5
+return *
+## Bing
+Voici une implémentation possible de la fonction est_divisible(a,b) qui teste si b divise a et renvoie True ou False:
+
+def est_divisible(a, b):
+    if a % b == 0:
+        return True
+    else:
+        return False
+
+La fonction utilise l'opérateur modulo % pour calculer le reste de la division de a par b. Si le reste est égal à 0, cela signifie que b divise a sans reste, donc la fonction renvoie True. Sinon, la fonction renvoie False.
+J'espère que cela vous aide!
