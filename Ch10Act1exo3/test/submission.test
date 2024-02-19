@@ -4,24 +4,15 @@ courseid: exo7
 custom: {}
 grade: 100.0
 input:
-    '@attempts':
-    - '35'
-    '@email':
-    - max.jacques@student.uclouvain.be
-    '@lang':
-    - fr
-    '@random':
-    - []
-    '@settings':
-    - {}
-    '@state':
-    - ''
-    '@time':
-    - '2024-01-03 21:15:21.771967'
-    '@username':
-    - Mava
-    q1:
-    - |-
+    '@attempts': '35'
+    '@email': max.jacques@student.uclouvain.be
+    '@lang': fr
+    '@random': []
+    '@settings': {}
+    '@state': ''
+    '@time': '2024-01-03 21:15:21.771967'
+    '@username': Mava
+    q1: |-
         class Pizza(Plat):
             def __init__(self,ingredient,prix,nom,isVege,typeDeFour):
                 #self.ingredient=ingredient
