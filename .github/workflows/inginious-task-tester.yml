@@ -53,7 +53,9 @@ jobs:
 
       - name: Get INGInious
         if: steps.cache-inginious.outputs.cache-hit != 'true'
-        run: git clone https://github.com/UCL-INGI/INGInious.git ${INGINIOUS}
+        run: |
+          git clone https://github.com/UCL-INGI/INGInious.git ${INGINIOUS}
+          git -C ${INGINIOUS} checkout 5c4eb0b90f2fcd7683383b96db6a5e4e2aa4b6af
 
       # Get INGInious containers
       - name: Cache INGInious containers
