@@ -1,28 +1,45 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-
 import unittest
 import random
 from contextlib import redirect_stdout
 import io
 from inginious import feedback
+import inginious_container_api.feedback as ingi_feedback
 
 import CorrMax as corr
 import max
 
+tagDico = []
 
 class TestMax(unittest.TestCase):
+
+    
+    
+    
+    
+    
     def test_exists(self):
-        self.assertTrue(hasattr(max, 'afficheMax'), _("Tu n\'as pas défini la bonne fonction. La fonction 'afficheMax' est introuvable."))
-        feedback.set_tag("exist", True)
-        feedback.set_tag("timeout", False) # SELECT
+        #print("TAG:exist=True")
+        if hasattr(max, 'afficheMax'):
+            pass
+            #print("TAG:exist=True")  # Tag indicating the function exists
+            #print("TAG:overflow=True")  # Tag indicating the function exists
+        else:
+            #print("TAG:overflow=True")
+            #print("TAG:exist=False")  # Tag indicating the function does not exist
+            tagDico.append("overflow")
+            tagDico.append("exist")
+            tagTransfer()
+        self.assertTrue(hasattr(max, 'afficheMax'), _("You have not defined the correct function. The function 'afficheMax' is missing."))
 
     def test_max(self):
         a = [random.randint(1, 100) for _ in range(25)]
         b = [random.randint(1, 100) for _ in range(25)]
-        ans  = _("Le maximum de {} est {} et vous avez affiché {}.")
-        ans2 = _("Le maximum de {} est {} et vous avez affiché {}.\nLa fonction n\'affiche rien. N'oublie pas que pour afficher quelque chose il faut faire appel à la fonction \'print()\'.")
+        ans = _("The maximum of {} is {} and you have displayed {}.")
+        ans2 = _("The maximum of {} is {} and you have displayed {}.\nThe function doesn't print anything. Remember to call the 'print()' function to display something.")
+        all_tests_passed = True
         for i in range(len(a)):
             with io.StringIO() as out, redirect_stdout(out):
                 max.afficheMax(a[i], b[i])
@@ -30,10 +47,25 @@ class TestMax(unittest.TestCase):
             with io.StringIO() as out, redirect_stdout(out):
                 corr.maximum(a[i], b[i])
                 corr_ans = out.getvalue()
-            if(stu_ans == ''):  
+            if stu_ans == '':
+                all_tests_passed = False
                 self.assertEqual(corr_ans, stu_ans, ans2.format([a[i], b[i]], corr_ans, stu_ans))
-            self.assertEqual(corr_ans, stu_ans, ans.format([a[i], b[i]], corr_ans, stu_ans))
+            else:
+                self.assertEqual(corr_ans, stu_ans, ans.format([a[i], b[i]], corr_ans, stu_ans))
+
+        if all_tests_passed:
+            print("TAG:max_correct=True")  # Tag indicating all max tests passed
+        else:
+            print("TAG:max_correct=False")  # Tag indicating some max tests failed
+            
+            
+def tagTransfer():
+    for tag in tagDico :
+        print(f"TAG:{tag}=True")
 
 
 if __name__ == '__main__':
-    unittest.main()
+    try:
+        unittest.main()
+    finally:
+        tagTransfer()

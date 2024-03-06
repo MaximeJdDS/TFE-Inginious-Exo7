@@ -8,6 +8,7 @@ import sys
 import os
 import re
 
+
 from inginious import feedback
 from inginious import rst
 from inginious import input
@@ -121,14 +122,14 @@ def run_code(n_exercises, lang):
         py_cmd = "run_student python3 Runner.pyc " + lang
         try:
             resproc = subprocess.Popen(shlex.split(py_cmd), universal_newlines=True, stderr=f, stdout=subprocess.PIPE)
-            resproc.communicate()
+            stdout, _ = resproc.communicate()
             result = resproc.returncode
         except (IOError, BrokenPipeError):
             result = 252
         f.flush()
         f.seek(0)
         errors = f.read()
-        print(errors)
+        #print(errors)
         outerr = rst.get_codeblock("console", cleanup_output(errors))
 
     # expected error code: 252=outofmemory, 253=timedout
@@ -142,7 +143,7 @@ def run_code(n_exercises, lang):
     else:  # Tests failed
         if n_exercises == 1:
             feedback.set_global_result('failed')
-            feedback.set_global_feedback(_("Il semble que votre code contienne des erreurs…\n\n") + outerr + "\n")
+            feedback.set_global_feedback(("Il semble que votre code contienne des erreurs…\n\n") + outerr + "\n")
         else:
             for i in range(0, n_exercises + 1):
                 regex = '@' + str(i) + '@: ((.+)(\n|\r){1})+'
@@ -165,6 +166,14 @@ def run_code(n_exercises, lang):
                         feedback.set_problem_feedback(_("Vous avez correctement répondu à cette question."), "q" + str(i))
                         feedback.set_problem_result('success', "q" + str(i))
 
+    # Parse stdout for tags
+    tag_lines = [line for line in stdout.split('\n') if line.startswith('TAG:')]
+    tags = {line.split(':')[1].split('=')[0]: line.split('=')[1] == 'True' for line in tag_lines}
+
+    # Set tags based on parsed output
+    for tag, value in tags.items():
+        print(f" tag {tag} = {value}")
+        ingi_feedback.set_tag(tag, value)              
 
 if __name__ == '__main__':
     language = init_translations()

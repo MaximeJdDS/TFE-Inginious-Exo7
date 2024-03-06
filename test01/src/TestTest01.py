@@ -9,26 +9,28 @@ import io
 
 import CorrTest01 as corr
 import max
+import Misconceptions
 
+tagDico = Misconceptions.runAllFunc(max.f)
+
+def tagTransfer():
+        for tag in tagDico :
+            print(f"TAG:{tag}=True")
 
 class TestSum(unittest.TestCase):
-    def test_exists(self):
-        self.assertTrue(hasattr(max, 'afficheSum'), _("You did not provide the requested method."))
+    
 
     def test_sum(self):
-        a = [random.randint(1, 100) for _ in range(5)]
-        b = [random.randint(1, 100) for _ in range(5)]
-        ans = _("La somme de {} est {} et vous avez renvoyé {}.")
-        for i in range(len(a)):
-            with io.StringIO() as out, redirect_stdout(out):
-                max.afficheSum(a[i], b[i])
-                stu_ans = out.getvalue()
-            with io.StringIO() as out, redirect_stdout(out):
-                corr.sum(a[i], b[i])
-                corr_ans = out.getvalue()
-            self.assertEqual(corr_ans, stu_ans, ans.format([a[i], b[i]], corr_ans, stu_ans))
-            #if(corr_ans != stu_ans): 
+        stu_ans = max.f()
+        ans = _("Vous avez renvoyé {}.\nAlors que {} était attendu.")
+        tagTransfer()
+        self.assertEqual(True, stu_ans, ans.format(stu_ans,True))
+            
 
+    
 
 if __name__ == '__main__':
-    unittest.main()
+    try:
+        unittest.main()
+    finally:
+        tagTransfer()

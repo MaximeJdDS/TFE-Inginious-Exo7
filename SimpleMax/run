@@ -14,22 +14,10 @@ from inginious import input
 import inginious_container_api.input as ingi_input
 import inginious_container_api.feedback as ingi_feedback
 
-
-# This runner suits for typical exercises of LSINF1101/FSAB1401
-# Should be adapted if used in another occasion
-# Structure used:
-#  -One folder : src with a proposer answer, the tests and a subdirectory containing the templates
-#  -A run file
-#  -A task file
-# Note that beside this structure we use the global folder common (c) and common/student (cs) containing:
-#  -The compiler script         (c)
-#  -The tests runner script     (c)
-#  -The translations folder     (cs)
-
 def init_translations():
     """
-        Move the translations files to student directory
-        Initialize gettext and translate to the proper language
+    Move the translations files to student directory
+    Initialize gettext and translate to the proper language
     """
     lang = input.get_lang()
     try:
@@ -37,24 +25,41 @@ def init_translations():
     except FileNotFoundError:
         trad = gettext.NullTranslations()
     trad.install()
-    return lang
 
+    # Check if the '_' function is properly set up
+    global _
+    if '_' not in globals() or not callable(_):
+        def _(msg):
+            return msg  # Fallback to a simple echo function if gettext setup fails
+    return lang
 
 def compute_code():
     """
-        Fills the template file with the student answer
-        Returns the task's number of questions
+    Fills the template file with the student answer
+    Returns the task's number of questions
     """
     for file in os.listdir('./src/Templates'):
         input.parse_template('./src/Templates/' + file, './student/' + file + '.py')
     data = input._load_input()
     return len([k for k in data['input'].keys() if '@' not in k])
+        
+def cleanup_output(error_content):
+    """
+        Provides a cleaner output from the error trace
 
+        :param error_content: string returned by the unittest failures
+    """
+    cleaned_lines = []
+    indexes = [match.start() for match in re.finditer('AssertionError: ', error_content)]
+    for i in indexes:
+        cleaned_lines.append(_('Test échoué:\n'))
+        cleaned_lines.append(error_content[i + len("AssertionError: "): error_content.find("=" * 70, i)])
+    return ''.join(cleaned_lines) if len(indexes) > 0 else error_content                
 
 def compile_code():
     """
-        Compiles both the student code and the exercise code
-        Provides feedback if there is any compilation error
+    Compiles both the student code and the exercise code
+    Provides feedback if there is any compilation error
     """
     pyc_cmd = "python3 ../course/common/compiler.py "
 
@@ -93,46 +98,31 @@ def compile_code():
                                        "veuillez contacter un administrateur dès que possible: \n ") + rawhtml + "\n")
         sys.exit(0)
 
-
-def cleanup_output(error_content):
-    """
-        Provides a cleaner output from the error trace
-
-        :param error_content: string returned by the unittest failures
-    """
-    cleaned_lines = []
-    indexes = [match.start() for match in re.finditer('AssertionError: ', error_content)]
-    for i in indexes:
-        cleaned_lines.append(_('Test échoué:\n'))
-        cleaned_lines.append(error_content[i + len("AssertionError: "): error_content.find("=" * 70, i)])
-    return ''.join(cleaned_lines) if len(indexes) > 0 else error_content
-
-
 def run_code(n_exercises, lang):
     """
-        Runs the student code with the tests
-        Provides feedback if it contains errors
+    Runs the student code with the tests
+    Provides feedback if it contains errors
 
-        :param n_exercises: the task's number of exercices
-        :param lang: the language used by the user
+    :param n_exercises: the task's number of exercises
+    :param lang: the language used by the user
     """
     with open('err.txt', 'w+', encoding="utf-8") as f:
         os.chdir('./student')
         py_cmd = "run_student python3 Runner.pyc " + lang
         try:
             resproc = subprocess.Popen(shlex.split(py_cmd), universal_newlines=True, stderr=f, stdout=subprocess.PIPE)
-            resproc.communicate()
+            stdout, _ = resproc.communicate()
             result = resproc.returncode
         except (IOError, BrokenPipeError):
             result = 252
         f.flush()
         f.seek(0)
         errors = f.read()
-        print(errors)
         outerr = rst.get_codeblock("console", cleanup_output(errors))
 
-    # expected error code: 252=outofmemory, 253=timedout
-    # 127 = code returned by our runner
+    
+
+    # Handle test results as before...
     if result == 127:
         feedback.set_global_result('success')
     elif result == 252:
@@ -140,31 +130,23 @@ def run_code(n_exercises, lang):
     elif result == 253:
         feedback.set_global_result('timeout')
     else:  # Tests failed
+        
         if n_exercises == 1:
             feedback.set_global_result('failed')
-            feedback.set_global_feedback(_("Il semble que votre code contienne des erreurs…\n\n") + outerr + "\n")
+            feedback.set_global_feedback(("Il semble que votre code contienne des erreurs…\n\n") + outerr + "\n")
         else:
-            for i in range(0, n_exercises + 1):
-                regex = '@' + str(i) + '@: ((.+)(\n|\r){1})+'
-                regex_question = re.search(regex, errors)
-                if regex_question:
-                    outerr_question = re.sub('"', '', regex_question.group(0)[5:])
-                else:
-                    outerr_question = False
+            feedback.set_global_result('failed')
+            feedback.set_global_feedback(_("Des erreurs ont été trouvées dans plusieurs questions.\n\n") + outerr + "\n")
+               
+    # Parse stdout for tags
+    tag_lines = [line for line in stdout.split('\n') if line.startswith('TAG:')]
+    tags = {line.split(':')[1].split('=')[0]: line.split('=')[1] == 'True' for line in tag_lines}
 
-                if i == 0:
-                    feedback.set_global_result('failed')
-                    if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console", outerr_question) + "\n"
-                        feedback.set_global_feedback(feed)
-                else:
-                    if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console", outerr_question) + "\n"
-                        feedback.set_problem_feedback(feed, "q" + str(i))
-                    else:
-                        feedback.set_problem_feedback(_("Vous avez correctement répondu à cette question."), "q" + str(i))
-                        feedback.set_problem_result('success', "q" + str(i))
-
+    # Set tags based on parsed output
+    for tag, value in tags.items():
+        print(f" tag {tag} = {value}")
+        ingi_feedback.set_tag(tag, value)           
+               
 
 if __name__ == '__main__':
     language = init_translations()

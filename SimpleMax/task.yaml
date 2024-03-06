@@ -46,6 +46,11 @@ problems:
     q1:
         type: code
         name: Implementaion
-        header: ''
+        header: |+
+            .. code-block:: python
+
+                pre: --
+                post: affiche le maximum entre les nombres entiers `a` et `b`
+
         language: python
         default: ''

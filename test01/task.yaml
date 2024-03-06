@@ -1,35 +1,18 @@
 author: MJdDS
 contact_url: ''
 context: |-
-    Ecrivez l'en-tête et le corps d'une fonction baptisée ``afficheSum`` qui prend deux nombres entiers comme arguments et affiche la somme de ces nombres. La spécification de cette fonction est :
+    Vitrine des détections de misconception. Pour réussir l'exercice, il suffit de renvoyer ``True``.
+
+    Voici quelques exemples de code avec des misconcceptions :
 
     .. code-block:: python
 
-        pre: --
-        post: affiche la somme entre les nombres entiers `a` et `b`
-
-    .. raw:: html
-
-       <script defer>
-
-       bodyHeight = 0;
-       function postSize() {
-           if (document.body.scrollHeight != bodyHeight) {
-               bodyHeight = document.body.scrollHeight;
-               window.parent.postMessage({height: document.body.scrollHeight}, "*");
-           }
-       };
-       var target = document.querySelector('body');
-
-       var observer = new MutationObserver(postSize);
-
-       var config = { attributes: true, subtree: true }
-
-       observer.observe(target, config);
-       $(document).ready(function(){
-           setTimeout(postSize, 0);
-       });
-       </script>
+        def f():
+            num=-1
+            if num > 0:
+                return True
+            else:
+                return False
 environment_id: default
 environment_parameters:
     limits:

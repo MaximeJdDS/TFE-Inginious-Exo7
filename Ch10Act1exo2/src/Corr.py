@@ -8,7 +8,7 @@ class Bourse:
         self.bronze = bronze
         
     def __str__(self):
-        return str(self.gold)+" piece(s) d'or, "+ str(self.silver)+" piece(s) d'argent et "+str(self.bronze)+" piece(s) de bronze."
+        return str(self.gold)+" pièce(s) d'or, "+ str(self.silver)+" pièce(s) d'argent et "+str(self.bronze)+" pièce(s) de bronze."
         
     def __add__(self,other):
         W = Bourse(self.gold+other.gold,self.silver+ other.silver, self.bronze+ other.bronze)

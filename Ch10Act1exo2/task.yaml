@@ -77,12 +77,12 @@ problems:
             .. code-block:: python
 
                 maBourse = Bourse(1,34,23)
-                print("Dans ma bourse j'ai "+maBourse) #Dans ma bourse j'ai 1 piece(s) d'or, 34 piece(s) d'argent et 23 piece(s) de bronze.
+                print("Dans ma bourse j'ai "+maBourse) #Dans ma bourse j'ai 1 pièce(s) d'or, 34 pièce(s) d'argent et 23 pièce(s) de bronze.
                 bourseParTerre = Bourse(0,65,89)
                 mabourse = mabourse + bourseParTerre
-                print("En rammassant la bourse que j'ai trouvé par terre j'ai "+ maBourse)#En rammassant la bourse que j'ai trouvé par terre j'ai 1 piece(s) d'or, 99 piece(s) d'argent et 112 piece(s) de bronze.
+                print("En rammassant la bourse que j'ai trouvé par terre j'ai "+ maBourse)#En rammassant la bourse que j'ai trouvé par terre j'ai 1 pièce(s) d'or, 99 pièce(s) d'argent et 112 pièce(s) de bronze.
                 mabourse.echange()
-                print("Après avoir échangé mes pièces, j'ai "+ mabourse)#Après avoir échangé mes pièces, j'ai 2 piece(s) d'or, 0 piece(s) d'argent et 12 piece(s) de bronze.
+                print("Après avoir échangé mes pièces, j'ai "+ mabourse)#Après avoir échangé mes pièces, j'ai 2 pièce(s) d'or, 0 pièce(s) d'argent et 12 pièce(s) de bronze.
 
 
 
