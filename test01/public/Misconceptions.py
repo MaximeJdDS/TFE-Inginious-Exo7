@@ -201,11 +201,11 @@ def runAllFunc(func):
     return TagStack
 
 def runAllCode(code):
-    #StudentCode = inspect.getsource(StudentFunction)
+    TagStack = []
     ApiCodeFunction = [assignCompares #Function with code parameter
                   ]
 
     for fonction in ApiCodeFunction:
-        if fonction(StudentCode):
+        if fonction(code):
             TagStack.append(fonction.__name__)  
     return TagStack

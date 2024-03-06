@@ -1,18 +1,23 @@
 author: MJdDS
 contact_url: ''
-context: |-
+context: |
     Vitrine des détections de misconception. Pour réussir l'exercice, il suffit de renvoyer ``True``.
 
     Voici quelques exemples de code avec des misconcceptions :
 
     .. code-block:: python
 
-        def f():
+        def f():#MapToBooleanWithIf
             num=-1
             if num > 0:
                 return True
             else:
                 return False
+
+        def f():#AssignCompare
+            if(x=4):
+                return True
+            return False
 environment_id: default
 environment_parameters:
     limits:
@@ -23,7 +28,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: test01
+name: Vitrine Misconceptions
 network_grading: false
 problems:
     q1:

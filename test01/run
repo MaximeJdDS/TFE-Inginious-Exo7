@@ -7,6 +7,7 @@ import shlex
 import sys
 import os
 import re
+from public.Misconceptions import runAllCode
 
 
 from inginious import feedback
@@ -50,9 +51,26 @@ def compute_code():
         input.parse_template('./src/Templates/' + file, './student/' + file + '.py')
     data = input._load_input()
     return len([k for k in data['input'].keys() if '@' not in k])
+        
+def extract_student_code():
+    """
+    Extracts Python code from student files
+    Returns a list of strings containing the code
+    """
+    student_code = []
+    # Parcourir les fichiers dans le répertoire de l'étudiant
+    for file in os.listdir('./student'):
+        if file.endswith('.py'):  # Assurez-vous que le fichier est un fichier Python
+            with open(os.path.join('./student', file), 'r') as f:
+                code = f.read()  # Lire le contenu du fichier
+                student_code.append(code)  # Ajouter le code à la liste
+    print(student_code[0])
+    return runAllCode(student_code[0])            
+     
+    
+       
 
-
-def compile_code():
+def compile_code(tagTab):
     """
         Compiles both the student code and the exercise code
         Provides feedback if there is any compilation error
@@ -68,6 +86,9 @@ def compile_code():
         rawhtml = rst.get_codeblock("", out_student)
         feedback.set_global_result('failed')
         feedback.set_global_feedback(_("Ton programme ne compile pas: \n ") + rawhtml + "\n")
+        for tag in tagTab:
+            print(f" tag {tag} = True l90")
+            ingi_feedback.set_tag(tag, True)       
         sys.exit(0)
 
     with open('logTests.out', 'w+', encoding="utf-8") as f:
@@ -178,5 +199,6 @@ def run_code(n_exercises, lang):
 if __name__ == '__main__':
     language = init_translations()
     num_exercises = compute_code()
-    compile_code()
+                 
+    compile_code(extract_student_code())
     run_code(num_exercises, language)
