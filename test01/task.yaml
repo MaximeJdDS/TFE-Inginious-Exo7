@@ -18,6 +18,15 @@ context: |
             if(x=4):
                 return True
             return False
+
+        def f():#ComparisonWithBoolLiteral
+            x = True
+            if x == True:
+                return True
+            return False
+
+        def f():#ReturnCall
+            return (True)
 environment_id: default
 environment_parameters:
     limits:

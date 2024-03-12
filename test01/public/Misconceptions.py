@@ -5,7 +5,7 @@ import re
 import ast
 import inspect
 
-def assignCompares(code):
+def AssignCompares(code):
     # Expression régulière pour rechercher une affectation dans une condition avec des parenthèses
     patternParanthese     = r'\bif\s*\([^=]+?=\s*(?!=).+?\)\s*:'
     # Expression régulière pour rechercher une affectation dans une condition sans parenthèses
@@ -202,10 +202,33 @@ def runAllFunc(func):
 
 def runAllCode(code):
     TagStack = []
-    ApiCodeFunction = [assignCompares #Function with code parameter
+    ApiCodeFunction = [AssignCompares #Function with code parameter
                   ]
 
     for fonction in ApiCodeFunction:
         if fonction(code):
             TagStack.append(fonction.__name__)  
     return TagStack
+
+dicoFeedback = {"AssignCompares": "Nous pensons que tu as fait une erreur au niveau de la condition du if.\nPour rappel, \"=\" c'est pour assigner une valeur à une variable.\nSi tu veux comparer tu dois utiliser \"==\".",
+       "ComparisonWithBoolLiteral":"text b",
+       "MapToBooleanWithIf":"",
+       "MapToBooleanWithTernaryOperator":"",
+       "ParenthesesOnlyIfArgument":"",
+       "RecursiveFunctionNeedsIfElse":"",
+       "ReturnCall":"ReturnCall FeedBack"}
+
+def feedbackMisconceptions(tabMisconception,verbose = False):
+    """
+    Return a array with the feedback for each Misconceptions in tabMisconception
+    Use verbose = True if you want to print the Misconception who's in tabMisconception but not in dicoFeedback
+    Please refer to the variable 'dicoFeedback' to know the list of Misconceptions handled.
+    """
+    tabOutput = []
+    
+    for misc in tabMisconception:
+        if misc in dicoFeedback:
+            tabOutput.append(dicoFeedback[misc])
+        elif (verbose):
+            print(misc)
+    return tabOutput
