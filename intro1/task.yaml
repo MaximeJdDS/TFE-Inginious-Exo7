@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |+
     On aimerait écrire un bout de code qui double la valeur contenue dans n.
@@ -16,9 +14,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Un c'est bien, deux c'est mieux!
 network_grading: false
@@ -29,8 +25,3 @@ problems:
         header: ''
         language: python
         default: n = ?
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

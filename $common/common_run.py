@@ -7,8 +7,10 @@ import shlex
 import sys
 import os
 import re
-from public.Misconceptions import runAllCode
-from public.Misconceptions import feedbackMisconceptions
+#from public.Misconceptions import runAllCode
+#from public.Misconceptions import feedbackMisconceptions
+from Misconceptions import runAllCode
+from Misconceptions import feedbackMisconceptions
 #import Misconceptions
 
 
@@ -43,22 +45,24 @@ def init_translations():
     trad.install()
     return lang
 
+
 def tagAndMisconception(stdout):
     # Parse stdout for tags
     tag_lines = [line for line in stdout.split('\n') if line.startswith('TAG:')]
     tags = {line.split(':')[1].split('=')[0]: line.split('=')[1] == 'True' for line in tag_lines}
-                 
+
     tabMisconception = []
     # Set tags based on parsed output
     for tag, value in tags.items():
         print(f" tag {tag} = {value}")
-        tabMisconception.append(tag)         
+        tabMisconception.append(tag)
         ingi_feedback.set_tag(tag, value)
-    
+
     feedbackMisconceptionsString = ""
     for i in feedbackMisconceptions(tabMisconception):
-        feedbackMisconceptionsString = feedbackMisconceptionsString + i + "\n" 
-    feedback.set_global_feedback(feedbackMisconceptionsString,append = True) 
+        feedbackMisconceptionsString = feedbackMisconceptionsString + i + "\n"
+    feedback.set_global_feedback(feedbackMisconceptionsString, append=True)
+
 
 def compute_code():
     """
@@ -69,7 +73,8 @@ def compute_code():
         input.parse_template('./src/Templates/' + file, './student/' + file + '.py')
     data = input._load_input()
     return len([k for k in data['input'].keys() if '@' not in k])
-        
+
+
 def extract_student_code():
     """
     Extracts Python code from student files
@@ -82,10 +87,8 @@ def extract_student_code():
             with open(os.path.join('./student', file), 'r') as f:
                 code = f.read()  # Lire le contenu du fichier
                 student_code.append(code)  # Ajouter le code à la liste
-    return runAllCode(student_code[0])            
-     
-    
-       
+    return runAllCode(student_code[0])
+
 
 def compile_code(tagTab):
     """
@@ -103,15 +106,15 @@ def compile_code(tagTab):
         rawhtml = rst.get_codeblock("", out_student)
         feedback.set_global_result('failed')
         feedbackMisconceptionsString = ""
-        #print(feedbackMisconceptions(tagTab))
+        # print(feedbackMisconceptions(tagTab))
         for i in feedbackMisconceptions(tagTab):
             feedbackMisconceptionsString = feedbackMisconceptionsString + i + " \n "
         feedback.set_global_feedback(_("Ton programme ne compile pas: \n ") + rawhtml + "\n")
-        #print(feedbackMisconceptionsString)        
-        feedback.set_global_feedback(feedbackMisconceptionsString,append=True)        
+        # print(feedbackMisconceptionsString)
+        feedback.set_global_feedback(feedbackMisconceptionsString, append=True)
         for tag in tagTab:
             print(f" tag {tag} = True")
-            ingi_feedback.set_tag(tag, True)       
+            ingi_feedback.set_tag(tag, True)
         sys.exit(0)
 
     with open('logTests.out', 'w+', encoding="utf-8") as f:
@@ -173,14 +176,14 @@ def run_code(n_exercises, lang):
         f.flush()
         f.seek(0)
         errors = f.read()
-        #print(errors)
+        # print(errors)
         outerr = rst.get_codeblock("console", cleanup_output(errors))
 
     # expected error code: 252=outofmemory, 253=timedout
     # 127 = code returned by our runner
     if result == 127:
         feedback.set_global_result('success')
-        #tagAndMisconception(stdout)
+        # tagAndMisconception(stdout)
     elif result == 252:
         feedback.set_global_result('overflow')
     elif result == 253:
@@ -201,41 +204,50 @@ def run_code(n_exercises, lang):
                 if i == 0:
                     feedback.set_global_result('failed')
                     if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console", outerr_question) + "\n"
+                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console",
+                                                                                         outerr_question) + "\n"
                         feedback.set_global_feedback(feed)
                 else:
                     if outerr_question:
-                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console", outerr_question) + "\n"
+                        feed = _("Vous avez fait des erreurs: \n\n") + rst.get_codeblock("console",
+                                                                                         outerr_question) + "\n"
                         feedback.set_problem_feedback(feed, "q" + str(i))
                     else:
-                        feedback.set_problem_feedback(_("Vous avez correctement répondu à cette question."), "q" + str(i))
+                        feedback.set_problem_feedback(_("Vous avez correctement répondu à cette question."),
+                                                      "q" + str(i))
                         feedback.set_problem_result('success', "q" + str(i))
 
-    #tagAndMisconception(stdout)           
-    #```           
+    # tagAndMisconception(stdout)
+    # ```
     # Parse stdout for tags
     tag_lines = [line for line in stdout.split('\n') if line.startswith('TAG:')]
     tags = {line.split(':')[1].split('=')[0]: line.split('=')[1] == 'True' for line in tag_lines}
-                 
+
     tabMisconception = []
     # Set tags based on parsed output
     for tag, value in tags.items():
         print(f" tag {tag} = {value}")
-        tabMisconception.append(tag)         
+        tabMisconception.append(tag)
         ingi_feedback.set_tag(tag, value)
-    
+
     feedbackMisconceptionsString = ""
     for i in feedbackMisconceptions(tabMisconception):
-        feedbackMisconceptionsString = " \n"+ str(i) + " \n" 
-        feedback.set_global_feedback(feedbackMisconceptionsString,append=True) 
-    #feedback.set_global_feedback(feedbackMisconceptionsString,append=True) 
-    if((len(tabMisconception)!= 0) and (result == 127)):
+        feedbackMisconceptionsString = " \n" + str(i) + " \n"
+        feedback.set_global_feedback(feedbackMisconceptionsString, append=True)
+        # feedback.set_global_feedback(feedbackMisconceptionsString,append=True)
+    if ((len(tabMisconception) != 0) and (result == 127)):
         feedback.set_global_result('failed')
-        feedback.set_grade(95)         
-    #```             
+        feedback.set_grade(95)
+        # ```
+
+def common_run():
+    language = init_translations()
+    num_exercises = compute_code()
+    compile_code(extract_student_code())
+    run_code(num_exercises, language)
 
 if __name__ == '__main__':
     language = init_translations()
-    num_exercises = compute_code()             
+    num_exercises = compute_code()
     compile_code(extract_student_code())
     run_code(num_exercises, language)

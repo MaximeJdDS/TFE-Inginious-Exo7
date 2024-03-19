@@ -168,7 +168,7 @@ def ReturnCall(func):
     """
     source = inspect.getsource(func)
     for line in source.split('\n'):
-        if ' return ' in line:
+        if ' return (' in line:
             if '(' in line or ')' in line:
                 return True
     return False
@@ -211,12 +211,12 @@ def runAllCode(code):
     return TagStack
 
 dicoFeedback = {"AssignCompares": "Nous pensons que tu as fait une erreur au niveau de la condition du if.\nPour rappel, \"=\" c'est pour assigner une valeur à une variable.\nSi tu veux comparer tu dois utiliser \"==\".",
-       "ComparisonWithBoolLiteral":"text b",
-       "MapToBooleanWithIf":"",
-       "MapToBooleanWithTernaryOperator":"",
-       "ParenthesesOnlyIfArgument":"",
-       "RecursiveFunctionNeedsIfElse":"",
-       "ReturnCall":"ReturnCall FeedBack"}
+       "ComparisonWithBoolLiteral":"Nous pensons que tu as fait une erreur au niveau de la condition du if. Tu as déjà un boolean, tu n'as pas besoin de le comparer à un autre boolean pour faire ta condition. Tu peux tout simplement écrire \"if nomDeLaVariable : \"",
+       "MapToBooleanWithIf":"FeedBack MapToBooleanWithIf",
+       "MapToBooleanWithTernaryOperator":"FeedBack MapToBooleanWithTernaryOperator",
+       "ParenthesesOnlyIfArgument":"FeedBack ParenthesesOnlyIfArgument",
+       "RecursiveFunctionNeedsIfElse":"FeedBack RecursiveFunctionNeedsIfElse",
+       "ReturnCall":"Nous pensons que tu as fait une erreur au niveau du \"return\".\nLorsque python lit \"return\" il va exécuter tout ce qui suit puis renvoyer le résultat. \nAinsi, les paranthèses ne sont pas nécessaires."}
 
 def feedbackMisconceptions(tabMisconception,verbose = False):
     """

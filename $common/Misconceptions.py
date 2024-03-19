@@ -5,29 +5,31 @@ import re
 import ast
 import inspect
 
-def assignCompares(code):
+
+def AssignCompares(code):
     # Expression régulière pour rechercher une affectation dans une condition avec des parenthèses
-    patternParanthese     = r'\bif\s*\([^=]+?=\s*(?!=).+?\)\s*:'
+    patternParanthese = r'\bif\s*\([^=]+?=\s*(?!=).+?\)\s*:'
     # Expression régulière pour rechercher une affectation dans une condition sans parenthèses
     patternSansParanthese = r'\bif\s+\w+\s*=\s*(?!=).+?\b:'
     if (re.search(patternParanthese, code) or re.search(patternSansParanthese, code)):
         return True
     return False
 
+
 def has_nested_loops(func):
     """
     Check if a function contains nested loops.
-    
+
     Parameters:
         func (function): The function to check.
-        
+
     Returns:
         bool: True if nested loops are found, False otherwise.
     """
     source_lines, _ = inspect.getsourcelines(func)
     source = ''.join(source_lines)
     tree = ast.parse(source)
-    
+
     def _check_for_nested_loops(node, depth=0):
         if isinstance(node, (ast.While, ast.For)):
             depth += 1
@@ -37,12 +39,13 @@ def has_nested_loops(func):
             if _check_for_nested_loops(child_node, depth):
                 return True
         return False
-    
+
     for node in ast.walk(tree):
         if _check_for_nested_loops(node):
             return True
-    
+
     return False
+
 
 def ComparisonWithBoolLiteral(func):
     """
@@ -65,6 +68,7 @@ def ComparisonWithBoolLiteral(func):
                             return True
     return False
 
+
 def MapToBooleanWithIf(func):
     source = inspect.getsource(func)
     parsed = ast.parse(source)
@@ -83,6 +87,7 @@ def MapToBooleanWithIf(func):
                             if node.orelse[0].value.value == False:
                                 return True
     return False
+
 
 def ParenthesesOnlyIfArgument(func, suspect_functions):
     """
@@ -119,6 +124,7 @@ def ParenthesesOnlyIfArgument(func, suspect_functions):
                 return True  # Une référence directe à une fonction suspecte sans parenthèses
     return False
 
+
 def detect_recursive_function(function):
     source = inspect.getsource(function)
     tree = ast.parse(source)
@@ -145,18 +151,21 @@ def detect_recursive_function(function):
     # Retourner True si une récursion est détectée, sinon False
     return recursive_detected
 
+
 def detect_else_keyword(function):
     source = inspect.getsource(function)
     tree = ast.parse(source)
-    
+
     for node in ast.walk(tree):
         if isinstance(node, ast.If):
             if node.orelse:
                 return True
     return False
 
+
 def RecursiveFunctionNeedsIfElse(func):
     return detect_recursive_function(func) and detect_else_keyword(func)
+
 
 def ReturnCall(func):
     """
@@ -168,13 +177,15 @@ def ReturnCall(func):
     """
     source = inspect.getsource(func)
     for line in source.split('\n'):
-        if ' return ' in line:
+        if ' return (' in line:
             if '(' in line or ')' in line:
                 return True
     return False
 
+
 def MapToBooleanWithTernaryOperator(func):
     return False
+
 
 #########################################################
 #		 RUN ALL FUNCTION			#
@@ -182,16 +193,15 @@ def MapToBooleanWithTernaryOperator(func):
 #########################################################
 
 
-def runAllFunc(func):    
-    
+def runAllFunc(func):
     StudentFunction = func
 
-    ApiFunction = [has_nested_loops,  #Function with function parameter
-                  ComparisonWithBoolLiteral,
-                  RecursiveFunctionNeedsIfElse,
-                  MapToBooleanWithIf,
-                  MapToBooleanWithTernaryOperator,
-                  ReturnCall] 
+    ApiFunction = [has_nested_loops,  # Function with function parameter
+                   ComparisonWithBoolLiteral,
+                   RecursiveFunctionNeedsIfElse,
+                   MapToBooleanWithIf,
+                   MapToBooleanWithTernaryOperator,
+                   ReturnCall]
 
     TagStack = []
 
@@ -200,12 +210,39 @@ def runAllFunc(func):
             TagStack.append(fonction.__name__)
     return TagStack
 
+
 def runAllCode(code):
-    #StudentCode = inspect.getsource(StudentFunction)
-    ApiCodeFunction = [assignCompares #Function with code parameter
-                  ]
+    TagStack = []
+    ApiCodeFunction = [AssignCompares  # Function with code parameter
+                       ]
 
     for fonction in ApiCodeFunction:
-        if fonction(StudentCode):
-            TagStack.append(fonction.__name__)  
+        if fonction(code):
+            TagStack.append(fonction.__name__)
     return TagStack
+
+
+dicoFeedback = {
+    "AssignCompares": "Nous pensons que tu as fait une erreur au niveau de la condition du if.\nPour rappel, \"=\" c'est pour assigner une valeur à une variable.\nSi tu veux comparer tu dois utiliser \"==\".",
+    "ComparisonWithBoolLiteral": "Nous pensons que tu as fait une erreur au niveau de la condition du if. Tu as déjà un boolean, tu n'as pas besoin de le comparer à un autre boolean pour faire ta condition. Tu peux tout simplement écrire \"if nomDeLaVariable : \"",
+    "MapToBooleanWithIf": "FeedBack MapToBooleanWithIf",
+    "MapToBooleanWithTernaryOperator": "FeedBack MapToBooleanWithTernaryOperator",
+    "ParenthesesOnlyIfArgument": "FeedBack ParenthesesOnlyIfArgument",
+    "RecursiveFunctionNeedsIfElse": "FeedBack RecursiveFunctionNeedsIfElse",
+    "ReturnCall": "Nous pensons que tu as fait une erreur au niveau du \"return\".\nLorsque python lit \"return\" il va exécuter tout ce qui suit puis renvoyer le résultat. \nAinsi, les paranthèses ne sont pas nécessaires."}
+
+
+def feedbackMisconceptions(tabMisconception, verbose=False):
+    """
+    Return a array with the feedback for each Misconceptions in tabMisconception
+    Use verbose = True if you want to print the Misconception who's in tabMisconception but not in dicoFeedback
+    Please refer to the variable 'dicoFeedback' to know the list of Misconceptions handled.
+    """
+    tabOutput = []
+
+    for misc in tabMisconception:
+        if misc in dicoFeedback:
+            tabOutput.append(dicoFeedback[misc])
+        elif (verbose):
+            print(misc)
+    return tabOutput
