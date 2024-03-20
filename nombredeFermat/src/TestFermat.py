@@ -22,6 +22,13 @@ def isFermat(n):
         temp = corr.F(i)
     if temp == n : return True
     else : return False
+    
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(Fermat, 'F') and hasattr(Fermat, 'contreExemple')):
+    tagDico = Misconceptions.runAllFunc(Fermat.est_premier_1)
+Misconceptions.tagTransfer(tagDico)    
 
 
 class TestFermat(unittest.TestCase):

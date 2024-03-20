@@ -7,7 +7,12 @@ import random
 
 import Corr as corr
 import student
+import Misconceptions
 
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'met_au_pluriel')):
+    tagDico = Misconceptions.runAllFunc(student.met_au_pluriel)
+Misconceptions.tagTransfer(tagDico)
 
 class Test(unittest.TestCase):
     def test_exists(self):

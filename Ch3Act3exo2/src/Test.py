@@ -7,6 +7,10 @@ import random
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico = Misconceptions.runAllFunc(student.fonction)
+Misconceptions.tagTransfer(tagDico)
 
 def comparer_tableaux(tab1, tab2, n):
     diff1 = sorted(list(set(tab1) - set(tab2)))[:n]

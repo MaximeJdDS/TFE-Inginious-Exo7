@@ -8,6 +8,12 @@ import math
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'pythagore')):
+    tagDico = Misconceptions.runAllFunc(student.pythagore)
+Misconceptions.tagTransfer(tagDico)
 
 def pythagoreInt(n):
     database=[]

@@ -9,6 +9,12 @@ import io
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'echange')):
+    tagDico = Misconceptions.runAllFunc(student.echange)
+Misconceptions.tagTransfer(tagDico)
 
 def tester_objet_attribut(objet):
     attributs_attendus = ['gold', 'silver', 'bronze']

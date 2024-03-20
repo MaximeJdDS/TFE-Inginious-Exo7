@@ -7,6 +7,12 @@ import random
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'viensIci')):
+    tagDico = Misconceptions.runAllFunc(student.viensIci)
+Misconceptions.tagTransfer(tagDico)
 
 def tester_objet_attribut(objet):
     attributs_attendus = ['nom', 'race', 'x', 'y']

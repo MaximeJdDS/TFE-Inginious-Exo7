@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: Écris une fonction ``position_de_AT()`` qui teste si une séquence contient
     le nucléotide ``A`` suivi du nucléotide ``T`` et renvoie la position de la première
@@ -13,9 +11,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Position de AT
 network_grading: false
@@ -44,8 +40,3 @@ problems:
             def position_de_AT(adn):
 
                 return None
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

@@ -9,6 +9,12 @@ from unittest.mock import mock_open, patch
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'ecritXfois')):
+    tagDico = Misconceptions.runAllFunc(student.ecritXfois)
+Misconceptions.tagTransfer(tagDico)
 
 
 def compare2file(file1,file2):

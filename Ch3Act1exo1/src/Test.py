@@ -9,6 +9,10 @@ import io
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico = Misconceptions.runAllFunc(student.fonction)
+Misconceptions.tagTransfer(tagDico)
 
 
 class Test(unittest.TestCase):

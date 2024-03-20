@@ -7,6 +7,12 @@ import random
 
 import Corrppdiv as corr
 import ppdiv
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(ppdiv, 'plus_petit_diviseur')):
+    tagDico = Misconceptions.runAllFunc(ppdiv.plus_petit_diviseur)
+Misconceptions.tagTransfer(tagDico)
 
 
 class Testppdiv(unittest.TestCase):

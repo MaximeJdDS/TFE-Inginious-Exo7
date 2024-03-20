@@ -7,6 +7,12 @@ import random
 
 import CorrPremier3 as corr
 import premier3
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(premier3, 'est_premier_3')):
+    tagDico = Misconceptions.runAllFunc(premier3.est_premier_3)
+Misconceptions.tagTransfer(tagDico)
 
 
 class TestPrime2(unittest.TestCase):

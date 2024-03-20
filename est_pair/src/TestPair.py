@@ -7,6 +7,12 @@ import random
 
 import CorrPair as corr
 import pair
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(pair, 'est_pair')):
+    tagDico = Misconceptions.runAllFunc(pair.est_pair)
+Misconceptions.tagTransfer(tagDico)
 
 
 class TestPair(unittest.TestCase):

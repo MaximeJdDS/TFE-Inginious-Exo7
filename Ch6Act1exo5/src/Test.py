@@ -9,6 +9,12 @@ import io
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'affiche_conjugaison')):
+    tagDico = Misconceptions.runAllFunc(student.affiche_conjugaison)
+Misconceptions.tagTransfer(tagDico)
 
 
 class Test(unittest.TestCase):

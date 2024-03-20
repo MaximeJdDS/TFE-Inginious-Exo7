@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |
     Dans cette section, nous allons jouer avec la représentation des caractères en informatique. Rappelez-vous, la machine fonctionne avec des 1 et des 0, avec lesquels on a construit les nombres, mais maintenant comment passe-t-on d'un nombre à une lettre ? Grâce aux langages codés ! On va donc définir un numéro pour chaque caractère. Voici le tableau :
@@ -18,7 +16,6 @@ context: |
 
         chr(65)  #Qui renvoie "A"
         ord("A") #Qui renvoie 65
-
 environment_id: pyjavacpp
 environment_parameters:
     limits:
@@ -27,7 +24,6 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
 input_random: 0
 name: ord() et chr()
@@ -40,8 +36,3 @@ problems:
             en sa lettre Majuscule. Stockez votre réponse dans ``lettre``.
         language: python
         default: ''
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

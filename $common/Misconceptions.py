@@ -182,6 +182,23 @@ def ReturnCall(func):
                 return True
     return False
 
+def ReturnCallFile(file_path):
+    """
+    Detects the presence of parentheses in return statements of a given function.
+
+    @param func: The function to analyze.
+    @pre: func must be a Python function.
+    @post: Returns True if parentheses are detected in return statements, otherwise False.
+    """
+
+    with open(file_path, 'r') as file:
+        source = file.read()
+    for line in source.split('\n'):
+        if ' return (' in line:
+            if '(' in line or ')' in line:
+                return True
+    return False
+
 
 def MapToBooleanWithTernaryOperator(func):
     return False
@@ -225,10 +242,10 @@ def runAllCode(code):
 dicoFeedback = {
     "AssignCompares": "Nous pensons que tu as fait une erreur au niveau de la condition du if.\nPour rappel, \"=\" c'est pour assigner une valeur à une variable.\nSi tu veux comparer tu dois utiliser \"==\".",
     "ComparisonWithBoolLiteral": "Nous pensons que tu as fait une erreur au niveau de la condition du if. Tu as déjà un boolean, tu n'as pas besoin de le comparer à un autre boolean pour faire ta condition. Tu peux tout simplement écrire \"if nomDeLaVariable : \"",
-    "MapToBooleanWithIf": "FeedBack MapToBooleanWithIf",
-    "MapToBooleanWithTernaryOperator": "FeedBack MapToBooleanWithTernaryOperator",
-    "ParenthesesOnlyIfArgument": "FeedBack ParenthesesOnlyIfArgument",
-    "RecursiveFunctionNeedsIfElse": "FeedBack RecursiveFunctionNeedsIfElse",
+    "MapToBooleanWithIf": "Nous pensons que ce que tu as écris n'est pas une bonne habitude à prendre : Ce n'est pas nécessaire de faire des if/else pour renvoyer un Boolean, tu peux simplement écrire return CONDITION.",
+    "MapToBooleanWithTernaryOperator": "Nous pensons que ce que tu as écris n'est pas une bonne habitude à prendre : tu peux simplement écrire return CONDITION.",
+    "ParenthesesOnlyIfArgument": "Attention, Ne pas mettre de paranthèse derrière le nom d'une fonction va donner l'adresse de la fonction. Si tu veux faire appel à une fonction sans paramètre ",
+    "RecursiveFunctionNeedsIfElse": "Ce n'est pas obligatoire de faire un cas else. C'est possible d'écrire une fonction récursive sans else avec le cas de base de manière implicite.",
     "ReturnCall": "Nous pensons que tu as fait une erreur au niveau du \"return\".\nLorsque python lit \"return\" il va exécuter tout ce qui suit puis renvoyer le résultat. \nAinsi, les paranthèses ne sont pas nécessaires."}
 
 
@@ -246,3 +263,7 @@ def feedbackMisconceptions(tabMisconception, verbose=False):
         elif (verbose):
             print(misc)
     return tabOutput
+
+def tagTransfer(tagDico):
+    for tag in tagDico:
+        print(f"TAG:{tag}=True")

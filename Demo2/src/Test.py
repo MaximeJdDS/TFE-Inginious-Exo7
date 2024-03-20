@@ -7,8 +7,10 @@ import random
 
 import Corr as corr
 import student
+import Misconceptions
 
-
+tagDico = Misconceptions.runAllFunc(student.fonction)
+Misconceptions.tagTransfer(tagDico)
 class Test(unittest.TestCase):
     
 
@@ -18,6 +20,7 @@ class Test(unittest.TestCase):
         for i in range(len(a)):
             stu_ans  = student.fonction(a[i])
             corr_ans = corr.fonction(a[i])
+            
             if(a[i]< 0): #Négatif
                 self.assertEqual(corr_ans, stu_ans, ansresult.format(a[i],corr_ans,stu_ans))
             else: #Positif

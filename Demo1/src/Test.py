@@ -7,12 +7,12 @@ import random
 from inginious import feedback
 import inginious_container_api.input as ingi_input
 import inginious_container_api.feedback as ingi_feedback
-
+import Misconceptions
 
 import Corr as corr
 import student
 
-
+tagDico = Misconceptions.runAllFunc(student.fonction)
 
 class Test(unittest.TestCase):
     
@@ -37,6 +37,7 @@ class Test(unittest.TestCase):
         
         stu_ans  = student.fonction()
         corr_ans = corr.fonction()
+        Misconceptions.tagTransfer(tagDico)
         if(stu_ans == "Pas instancié"):
             self.assertEqual(corr_ans, stu_ans, ansNotInstance.format())
         else :
@@ -44,7 +45,5 @@ class Test(unittest.TestCase):
             
 
     
-
-
 if __name__ == '__main__':
     unittest.main()

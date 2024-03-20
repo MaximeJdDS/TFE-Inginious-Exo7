@@ -11,6 +11,10 @@ import student
 from inginious import feedback
 import inginious_container_api.input as ingi_input
 import inginious_container_api.feedback as ingi_feedback
+import Misconceptions
+
+tagDico = Misconceptions.runAllFunc(student.fonction)
+Misconceptions.tagTransfer(tagDico)
 
 
 class Test(unittest.TestCase):

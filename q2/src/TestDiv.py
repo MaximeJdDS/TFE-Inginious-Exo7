@@ -7,6 +7,12 @@ import random
 
 import CorrDiv as corr
 import Div
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(Div, 'est_divisible')):
+    tagDico = Misconceptions.runAllFunc(Div.est_divisible)
+Misconceptions.tagTransfer(tagDico)
 
 
 class TestDiv(unittest.TestCase):

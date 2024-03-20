@@ -9,7 +9,12 @@ import io
 
 import Corr as corr
 import student
+import Misconceptions
 
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'filtreTableau')):
+    tagDico = Misconceptions.runAllFunc(student.filtreTableau)
+Misconceptions.tagTransfer(tagDico)
 
 class Test(unittest.TestCase):
     def test_exists(self):

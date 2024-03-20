@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-def shift(lettre):
+def fonction(lettre):
      
 @    @q1@@ 
     return lettre
     
-def fonction(x):
-	return shift(x)

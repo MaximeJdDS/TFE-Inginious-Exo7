@@ -7,10 +7,18 @@ import random
 
 import Corr as corr
 import student
+import Misconceptions
 
+tagDico = Misconceptions.runAllFunc(student.fonction)
+Misconceptions.tagTransfer(tagDico)
 
 class Test(unittest.TestCase):
-    
+    '''
+    def test_file(self):
+        
+        if(Misconceptions.ReturnCallFile("Templates/student")):
+            tagDico.append("Test_Exist")
+    '''
     def test_result_Int(self):
         a = [random.randint(1, 100) for _ in range(5)]
         b = [random.randint(1, 100) for _ in range(5)]

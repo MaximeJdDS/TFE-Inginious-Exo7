@@ -9,6 +9,12 @@ from unittest.mock import mock_open, patch
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'fichierToList')):
+    tagDico = Misconceptions.runAllFunc(student.fichierToList)
+Misconceptions.tagTransfer(tagDico)
 
 
 def listToFile(tab,filename):

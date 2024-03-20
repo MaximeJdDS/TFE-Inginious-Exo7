@@ -10,6 +10,12 @@ import io
 import Corr as corr
 import student
 from student import Pizza,Plat
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'surfacePizza')):
+    tagDico = Misconceptions.runAllFunc(student.surfacePizza)
+Misconceptions.tagTransfer(tagDico)
 
 def tester_objet_attribut(objet):
     attributs_attendus = ['typeDeFour']

@@ -1,6 +1,4 @@
-accessible: true
 author: Maxime Jacques de Dixmude Slavic
-categories: []
 contact_url: ''
 context: |-
     Déduis-en une fonction qui teste si un mot est un palindrome ou pas. Un palindrome est un mot qui s’écrit indifféremment de gauche à droite ou de droite à gauche ;
@@ -14,9 +12,7 @@ environment_parameters:
         memory: '100'
     run_cmd: ''
 environment_type: docker
-evaluate: best
 file: ''
-groups: false
 input_random: 0
 name: Palindrome
 network_grading: false
@@ -37,8 +33,3 @@ problems:
             def est_un_palindrome(mot):
 
                 return False
-stored_submissions: 0
-submission_limit:
-    amount: -1
-    period: -1
-weight: 1.0

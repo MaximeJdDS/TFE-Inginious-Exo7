@@ -7,6 +7,12 @@ import random
 
 import Corr as corr
 import student
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(student, 'latin_cochon')):
+    tagDico = Misconceptions.runAllFunc(student.latin_cochon)
+Misconceptions.tagTransfer(tagDico)
 
 def compare(mot1, mot2):
     return mot1.lower() == mot2.lower()

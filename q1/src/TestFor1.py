@@ -9,6 +9,12 @@ import io
 
 import CorrFor1 as corr
 import for1
+import Misconceptions
+
+tagDico=["MissnamingFunction"]
+if(hasattr(for1, 'quotient_reste')):
+    tagDico = Misconceptions.runAllFunc(for1.quotient_reste)
+Misconceptions.tagTransfer(tagDico)
 
 
 class TestFor1(unittest.TestCase):
