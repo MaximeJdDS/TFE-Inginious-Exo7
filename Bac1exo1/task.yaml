@@ -1,0 +1,41 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    On aimerait que tu implémentes une fonction qui filtrerait le contenu d'un tableau. Par filtrer, on entend retirer les éléments.
+    N'oublie pas de définir la fonction.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Filtre
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: |-
+            ``@pré`` :
+
+            ``tab`` Le tableau cible à qui on va retirer les éléments contenu dans
+
+            ``filtre`` qui est un tableau également et contient tous les éléments qu'on ne veut plus avoir.
+
+            ``@post`` :
+
+            Un tableau contenant tous les éléments de ``tab`` mais pas ceux contenu dans ``filtre``
+
+            ``Exemple`` : ``filtreTableau`` (
+
+            [0,0,1,2,3,4,5,3,6,7,9,0,3],
+
+            [0,3,0])
+
+            = [1,2,4,5,6,7,9]
+        language: python
+        default: ''
