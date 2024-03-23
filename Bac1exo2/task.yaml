@@ -1,0 +1,36 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |
+    On voudrait que tu écrives un code qui vérifie si la matrice donné en paramètre contient le résultat d'une fonction ``f`` qui n'a pas de paramètre.
+
+
+    .. code-block:: python
+
+        matrix = [[0,1,2],
+                  [3,4,5],
+                  [6,7,8]]
+        print(MatrixCheck(matrix))
+
+
+    Si ``f`` renvoie 3, alors ce code renverra ``True``.
+    Si ``f`` renvoie 10, alors ce code renverra ``False``.
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Est-ce qu'on est dans la matrice ?
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: Implémente la fonction ``MatrixCheck(matrix)`` qui vérifie si le résultat
+            de la fonction ``f`` est contenu dans la matrice donnée en paramètre.
+        language: python
+        default: ''

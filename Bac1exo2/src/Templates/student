@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+
+
+def f():
+    return 0
+
+
+@@q1@@ 
+
+    
+def fonction(n):
+	return MatrixCheck(n)
