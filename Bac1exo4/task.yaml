@@ -1,0 +1,34 @@
+author: Maxime Jacques de Dixmude Slavic
+contact_url: ''
+context: |-
+    On voudrait que tu écrives un code qui renvoie une plus petite matrice qui ferait la moyenne des éléments qui la compose. Avec l'exemple ce sera plus simple à comprendre :
+
+
+    .. image:: Bac1exo4/MatrixReduc.png
+       :height: 320
+       :width: 645
+
+
+
+
+    En entré, on ne te donnera que des matrices carrées de longueur paire. Utilise la moyenne arithmétique (somme des éléments divisé par le nombre d'élément). Attention à bien renvoyer une matrice carrée 2 fois moins longue (et donc 4 fois plus petite).
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: Est-ce qu'on est dans la matrice ?
+network_grading: false
+problems:
+    q1:
+        type: code
+        name: Implémentation
+        header: Implémente la fonction ``MatrixReduc(matrix)`` qui renvoie une matrice
+            comme expliqué plus haut.
+        language: python
+        default: ''

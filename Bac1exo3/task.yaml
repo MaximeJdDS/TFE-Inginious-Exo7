@@ -1,7 +1,7 @@
 author: Maxime Jacques de Dixmude Slavic
 contact_url: ''
 context: |
-    On voudrait que tu écrives un code qui vérifie si la matrice donné en paramètre contient le résultat d'une fonction ``f`` qui n'a pas de paramètre mais qui renvoie cette fois-ci un tableau!.
+    On voudrait que tu écrives un code qui vérifie si la matrice donné en paramètre contient le résultat d'une fonction ``f`` qui n'a pas de paramètre mais qui renvoie cette fois-ci un tableau!
 
 
     .. code-block:: python
@@ -24,7 +24,7 @@ environment_parameters:
 environment_type: docker
 file: ''
 input_random: 0
-name: Est-ce qu'on est dans la matrice ?
+name: Est-ce tout est dans la matrice ?
 network_grading: false
 problems:
     q1:
