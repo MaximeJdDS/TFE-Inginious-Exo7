@@ -58,7 +58,7 @@ def test_has_nested_loops():
     assert has_nested_loops(example_function)                      == True
     assert has_nested_loops(example_function_without_nested_loops) == False
     assert has_nested_loops(example_function_for_and_while_loops)  == True
-    assert has_nested_loops(exemple_function_two_loops_not_nested))== False
+    assert has_nested_loops(exemple_function_two_loops_not_nested) == False
 
 def test_ComparisonWithBoolLiteral():
         def test_function_1():
