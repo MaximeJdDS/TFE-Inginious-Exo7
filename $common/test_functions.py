@@ -90,7 +90,7 @@ def test_ComparisonWithBoolLiteral():
         functions_to_test = [test_function_1, test_function_2, test_function_3, test_function_4]
         Result            = [True,            True,            True,            False          ]
         for i, func in enumerate(functions_to_test, start=1):
-            assert   ComparisonWithBoolLiteral(func) = Result[i]
+            assert   ComparisonWithBoolLiteral(func) == Result[i]
 
 def test_detect_else_keyword():
     # Fonction de test sans bloc else
