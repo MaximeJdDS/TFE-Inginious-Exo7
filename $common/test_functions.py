@@ -1,8 +1,10 @@
 from Misconceptions import *
 import pytest
 
+
 def test_1():
-    assert 1==1
+    assert 1 == 1
+
 
 def test_AssignCompares():
     # Exemples d'utilisation
@@ -30,6 +32,7 @@ def test_AssignCompares():
     assert AssignCompares(code_exemple2) == True
     assert AssignCompares(code_exemple3) == False
     assert AssignCompares(code_exemple4) == False
+
 
 def test_has_nested_loops():
     # Testing the function with examples
@@ -60,37 +63,39 @@ def test_has_nested_loops():
     assert has_nested_loops(example_function_for_and_while_loops) == True
     assert has_nested_loops(exemple_function_two_loops_not_nested) == False
 
+
 def test_ComparisonWithBoolLiteral():
-        def test_function_1():
-            x = True
-            if x == True:
-                return True
-            return False
+    def test_function_1():
+        x = True
+        if x == True:
+            return True
+        return False
 
-        def test_function_2():
-            y = False
-            if y == True:
-                return True
-            return False
+    def test_function_2():
+        y = False
+        if y == True:
+            return True
+        return False
 
-        def test_function_3():
-            def some_function():
-                return True
+    def test_function_3():
+        def some_function():
+            return True
 
-            if some_function() == True:
-                return True
-            return False
+        if some_function() == True:
+            return True
+        return False
 
-        def test_function_4():
-            z = False
-            if z == False:
-                return True
-            return False
+    def test_function_4():
+        z = False
+        if z == False:
+            return True
+        return False
 
-        functions_to_test = [test_function_1, test_function_2, test_function_3, test_function_4]
-        Result            = [True,            True,            True,            False          ]
-        for i, func in enumerate(functions_to_test, start=1):
-            assert   ComparisonWithBoolLiteral(func) == Result[i]
+    functions_to_test = [test_function_1, test_function_2, test_function_3, test_function_4]
+    Result = [True, True, True, False]
+    for i, func in enumerate(functions_to_test, start=1):
+        assert ComparisonWithBoolLiteral(func) == Result[i]
+
 
 def test_detect_else_keyword():
     # Fonction de test sans bloc else
@@ -120,10 +125,11 @@ def test_detect_else_keyword():
         elsevariable = x * 2
         return elsevariable
 
-    assert detect_else_keyword(test_function_1)  == False
-    assert detect_else_keyword(test_function_2)  == True
-    assert detect_else_keyword(test_function_3)  == True
-    assert detect_else_keyword(test_function_4)  == False
+    assert detect_else_keyword(test_function_1) == False
+    assert detect_else_keyword(test_function_2) == True
+    assert detect_else_keyword(test_function_3) == True
+    assert detect_else_keyword(test_function_4) == False
+
 
 def test_detect_recursive_function():
     def test_function_1():
@@ -154,11 +160,12 @@ def test_detect_recursive_function():
         else:
             return n * conditional_recursive_call(n - 2)
 
-    assert detect_recursive_function(test_function_1)                          == True
-    assert detect_recursive_function(recursive_function)                       == True
-    assert detect_recursive_function(multiple_recursive_calls)                 == True
+    assert detect_recursive_function(test_function_1) == True
+    assert detect_recursive_function(recursive_function) == True
+    assert detect_recursive_function(multiple_recursive_calls) == True
     assert detect_recursive_function(non_recursive_call_to_recursive_function) == False
-    assert detect_recursive_function(conditional_recursive_call)               == True
+    assert detect_recursive_function(conditional_recursive_call) == True
+
 
 def test_MapToBooleanWithIf():
     def example_function1(num):
@@ -180,6 +187,7 @@ def test_MapToBooleanWithIf():
     assert MapToBooleanWithIf(example_function2) == False
     assert MapToBooleanWithIf(example_function3) == False
 
+
 def test_MapToBooleanWithTernaryOperator():
     def example_function1():
         return True if x > 0 else False
@@ -200,6 +208,7 @@ def test_MapToBooleanWithTernaryOperator():
     assert MapToBooleanWithTernaryOperator(example_function2) == False
     assert MapToBooleanWithTernaryOperator(example_function3) == True
     assert MapToBooleanWithTernaryOperator(example_function4) == True
+
 
 def test_ParenthesesOnlyIfArgument():
     # Fonction de test
@@ -226,6 +235,7 @@ def test_ParenthesesOnlyIfArgument():
     assert ParenthesesOnlyIfArgument(function2, suspect_functions) == True
     assert ParenthesesOnlyIfArgument(function3, suspect_functions) == True
 
+
 def test_ReturnCall():
     def example_function_with_parentheses(x):
         return (x + 5)
@@ -243,10 +253,7 @@ def test_ReturnCall():
         returnPrint = print("Pwouet")
         return (x + 5)
 
-
-    assert ReturnCall(example_function_with_parentheses)    == True
+    assert ReturnCall(example_function_with_parentheses) == True
     assert ReturnCall(example_function_without_parentheses) == False
-    assert ReturnCall(example_function1)                    == False
-    assert ReturnCall(example_function2)                    == True
-
-
+    assert ReturnCall(example_function1) == False
+    assert ReturnCall(example_function2) == True
