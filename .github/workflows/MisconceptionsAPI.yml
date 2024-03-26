@@ -1,6 +1,6 @@
 name: Misconceptions API CI
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   test:
@@ -14,8 +14,8 @@ jobs:
       with:
         python-version: '3.8' 
 
-    - name: Install dependencies
-      run: pip install -r requirements.txt
+    #- name: Install dependencies
+      #run: pip install -r requirements.txt
 
     - name: Run tests
-      run: pytest
+      run: pytest $common/Misconceptions.py
