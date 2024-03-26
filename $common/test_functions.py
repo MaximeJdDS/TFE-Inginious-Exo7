@@ -1,4 +1,4 @@
-import Misconceptions
+from Misconceptions import *
 import pytest
 
 def test_1():
