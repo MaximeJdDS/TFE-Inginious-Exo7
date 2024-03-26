@@ -20,4 +20,4 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run tests
-      run: pytest 'MisconceptionsAPITest/test_functions.py'
+      run: pytest '$common/test_functions.py'
