@@ -26,7 +26,7 @@ def test_assignCompares():
         pass
     """
 
-    assert assignCompares(code_exemple1) == True
-    assert assignCompares(code_exemple2) == True
-    assert assignCompares(code_exemple3) == False
-    assert assignCompares(code_exemple4) == False
+    assert AssignCompares(code_exemple1) == True
+    assert AssignCompares(code_exemple2) == True
+    assert AssignCompares(code_exemple3) == False
+    assert AssignCompares(code_exemple4) == False
