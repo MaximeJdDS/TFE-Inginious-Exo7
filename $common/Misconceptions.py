@@ -201,6 +201,14 @@ def ReturnCallFile(file_path):
 
 
 def MapToBooleanWithTernaryOperator(func):
+    code = inspect.getsource(func)
+    tree = ast.parse(code)
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Return):
+            if isinstance(node.value, ast.IfExp):
+                if isinstance(node.value.test, ast.NameConstant) and node.value.test.value == True:
+                    return True
     return False
 
 
