@@ -16,7 +16,7 @@ def AssignCompares(code):
     return False
 
 
-def has_nested_loops(func):
+def has_nested_loops(func,function = True):
     """
     Check if a function contains nested loops.
 
@@ -26,9 +26,11 @@ def has_nested_loops(func):
     Returns:
         bool: True if nested loops are found, False otherwise.
     """
-    source_lines, _ = inspect.getsourcelines(func)
-    source = ''.join(source_lines)
-    tree = ast.parse(source)
+    if function:
+        source = inspect.getsource(func)
+        tree = ast.parse(source)
+    else:
+        tree = ast.parse(func)
 
     def _check_for_nested_loops(node, depth=0):
         if isinstance(node, (ast.While, ast.For)):
@@ -47,7 +49,7 @@ def has_nested_loops(func):
     return False
 
 
-def ComparisonWithBoolLiteral(func):
+def ComparisonWithBoolLiteral(func,function = True):
     """
     Detects if a function contains a condition testing if a variable or function result is equal to True.
 
@@ -57,8 +59,12 @@ def ComparisonWithBoolLiteral(func):
     Returns:
     bool: True if such a condition is found, False otherwise.
     """
-    func_source = inspect.getsource(func)
-    tree = ast.parse(func_source)
+    if function:
+        source = inspect.getsource(func)
+        tree = ast.parse(source)
+    else:
+        tree = ast.parse(func)
+
     for node in ast.walk(tree):
         if isinstance(node, ast.Compare):
             for op in node.ops:
@@ -69,11 +75,14 @@ def ComparisonWithBoolLiteral(func):
     return False
 
 
-def MapToBooleanWithIf(func):
-    source = inspect.getsource(func)
-    parsed = ast.parse(source)
+def MapToBooleanWithIf(func,function = True):
+    if function:
+        source = inspect.getsource(func)
+        tree = ast.parse(source)
+    else:
+        tree = ast.parse(func)
 
-    for node in ast.walk(parsed):
+    for node in ast.walk(tree):
         if isinstance(node, ast.If):
             if isinstance(node.test, ast.Compare):
                 left = node.test.left
@@ -89,7 +98,7 @@ def MapToBooleanWithIf(func):
     return False
 
 
-def ParenthesesOnlyIfArgument(func, suspect_functions):
+def ParenthesesOnlyIfArgument(func, suspect_functions,function = True):
     """
     Cette fonction détecte si une fonction utilise un appel de fonction
     sans parenthèses, ce qui peut résulter en une référence à la fonction plutôt que
@@ -101,12 +110,11 @@ def ParenthesesOnlyIfArgument(func, suspect_functions):
     @post: Retourne True si des appels de fonction sans parenthèses sont détectés, False sinon.
     """
 
-    # Obtient le code source de la fonction
-    source_lines, _ = inspect.getsourcelines(func)
-    source_code = ''.join(source_lines)
-
-    # Parse le code en un arbre de syntaxe abstrait
-    tree = ast.parse(source_code)
+    if function:
+        source = inspect.getsource(func)
+        tree = ast.parse(source)
+    else:
+        tree = ast.parse(func)
 
     # Parcours l'arbre pour rechercher les appels de fonction sans parenthèses
     for node in ast.walk(tree):
@@ -125,11 +133,14 @@ def ParenthesesOnlyIfArgument(func, suspect_functions):
     return False
 
 
-def detect_recursive_function(function):
-    source = inspect.getsource(function)
-    tree = ast.parse(source)
+def detect_recursive_function(func, function=True):
+    if function:
+        source = inspect.getsource(func)
+        tree = ast.parse(source)
+    else:
+        tree = ast.parse(func)
 
-    function_name = function.__name__
+    function_name = tree.body[0].name
 
     # Variable pour indiquer si une récursion est détectée
     recursive_detected = False
@@ -152,9 +163,12 @@ def detect_recursive_function(function):
     return recursive_detected
 
 
-def detect_else_keyword(function):
-    source = inspect.getsource(function)
-    tree = ast.parse(source)
+def detect_else_keyword(func, function=True):
+    if function:
+        source = inspect.getsource(func)
+        tree = ast.parse(source)
+    else:
+        tree = ast.parse(func)
 
     for node in ast.walk(tree):
         if isinstance(node, ast.If):
@@ -163,11 +177,14 @@ def detect_else_keyword(function):
     return False
 
 
-def RecursiveFunctionNeedsIfElse(func):
-    return detect_recursive_function(func) and detect_else_keyword(func)
+def RecursiveFunctionNeedsIfElse(func, function=True):
+    if(function):
+        return detect_recursive_function(func) and detect_else_keyword(func)
+    else :
+        return detect_recursive_function(func,function=False) and detect_else_keyword(func,function=False)
 
 
-def ReturnCall(func):
+def ReturnCall(func, function=True):
     """
     Detects the presence of parentheses in return statements of a given function.
 
@@ -175,7 +192,11 @@ def ReturnCall(func):
     @pre: func must be a Python function.
     @post: Returns True if parentheses are detected in return statements, otherwise False.
     """
-    source = inspect.getsource(func)
+    if function:
+        source = inspect.getsource(func)
+    else:
+        source = func
+
     for line in source.split('\n'):
         if ' return (' in line:
             if '(' in line or ')' in line:
@@ -200,9 +221,13 @@ def ReturnCallFile(file_path):
     return False
 
 
-def MapToBooleanWithTernaryOperator(func):
-    code = inspect.getsource(func)
-    tree = ast.parse(code)
+def MapToBooleanWithTernaryOperator(func, function=True):
+    if function:
+        source = inspect.getsource(func)
+        tree = ast.parse(source)
+    else:
+        tree = ast.parse(func)
+
 
     for node in ast.walk(tree):
         if isinstance(node, ast.Return):
