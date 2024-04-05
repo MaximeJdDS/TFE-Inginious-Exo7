@@ -75,7 +75,7 @@ def ComparisonWithBoolLiteral(func,function = True):
     return False
 
 
-def MapToBooleanWithIf(func,function = True):
+def MapToBooleanWithIf(func, function=True):
     if function:
         source = inspect.getsource(func)
         tree = ast.parse(source)
@@ -85,16 +85,14 @@ def MapToBooleanWithIf(func,function = True):
     for node in ast.walk(tree):
         if isinstance(node, ast.If):
             if isinstance(node.test, ast.Compare):
-                left = node.test.left
-                if isinstance(left, ast.Name) and left.id == "num":
-                    if len(node.body) == 1 and isinstance(node.body[0], ast.Return):
-                        if isinstance(node.body[0].value, ast.NameConstant):
-                            if node.body[0].value.value == True:
-                                return True
-                    if len(node.orelse) == 1 and isinstance(node.orelse[0], ast.Return):
-                        if isinstance(node.orelse[0].value, ast.NameConstant):
-                            if node.orelse[0].value.value == False:
-                                return True
+                if len(node.body) == 1 and isinstance(node.body[0], ast.Return):
+                    if isinstance(node.body[0].value, ast.NameConstant):
+                        if node.body[0].value.value == True:
+                            return True
+                if len(node.orelse) == 1 and isinstance(node.orelse[0], ast.Return):
+                    if isinstance(node.orelse[0].value, ast.NameConstant):
+                        if node.orelse[0].value.value == False:
+                            return True
     return False
 
 
@@ -238,8 +236,8 @@ def MapToBooleanWithTernaryOperator(func, function=True):
 
 
 #########################################################
-#		 RUN ALL FUNCTION			#
-#							#
+#		        RUN ALL FUNCTION			            #
+#							                            #
 #########################################################
 
 
