@@ -270,6 +270,22 @@ def runAllCode(code):
     return TagStack
 
 
+def runAll(code):
+    ApiFunction = [has_nested_loops,  # Function with function parameter
+                   ComparisonWithBoolLiteral,
+                   RecursiveFunctionNeedsIfElse,
+                   MapToBooleanWithIf,
+                   MapToBooleanWithTernaryOperator,
+                   ReturnCall]
+
+    TagStack = []
+
+    for fonction in ApiFunction:
+        if fonction(code, function=False):
+            TagStack.append(fonction.__name__)
+    TagStack = TagStack + runAllCode(code)
+    return TagStack
+
 dicoFeedback = {
     "AssignCompares": "Nous pensons que tu as fait une erreur au niveau de la condition du if.\nPour rappel, \"=\" c'est pour assigner une valeur à une variable.\nSi tu veux comparer tu dois utiliser \"==\".",
     "ComparisonWithBoolLiteral": "Nous pensons que tu as fait une erreur au niveau de la condition du if. Tu as déjà un boolean, tu n'as pas besoin de le comparer à un autre boolean pour faire ta condition. Tu peux tout simplement écrire \"if nomDeLaVariable : \"",
