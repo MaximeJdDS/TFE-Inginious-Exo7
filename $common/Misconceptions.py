@@ -138,24 +138,26 @@ def detect_recursive_function(func, function=True):
     else:
         tree = ast.parse(func)
 
-    function_name = tree.body[0].name
-
-    # Variable pour indiquer si une récursion est détectée
     recursive_detected = False
+    for body in tree.body:
+        function_name = body.name
+        tree = body
 
-    # Fonction récursive interne pour parcourir l'arbre syntaxique
-    def traverse(node):
-        nonlocal recursive_detected
-        if isinstance(node, ast.Call):
-            if isinstance(node.func, ast.Name):
-                called_function_name = node.func.id
-                if called_function_name == function_name:
-                    recursive_detected = True
-        for child_node in ast.iter_child_nodes(node):
-            traverse(child_node)
+        # Variable pour indiquer si une récursion est détectée
 
-    # Appeler la fonction récursive interne pour parcourir l'arbre syntaxique
-    traverse(tree)
+        # Fonction récursive interne pour parcourir l'arbre syntaxique
+        def traverse(node):
+            nonlocal recursive_detected
+            if isinstance(node, ast.Call):
+                if isinstance(node.func, ast.Name):
+                    called_function_name = node.func.id
+                    if called_function_name == function_name:
+                        recursive_detected = True
+            for child_node in ast.iter_child_nodes(node):
+                traverse(child_node)
+
+        # Appeler la fonction récursive interne pour parcourir l'arbre syntaxique
+        traverse(tree)
 
     # Retourner True si une récursion est détectée, sinon False
     return recursive_detected
@@ -196,9 +198,8 @@ def ReturnCall(func, function=True):
         source = func
 
     for line in source.split('\n'):
-        if ' return (' in line:
-            if '(' in line or ')' in line:
-                return True
+        if ' return (' in line or ' return(' in line:
+            return True
     return False
 
 def ReturnCallFile(file_path):
@@ -269,7 +270,6 @@ def runAllCode(code):
             TagStack.append(fonction.__name__)
     return TagStack
 
-
 def runAll(code):
     ApiFunction = [has_nested_loops,  # Function with function parameter
                    ComparisonWithBoolLiteral,
@@ -281,9 +281,9 @@ def runAll(code):
     TagStack = []
 
     for fonction in ApiFunction:
-        if fonction(code, function=False):
+        if fonction(code,function=False):
             TagStack.append(fonction.__name__)
-    TagStack = TagStack + runAllCode(code)
+    TagStack=TagStack + runAllCode(code)
     return TagStack
 
 dicoFeedback = {

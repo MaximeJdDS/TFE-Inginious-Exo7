@@ -163,6 +163,17 @@ def conditional_recursive_call(n):
         return n * conditional_recursive_call(n - 1)
     else:
         return n * conditional_recursive_call(n - 2)
+def number_of_numbers (n) :
+    cnt= 0
+    for i in range (len("n")):
+        cnt+=1
+    return cnt
+def chiffres_pairs(n):
+    if (number_of_numbers(n))//2 ==0 :
+        return True
+    else :
+        return False
+
 
 def test_detect_recursive_function():
     assert detect_recursive_function(function_1) == True
@@ -170,7 +181,8 @@ def test_detect_recursive_function():
     assert detect_recursive_function(multiple_recursive_calls) == True
     assert detect_recursive_function(non_recursive_call_to_recursive_function) == False
     assert detect_recursive_function(conditional_recursive_call) == True
-
+    stringu=inspect.getsource(number_of_numbers)+inspect.getsource(chiffres_pairs)
+    assert detect_recursive_function(stringu,function=False) == False
 
 
 def example_function1(num):
