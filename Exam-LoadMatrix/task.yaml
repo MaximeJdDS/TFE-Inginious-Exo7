@@ -1,0 +1,82 @@
+author: ''
+contact_url: ''
+context: |-
+    Ecrivez le corps de la fonction ``load_matrix(filename)`` qui lit dans le fichier dont le nom est ``filename`` le contenu d'une matrice rectangulaire, suivant la spécification donnée.  Par exemple, si le fichier ``mat.txt`` contient:
+
+    .. code-block::
+
+      3
+      3
+      0,0 10
+      1,1 20
+      0,2 30
+
+    ``load_matrix("mat.txt")`` retourne la matrice:
+
+    .. code-block::
+
+      [[10.0, 0.0, 30.0], [0.0, 20.0, 0.0], [0.0, 0.0, 0.0]]
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: 'Examen à blanc: load_matrix'
+network_grading: false
+order: 146
+problems:
+    q1:
+        type: code
+        name: load_matrix
+        header: |-
+            Ecrivez ici le corps de la méthode ``load_matrix``.
+
+            .. code-block:: python
+
+                def load_matrix(filename):
+                    """
+                    pre: `filename` est un nom de fichier
+                    post: retourne une matrice rectangulaire M x N dont le contenu est donné
+                        dans le fichier `filename`.
+
+                    le format du fichier est :
+                        première ligne : le nombre de lignes M
+                        deuxième ligne : le nombre de colonnes N
+                        lignes suivantes : une ligne par élément au format "I,J VAL"
+                            où 0 <= I < M et 0 <= J < N
+                            et VAL est le réel en ligne I et colonne J de la matrice
+
+                    Les éléments non repris dans le fichier sont initialisés à 0.0.
+
+                    En cas d'erreur (exception d'entrée/sortie, fichier non lisible,
+                    mauvais format) retourne None.
+                    """
+                    ### VOTRE REPONSE
+        language: python
+        default: ''
+    ztest:
+        type: code
+        name: Tests
+        header: |
+            Insérez votre code de test optionnel ci-dessous. Vous pouvez utiliser ``print`` pour tester votre programme. Votre code de test est exécuté à la suite de la définition de ``load_matrix``.  Exemple:
+
+            .. code-block:: python
+
+                f = open("mat.txt", "w")
+                f.write("""\
+                3
+                3
+                0,0 10
+                1,1 20
+                0,2 30
+                """)
+                f.close()
+                print(load_matrix("mat.txt"))    # [[10.0, 0.0, 30.0], [0.0, 20.0, 0.0], [0.0, 0.0, 0.0]]
+        language: python
+        optional: 'on'
+        default: ''

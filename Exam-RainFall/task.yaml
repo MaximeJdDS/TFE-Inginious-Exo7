@@ -1,0 +1,39 @@
+author: ''
+contact_url: ''
+context: |-
+    Ecrivez le corps de la fonction ``rainfall(l)`` qui retourne la moyenne des relevés des précipitations présents dans la liste ``l`` jusqu'à la valeur ``9999`` non comprise. Attention que les précipitations négatives sont considérées comme nulles.  Par exemple,
+
+    ``rainfall([3, 5, -2, 4, 9999, 10])``
+
+    retourne ``3.0`` (moyenne de 3, 5, 0 et 4).
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: 'Examen à blanc: problème des précipitations'
+network_grading: false
+order: 145
+problems:
+    q1:
+        type: code
+        name: rainfall
+        header: |-
+            Ecrivez ici le corps de la méthode ``rainfall``.
+
+            .. code-block:: python
+
+                def rainfall(l):
+                    """
+                    pre: l est une liste de nombres, len(l) > 0, l contient un élément 9999.
+                    post: retourne la moyenne des éléments dans la liste l jusqu'à l'élément 9999
+                        non compris.  Si des éléments sont négatifs, ils sont traités comme valant 0.
+                    """
+                    ### VOTRE REPONSE
+        language: python
+        default: ''

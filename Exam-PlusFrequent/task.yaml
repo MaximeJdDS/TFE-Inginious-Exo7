@@ -1,0 +1,39 @@
+author: ''
+contact_url: ''
+context: Ecrivez le corps de la fonction ``plus_frequent(l)`` qui retourne l'élément
+    le plus fréquemment présent dans la liste ``l``.  Si la liste contient des éléments
+    différents avec le même nombre maximal d'occurences, retourne le premier trouvé
+    de gauche à droite dans la liste.
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+file: ''
+input_random: 0
+name: 'Examen à blanc: élément le plus fréquent'
+network_grading: false
+order: 144
+problems:
+    q1:
+        type: code
+        name: plus_frequent
+        header: |-
+            Ecrivez ici le corps de la méthode ``plus_frequent``.
+
+            .. code-block:: python
+
+                def plus_frequent(l):
+                    """
+                    pre: `l` est une liste, len(l) > 0
+                    post: retourne l'élément qui se trouve le plus grand nombre de fois
+                        dans la liste `l` (nombre d'ocurrences égales au sens de ==).  Si
+                        plusieurs éléments différents apparaissent un plus grand nombre égal
+                        de fois, retourne le premier apparaissant dans la liste.
+                    """
+                    ### VOTRE REPONSE
+        language: python
+        default: ''
