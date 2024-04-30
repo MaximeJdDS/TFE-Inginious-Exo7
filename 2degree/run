@@ -1,0 +1,11 @@
+#! /usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import sys
+sys.path.append('../course/common')  
+from common_run import common_run
+
+
+if __name__ == '__main__':
+    # Ajoutez ici des paramètres spécifiques à l'exercice si nécessaire
+    common_run()
