@@ -32,6 +32,3 @@ Le reste sont des exercices ayant comme structure :
  
 Tous les autres dossiers représentent des exercices.
 
-## Licence
-
-Ce projet est sous licence [Nom_de_la_Licence]. Veuillez consulter le fichier [LICENSE](LICENSE) pour plus de détails.
